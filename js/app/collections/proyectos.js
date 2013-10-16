@@ -23,11 +23,10 @@ define(function(require) {
 		initialize: function() {            
             var baseapc = new DB(window.openDatabase("apc", "1.0", "APC - Agencia Presidencial de la Cooperación en Colombia", 4145728));
             var self = this;
-            baseapc.execute("SELECT * FROM dci", model, function(dataCollection) {
+            baseapc.execute("SELECT DISTINCT demanda.codigoproyecto, demanda.proyectoprograma FROM demanda", model, function(dataCollection) {
             	self.reset(dataCollection);
-                var view = new ProyectosPage({ collection: self });
+                var view = new ProyectosPage({ collection: self });                
                 view.render();
-                console.log(view.el);
             });
 		}
 	});

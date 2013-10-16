@@ -14,13 +14,13 @@ define(function(require) {
 
     var $           = require('jquery'),
         Backbone    = require('backbone'),        
-        introTpl   = require('text!tpl/intro.html');
+        tpl   = require('text!tpl/home.html');
 
     return Backbone.View.extend({
         el: "#content",
-        template: _.template(introTpl),
+        template: _.template(tpl),
         render: function() {
-            this.$el.html(introTpl);
+            this.$el.html(tpl);
             return this;
         }
     });

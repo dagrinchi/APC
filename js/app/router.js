@@ -14,15 +14,24 @@ define(function(require) {
 
     var $           = require('jquery'),
         Backbone    = require('backbone'),
-        InitDB      = require('app/utils/init'),
-        IntroView   = require('app/views/Intro');
+        InitDB      = require('app/utils/init');
+
+    var headerView = require('app/views/header'),
+        footerView = require('app/views/footer'),
+        IntroView   = require('app/views/intro'),
+        HomeView    = require('app/views/home');
         
     var ProyectosCollection = require('app/collections/proyectos');
+
+    var HeaderView = new headerView();
+    var FooterView = new footerView();
+            
 
     return Backbone.Router.extend({
 
         routes: {
             "": "intro",
+            "inicio": "inicio",
             "prioridadesdecooperacion": "prioridades",
             "cooperacionsursur": "sursur",            
             "proyectos": "proyectos",
@@ -37,43 +46,54 @@ define(function(require) {
 
         intro: function() {
             var self = this;
-            this.introView = new IntroView();
-            this.introView.render();
+            var introView = new IntroView();
+            introView.render();
 
             var initdb = new InitDB();
             $.when(initdb).done(function() {
                 setTimeout(function() {
-                    //self.navigate("map", { trigger: true });
+                    self.navigate("inicio", { trigger: true });
                 }, 2000);
-            });            
+            });
+
+            return this;
         },
 
-        home: function() {            
-            
+        inicio: function() {            
+            var homeView = new HomeView();
+            homeView.render();
         },
 
-        prioridades: function() {
-
+        prioridades: function() {            
+            HeaderView.render();
+            FooterView.render();
         },
 
         sursur: function() {
-
+            HeaderView.render();
+            FooterView.render();
         },
 
         proyectos: function() {
-            var collection = new ProyectosCollection();            
+            HeaderView.render();
+            FooterView.render();
+
+            var collection = new ProyectosCollection();
         },
 
-        directorio: function() {
-
+        directorio: function() {    
+            HeaderView.render();
+            FooterView.render();
         },
 
         ejecutas: function() {
-
+            HeaderView.render();
+            FooterView.render();
         },
 
         acercade: function() {
-
+            HeaderView.render();
+            FooterView.render();
         }
 
     });

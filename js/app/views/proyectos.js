@@ -16,9 +16,7 @@ define(function(require) {
 		Backbone = require('backbone'),
 		_ = require('underscore'),
 		proyectoTpl = require('text!tpl/proyecto.html'),
-		proyectosPageTpl = require('text!tpl/proyectos_page.html'),
-		headerView = require('app/views/header'),
-		footerView = require('app/views/footer');;
+		proyectosPageTpl = require('text!tpl/proyectos_page.html');
 
 	var ProyectoView = Backbone.View.extend({
 		tagName: 'li',
@@ -42,21 +40,17 @@ define(function(require) {
 		}
 	});
 
-	return Backbone.View.extend({		
-		el: "body",
+	return Backbone.View.extend({
+		el: "#content",
 		template: _.template(proyectosPageTpl),
 		initialize: function() {
-			var HeaderView = new headerView();
-			HeaderView.render();
 
-			var FooterView = new footerView();
-			FooterView.render();
 		},
 		render: function() {
 			var self = this;
 			var list = new ProyectosView({
 				collection: self.collection
-			});			
+			});
 
 			this.$el.html(this.template);
 			return this;
