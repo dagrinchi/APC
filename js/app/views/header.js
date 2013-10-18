@@ -23,6 +23,10 @@ define(function(require) {
 		render: function() {
 			this.$el.html(this.template);
 			return this;
+		},
+
+		remove: function() {
+			this.$el.html("");
 		}
 	});
 

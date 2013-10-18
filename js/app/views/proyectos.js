@@ -20,6 +20,7 @@ define(function(require) {
 
 	var ProyectoView = Backbone.View.extend({
 		tagName: 'li',
+		className: 'media',
 		template: _.template(proyectoTpl),
 		render: function() {
 			this.$el.html(this.template(this.model.toJSON()));
@@ -27,8 +28,26 @@ define(function(require) {
 		}
 	});
 
+	var ProyectosSearchView = Backbone.View.extend({
+		el: "#searchPage",
+		initialize: function() {
+			
+		},
+		render: function(eventName) {
+			
+		},
+		events: {
+			"keyup .search-key": "search"
+		},
+		search: function(event) {
+			var key = $('.search-key').val();
+			this.collection.findByName(key);
+		}
+	});
+
 	var ProyectosView = Backbone.View.extend({
 		tagName: "ul",
+		className: 'media-list',
 		render: function() {
 			this.collection.each(function(proyecto) {
 				var proyectoView = new ProyectoView({
@@ -53,6 +72,7 @@ define(function(require) {
 			});
 
 			this.$el.html(this.template);
+			//$("#proyectosList").html(list.render().el);
 			return this;
 		}
 	});

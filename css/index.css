@@ -78,12 +78,13 @@ h1 {
 .overlay-a {
     position: absolute;
     left: 0;
-    top: 34px;
+    top: 40px;
+    width: 100%;
     /*background-color: #ff5500;
     opacity: 0.2;*/
 }
 
-#coperationCollapse {
+#cooperationCollapse {
     background-color: rgba(39, 174, 39, 0.2);
 }
 
@@ -95,6 +96,7 @@ h1 {
     position: absolute;
     right: 0;
     bottom: 0;
+    width: 100%;
     /*background-color: #27ae27;
     opacity: 0.2;*/
 }
@@ -171,4 +173,8 @@ and (min-device-width : 320px)
 and (max-device-width : 480px) 
 and (orientation : portrait) {
     
+}
+
+.container-fluid {
+    padding: 0;        
 }

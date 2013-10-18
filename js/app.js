@@ -7,6 +7,7 @@
 * Paola Vanegas: pvanegas@cool4code.com,
 * David Alméciga: walmeciga@cool4code.com"
 */
+var APC;
 
 require.config({
 
@@ -33,8 +34,10 @@ require.config({
 //     document.addEventListener('deviceready', init);
 // });
 
-require(['fastclick', 'app/router'], function(fclick, router) {
-    fclick.attach(document.body);    
-    var Router = new router();
-    Backbone.history.start();
+require(['app/utils/jsapi', 'fastclick', 'app/router'], function(jsapi, fclick, router) {
+    jsapi(function() {
+        fclick.attach(document.body);    
+        APC = new router();
+        Backbone.history.start();
+    });
 });

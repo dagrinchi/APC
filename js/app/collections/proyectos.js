@@ -14,21 +14,28 @@ define(function(require) {
 
     var Backbone = require('backbone'),	
     	DB 	= require('app/utils/db'),
-    	model = require('app/models/proyectos'),
-        ProyectosPage = require('app/views/proyectos');
+    	model = require('app/models/proyectos');
+
+    var $        = require('jquery'),
+        deferred = $.Deferred();
 
     return Backbone.Collection.extend({	
 		model: model,
 
 		initialize: function() {            
+            
+		},
+
+        findAll: function() {
             var baseapc = new DB(window.openDatabase("apc", "1.0", "APC - Agencia Presidencial de la Cooperación en Colombia", 4145728));
             var self = this;
-            baseapc.execute("SELECT DISTINCT demanda.codigoproyecto, demanda.proyectoprograma FROM demanda", model, function(dataCollection) {
-            	self.reset(dataCollection);
-                var view = new ProyectosPage({ collection: self });                
-                view.render();
+            baseapc.execute("SELECT DISTINCT demanda.codigoproyecto, demanda.proyectoprograma FROM demanda", model, function(data) {
+                self.reset(data);
+                deferred.resolve();
             });
-		}
+
+            return deferred.promise();
+        }
 	});
 
 });

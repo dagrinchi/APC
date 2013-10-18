@@ -13,20 +13,22 @@ define(function(require) {
 	"use strict";
 
 	var $ = require('jquery'),
-		Backbone = require('backbone'),
-		_ = require('underscore'),		
-		footerTpl = require('text!tpl/footer.html');
+		Backbone = require('backbone');
 
 	return Backbone.View.extend({
-		el: "#footer",
-		template: _.template(footerTpl),
-		render: function() {
-			this.$el.html(this.template);
-			return this;
+		defaults: {
+			region: 'co',
+			language: 'es'
 		},
-
-		remove: function() {
-			this.$el.html("");
+		id: '',
+		className: '',
+		initialize: function() {			
+			this.model.set('map', new google.maps.Map(this.el, this.model.get('mapOptions')));
+		},
+		render: function() {
+			console.log('init map');
+			$('#' + this.id).replaceWith(this.el);
+			return this;
 		}
 	});
 
