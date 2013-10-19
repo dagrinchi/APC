@@ -12,16 +12,11 @@ define(function(require) {
 
 	"use strict";
 
-	function googleLoad() {
-		console.log("googleMaps: Cargando librería maps!");
-		google.load("maps", "3");
-	}
-
 	return function(cb) {
 
 		console.log("initGoogleLoader: Cargando activos google!");
 		var script = document.createElement("script");
-		script.src = "https://www.google.com/jsapi?callback=googleLoad" ;
+		script.src = "https://www.google.com/jsapi" ;
 		script.type = "text/javascript";
 		document.getElementsByTagName("head")[0].appendChild(script);
 

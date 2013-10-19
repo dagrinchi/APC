@@ -29,24 +29,22 @@ define(function(require) {
         },
 
         initialize: function() {
-            var self = this;
             require(['app/views/header', 'app/views/footer'], function(headerView, footerView) {
-                self.HeaderView = new headerView();
-                self.FooterView = new footerView();
+                APC.views.HeaderView = new headerView();
+                APC.views.FooterView = new footerView();
             });
         },
 
         intro: function() {
-            var self = this;
             require(['app/utils/init', 'app/views/intro'], function(Initdb, IntroView) {
 
-                self.introView = new IntroView();
-                self.introView.render();
+                APC.views.introView = new IntroView();
+                APC.views.introView.render();
 
-                var initdb = new Initdb();
-                $.when(initdb).done(function() {
+                APC.utils.initdb = new Initdb();
+                $.when(APC.utils.initdb).done(function() {
                     setTimeout(function() {
-                        self.navigate("inicio", {
+                        APC.router.navigate("inicio", {
                             trigger: true
                         });
                     }, 2000);
@@ -57,62 +55,33 @@ define(function(require) {
         },
 
         inicio: function() {
-            var self = this;
             require(['app/views/home'], function(HomeView) {
-                self.homeView = new HomeView();
-                self.homeView.render();
-
-                self.HeaderView.remove();
-                self.FooterView.remove();
+                if (typeof APC.views.homeView === 'undefined') {
+                    APC.views.homeView = new HomeView();
+                }
+                APC.views.homeView.render();
             });
+
+            APC.views.HeaderView.remove();
+            APC.views.FooterView.remove();
         },
 
         prioridades: function() {
-            var self = this;
             require(['app/collections/demanda', 'app/collections/cooperacion', 'app/views/prioridades', 'app/models/map', 'app/views/map'], function(DemandaCollection, CooperacionCollection, PrioridadesPage, Map, MapView) {
-                var demCollection = new DemandaCollection();
-                var coopCollection = new CooperacionCollection();
-                $.when(demCollection.findAll(), coopCollection.findAll()).done(function() {
+                if (typeof APC.collections.demCollection === 'undefined')
+                    APC.collections.demCollection = new DemandaCollection();
 
-                    self.HeaderView.render();
-                    self.FooterView.remove();
+                if (typeof APC.collections.coopCollection === 'undefined')
+                    APC.collections.coopCollection = new CooperacionCollection();
 
-                    var mapDemanda = new Map({
-                        zoom: 8,
-                        maxZoom: 18,
-                        minZoom: 8,
-                        position: {
-                            coords: {
-                                latitude: -34.397,
-                                longitude: 150.644
-                            }
-                        }
-                    });
-                    // var mapDemandaView = new MapView({
-                    //     id: "map-canvas-a",
-                    //     className: "map-canvas-a",
-                    //     model: mapDemanda
-                    // });
-                    // mapDemandaView.render();
+                if (typeof APC.models.mapDemanda === 'undefined')
+                    APC.models.mapDemanda = new Map();
 
-                    // var mapCooperacion = new Map({
-                    //     zoom: 8,
-                    //     maxZoom: 18,
-                    //     minZoom: 8
-                    // });
-                    // mapCooperacion.initMap();
-                    // var mapCooperacionView = new MapView({
-                    //     id: "map-canvas-b",
-                    //     className: "map-canvas-b",
-                    //     model: mapCooperacion
-                    // });
-                    // mapCooperacionView.render();
-
-                    var prioridadesPage = new PrioridadesPage({
-                        demcollection: demCollection,
-                        coopcollection: coopCollection
-                    });
-                    prioridadesPage.render();
+                $.when(APC.collections.demCollection.findAll(), APC.collections.coopCollection.findAll()).done(function() {
+                    APC.views.HeaderView.render();
+                    APC.views.FooterView.remove();                    
+                    APC.views.prioridadesPage = new PrioridadesPage();
+                    APC.views.prioridadesPage.render();
                 });
             });
         },
@@ -122,17 +91,17 @@ define(function(require) {
         },
 
         proyectos: function() {
-            var self = this;
-            require(['app/collections/proyectos', 'app/views/proyectos'], function(ProyectosCollection, ProyectosPage) {
-                self.HeaderView.render();
-                self.FooterView.render();
+            require(['app/collections/proyectos', 'app/views/proyectos'], function(ProyectosCollection, ProyectosPageView) {
+                APC.views.HeaderView.render();
+                APC.views.FooterView.render();
 
-                var proCollection = new ProyectosCollection();
-                $.when(proCollection.findAll()).done(function() {
-                    var ProyectosPageView = new ProyectosPage({
-                        collection: proCollection
+                if (typeof APC.collections.proCollection === 'undefined')
+                    APC.collections.proCollection = new ProyectosCollection();
+                $.when(APC.collections.proCollection.findAll()).done(function() {
+                    APC.views.ProyectosPageView = new ProyectosPageView({
+                        collection: APC.collections.proCollection
                     });
-                    ProyectosPageView.render();
+                    APC.views.ProyectosPageView.render();
                 });
             });
         },

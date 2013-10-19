@@ -16,18 +16,20 @@ define(function(require) {
 		Backbone = require('backbone');
 
 	return Backbone.View.extend({
-		defaults: {
-			region: 'co',
-			language: 'es'
-		},
+		
 		id: '',
-		className: '',
-		initialize: function() {			
-			this.model.set('map', new google.maps.Map(this.el, this.model.get('mapOptions')));
+		
+		defaults: {
+
 		},
-		render: function() {
-			console.log('init map');
-			$('#' + this.id).replaceWith(this.el);
+		
+		initialize: function() {
+			var self = this;			
+			var mapOptions = this.model.get('mapOptions');
+			this.model.set('map', new google.maps.Map(this.el, mapOptions));
+		},
+
+		render: function() {			
 			return this;
 		}
 	});

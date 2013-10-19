@@ -14,26 +14,23 @@ define(function(require) {
 
     var $           = require('jquery'),
         Backbone    = require('backbone'),        
-        prioridadesTpl   = require('text!tpl/prioridades.html'),
-        bootstrap   = require('bootstrap/bootstrap');
+        tpl   = require('text!tpl/prioridades.html'),
+        bootstrap   = require('bootstrap/bootstrap'),
+        MapView     = require('app/views/map');
 
     return Backbone.View.extend({
         el: "#content",
-        template: _.template(prioridadesTpl),
 
-        map_a: function() {
-            
-        },
-
-        map_b: function() {
-
-        },
+        initialize: function {
+            var self = this;
+            var list = new ProyectosView({
+                collection: self.collection
+            });
+            this.page = _.template(proyectosPageTpl, { list : list.render().$el.html() });
+        }
 
         render: function() {
-            this.map_a();
-            this.map_b();
-
-            this.$el.html(prioridadesTpl);
+            this.$el.html(this.template);
             return this;
         }
     });

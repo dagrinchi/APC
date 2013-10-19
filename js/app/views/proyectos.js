@@ -61,18 +61,15 @@ define(function(require) {
 
 	return Backbone.View.extend({
 		el: "#content",
-		template: _.template(proyectosPageTpl),
 		initialize: function() {
-
-		},
-		render: function() {
 			var self = this;
 			var list = new ProyectosView({
 				collection: self.collection
 			});
-
-			this.$el.html(this.template);
-			//$("#proyectosList").html(list.render().el);
+			this.page = _.template(proyectosPageTpl, { list : list.render().$el.html() });
+		},
+		render: function() {
+			this.$el.html(this.page);			
 			return this;
 		}
 	});

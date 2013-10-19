@@ -1,13 +1,19 @@
 /**
-* COOL4CODE
-* Authors:
-*
-* Alejandro Zarate: azarate@cool4code.com,
-* Marcos Aguilera: maguilera@cool4code.com,
-* Paola Vanegas: pvanegas@cool4code.com,
-* David Alméciga: walmeciga@cool4code.com"
-*/
-var APC;
+ * COOL4CODE
+ * Authors:
+ *
+ * Alejandro Zarate: azarate@cool4code.com,
+ * Marcos Aguilera: maguilera@cool4code.com,
+ * Paola Vanegas: pvanegas@cool4code.com,
+ * David Alméciga: walmeciga@cool4code.com"
+ */
+var APC = {
+    router: {},
+    models: {},
+    collections: {},
+    views: {},
+    utils: {}
+};
 
 require.config({
 
@@ -19,7 +25,7 @@ require.config({
         bootstrap: '../../bootstrap/js'
     },
 
-    shim: {            
+    shim: {
         'backbone': {
             deps: ['underscore', 'jquery'],
             exports: 'Backbone'
@@ -36,8 +42,8 @@ require.config({
 
 require(['app/utils/jsapi', 'fastclick', 'app/router'], function(jsapi, fclick, router) {
     jsapi(function() {
-        fclick.attach(document.body);    
-        APC = new router();
+        fclick.attach(document.body);
+        APC.router = new router();
         Backbone.history.start();
     });
 });
