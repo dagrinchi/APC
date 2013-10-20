@@ -17,7 +17,7 @@ define(function(require) {
         tpl   = require('text!tpl/home.html');
 
     return Backbone.View.extend({
-        el: "#content",
+        el: "body",
         template: _.template(tpl),
         render: function() {
             this.$el.html(tpl);

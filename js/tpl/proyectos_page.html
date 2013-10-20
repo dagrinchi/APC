@@ -1,5 +1,35 @@
-<div class="well">
-	<ul class="media-list" style="">
-	<%= list  %>
-	</ul>	
+<div class="topcoat-navigation-bar">
+    <div class="topcoat-navigation-bar__item left quarter" style="top: 18px;">
+        <a id="slide-menu-button" class="topcoat-icon-button--quiet slide-menu-button" href="#inicio">
+            <img src="img/home.svg" width="27px" height="28px">
+        </a>    
+    </div>
+    <div class="topcoat-navigation-bar__item center half">  
+        <h1 class="topcoat-navigation-bar__title">Proyectos</h1>
+    </div>
+    <div class="topcoat-navigation-bar__item right quarter" style="top: 18px;"> 
+        <a id="slide-menu-button" class="topcoat-icon-button--quiet slide-menu-button" style="margin-top: 4px !important;">
+            <img src="img/share.svg" width="27px" height="28px">
+        </a>
+    </div>
+</div>
+
+<div class="container">
+    <div class="topcoat-navigation-bar" style="height: 3.5rem;">
+          <input type="search" value="" placeholder="Buscar proyecto..." class="topcoat-search-input full" style="margin-top: 3px; padding-left: 30px;">
+    </div>
+    <div class="topcoat-list">
+      <ul class="topcoat-list__container">
+      	<%= list  %>
+      </ul>
+    </div>
+</div>
+
+<div class="topcoat-tab-bar full" style="position: fixed; bottom: 0px;">
+   <div class="topcoat-button-bar__item">
+     <button id="demandProyects" class="topcoat-button-bar__button full">Demanda</button>
+   </div>
+   <div class="topcoat-button-bar__item">
+     <button id="southProyects" class="topcoat-button-bar__button full">Sur-Sur</button>
+   </div>
 </div>

@@ -1,0 +1,21 @@
+#demandProyects {
+    background-color: #ff5500;
+    color: #ffffff;
+    text-shadow: none;
+    border: none;
+    background-image: url(../img/colombia.svg);
+    background-size: 32px;
+    background-position: 84px 9px;
+    background-repeat: no-repeat;
+}
+
+#southProyects {
+    background-color: #8c44ae;
+    color: #ffffff;
+    text-shadow: none;
+    border: none;
+    background-image: url(../img/south.svg);
+    background-size: 32px;
+    background-position: 84px 9px;
+    background-repeat: no-repeat;
+}

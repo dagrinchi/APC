@@ -20,7 +20,7 @@ define(function(require) {
 
 	var ProyectoView = Backbone.View.extend({
 		tagName: 'li',
-		className: 'media',
+		className: 'topcoat-list__item',
 		template: _.template(proyectoTpl),
 		render: function() {
 			this.$el.html(this.template(this.model.toJSON()));
@@ -60,7 +60,7 @@ define(function(require) {
 	});
 
 	return Backbone.View.extend({
-		el: "#content",
+		el: "body",
 		initialize: function() {
 			var self = this;
 			var list = new ProyectosView({

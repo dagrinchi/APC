@@ -75,8 +75,8 @@ define(function(require) {
                 APC.views.homeView.render();
             });
 
-            APC.views.HeaderView.remove();
-            APC.views.FooterView.remove();
+            //APC.views.HeaderView.remove();
+            //APC.views.FooterView.remove();
         },
 
         prioridades: function() {
@@ -124,8 +124,8 @@ define(function(require) {
                     APC.collections.demAreasCollection.findAll(),
                     APC.collections.demSectoresCollection.findAll()).done(function() {
                         
-                    APC.views.HeaderView.render();
-                    APC.views.FooterView.remove();                    
+                    //APC.views.HeaderView.render();
+                    //APC.views.FooterView.remove();                    
 
                     APC.views.prioridadesPageView = new PrioridadesPageView();
                     APC.views.prioridadesPageView.render();
@@ -140,8 +140,8 @@ define(function(require) {
 
         proyectos: function() {
             require(['app/collections/proyectos', 'app/views/proyectos'], function(ProyectosCollection, ProyectosPageView) {
-                APC.views.HeaderView.render();
-                APC.views.FooterView.render();
+                //APC.views.HeaderView.render();
+                //APC.views.FooterView.render();
 
                 if (typeof APC.collections.proCollection === 'undefined')
                     APC.collections.proCollection = new ProyectosCollection();

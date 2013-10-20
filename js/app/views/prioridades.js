@@ -43,7 +43,7 @@ define(function(require) {
     });
 
     return Backbone.View.extend({
-        el: "#content",
+        el: "body",
 
         template: _.template(tpl),
 
