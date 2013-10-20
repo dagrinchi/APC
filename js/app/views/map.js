@@ -16,17 +16,36 @@ define(function(require) {
 		Backbone = require('backbone');
 
 	return Backbone.View.extend({
-		
-		id: '',
-		
-		defaults: {
 
-		},
+		tagName: 'div',
+
+		zoom : 3,
+
+		minZoom : 3,
+
+		maxZoom : 18,
+
+		latitude : 4.6,
+
+		longitude : -74.2,
+
+		map : {},
 		
 		initialize: function() {
 			var self = this;			
-			var mapOptions = this.model.get('mapOptions');
-			this.model.set('map', new google.maps.Map(this.el, mapOptions));
+
+			require(['async!http://maps.googleapis.com/maps/api/js?key=AIzaSyCtA2EQoKD1VLTpg1De7-smoxI2o1YygBo&sensor=true&amp;language=es'], function() {
+
+				var mapOptions = {
+					zoom: self.zoom,
+					minZoom: self.minZoom,
+					maxZoom: self.maxZoom,
+					center: new google.maps.LatLng(self.latitude, self.longitude),
+					mapTypeId: google.maps.MapTypeId.ROADMAP,
+					mapTypeControl: false
+				};
+				self.map = new google.maps.Map(self.el, mapOptions);
+			});
 		},
 
 		render: function() {			

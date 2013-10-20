@@ -29,7 +29,20 @@ define(function(require) {
         },
 
         initialize: function() {
-            require(['app/views/header', 'app/views/footer'], function(headerView, footerView) {
+            require(['app/views/header', 'app/views/footer', 'app/views/map'], function(headerView, footerView, MapView) {
+
+                if (typeof APC.views.mapDemanda === 'undefined')
+                    APC.views.mapDemanda = new MapView({
+                        id : "#map-canvas-a",
+                        className : "map-canvas"
+                    });
+
+                if (typeof APC.views.mapCooperacion === 'undefined')
+                    APC.views.mapCooperacion = new MapView({
+                        id : "#map-canvas-b",
+                        className : "map-canvas"
+                    });
+
                 APC.views.HeaderView = new headerView();
                 APC.views.FooterView = new footerView();
             });
@@ -67,22 +80,57 @@ define(function(require) {
         },
 
         prioridades: function() {
-            require(['app/collections/demanda', 'app/collections/cooperacion', 'app/views/prioridades', 'app/models/map', 'app/views/map'], function(DemandaCollection, CooperacionCollection, PrioridadesPage, Map, MapView) {
+            require([
+                'app/collections/demanda',
+                'app/collections/demActores',
+                'app/collections/demTerritorios',
+                'app/collections/demMunicipios',
+                'app/collections/demAreas',
+                'app/collections/demSectores',
+                'app/collections/cooperacion',
+                'app/views/prioridades'
+            ], function(
+                DemandaCollection,
+                DemActoresCollection,
+                DemTerritoriosCollection,
+                DemMunicipiosCollection,
+                DemAreasCollection,
+                DemSectoresCollection,
+                CooperacionCollection,
+                PrioridadesPageView) {
+
                 if (typeof APC.collections.demCollection === 'undefined')
                     APC.collections.demCollection = new DemandaCollection();
+
+                if (typeof APC.collections.demActoresCollection === 'undefined')
+                    APC.collections.demActoresCollection = new DemActoresCollection();
+                if (typeof APC.collections.demTerritoriosCollection === 'undefined')
+                    APC.collections.demTerritoriosCollection = new DemTerritoriosCollection();                
+                if (typeof APC.collections.demMunicipiosCollection === 'undefined')
+                    APC.collections.demMunicipiosCollection = new DemMunicipiosCollection();
+                if (typeof APC.collections.demAreasCollection === 'undefined')
+                    APC.collections.demAreasCollection = new DemAreasCollection();
+                if (typeof APC.collections.demSectoresCollection === 'undefined')
+                    APC.collections.demSectoresCollection = new DemSectoresCollection();
 
                 if (typeof APC.collections.coopCollection === 'undefined')
                     APC.collections.coopCollection = new CooperacionCollection();
 
-                if (typeof APC.models.mapDemanda === 'undefined')
-                    APC.models.mapDemanda = new Map();
-
-                $.when(APC.collections.demCollection.findAll(), APC.collections.coopCollection.findAll()).done(function() {
+                $.when(APC.collections.demCollection.findAll(),
+                    APC.collections.coopCollection.findAll(),
+                    APC.collections.demActoresCollection.findAll(),
+                    APC.collections.demTerritoriosCollection.findAll(),
+                    APC.collections.demMunicipiosCollection.findAll(),
+                    APC.collections.demAreasCollection.findAll(),
+                    APC.collections.demSectoresCollection.findAll()).done(function() {
+                        
                     APC.views.HeaderView.render();
                     APC.views.FooterView.remove();                    
-                    APC.views.prioridadesPage = new PrioridadesPage();
-                    APC.views.prioridadesPage.render();
+
+                    APC.views.prioridadesPageView = new PrioridadesPageView();
+                    APC.views.prioridadesPageView.render();
                 });
+
             });
         },
 

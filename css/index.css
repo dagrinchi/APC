@@ -62,17 +62,19 @@ h1 {
     -webkit-animation:fade 3000ms infinite;
 }
 
-#map-canvas-a img, #map-canvas-b img { 
-  max-width: none;
+.gm-style img {
+    max-width: none;
 }
 
-#map-canvas-a img, #map-canvas-b label { 
-  width: auto; display:inline; 
-} 
+.gm-style label {
+    width: auto; display:inline;
+}
 
-#map-canvas-a, #map-canvas-b {
+.map-canvas {
     float: left;
     position: relative;
+    width: 100%;
+    height: 400px;
 }
 
 .overlay-a {

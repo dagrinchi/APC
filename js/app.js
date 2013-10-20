@@ -17,12 +17,16 @@ var APC = {
 
 require.config({
 
+    waitSeconds : 120,
+
     baseUrl: 'js/lib',
 
     paths: {
         app: '../app',
         tpl: '../tpl',
-        bootstrap: '../../bootstrap/js'
+        bootstrap: '../../bootstrap/js',
+        async : '../lib/requirejs-plugins/async',
+        goog : '../lib/requirejs-plugins/goog'
     },
 
     shim: {
@@ -40,10 +44,8 @@ require.config({
 //     document.addEventListener('deviceready', init);
 // });
 
-require(['app/utils/jsapi', 'fastclick', 'app/router'], function(jsapi, fclick, router) {
-    jsapi(function() {
-        fclick.attach(document.body);
-        APC.router = new router();
-        Backbone.history.start();
-    });
+require(['fastclick', 'app/router'], function(fclick, router) {    
+    fclick.attach(document.body);
+    APC.router = new router();
+    Backbone.history.start();
 });
