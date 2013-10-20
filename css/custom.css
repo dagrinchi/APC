@@ -5,7 +5,7 @@
     border: none;
     background-image: url(../img/colombia.svg);
     background-size: 32px;
-    background-position: 84px 9px;
+    background-position: 4px center;
     background-repeat: no-repeat;
 }
 
@@ -16,6 +16,6 @@
     border: none;
     background-image: url(../img/south.svg);
     background-size: 32px;
-    background-position: 84px 9px;
+    background-position: 4px center;
     background-repeat: no-repeat;
 }

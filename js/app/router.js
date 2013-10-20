@@ -156,6 +156,17 @@ define(function(require) {
 
         directorio: function() {
 
+             require(['app/collections/directorio', 'app/views/directorio'], function(DirectorioCollection, DirectorioPageView) { 
+                if (typeof APC.collections.directorioCollection === 'undefined')
+                    APC.collections.directorioCollection = new DirectorioCollection();
+                $.when(APC.collections.directorioCollection.findAll()).done(function() {
+                    APC.views.DirectorioPageView = new DirectorioPageView({
+                        collection: APC.collections.directorioCollection
+                    });
+                    APC.views.DirectorioPageView.render();
+                });
+            });
+
         },
 
         ejecutas: function() {

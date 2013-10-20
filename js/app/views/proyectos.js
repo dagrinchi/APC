@@ -15,8 +15,8 @@ define(function(require) {
 	var $ = require('jquery'),
 		Backbone = require('backbone'),
 		_ = require('underscore'),
-		proyectoTpl = require('text!tpl/proyecto.html'),
-		proyectosPageTpl = require('text!tpl/proyectos_page.html');
+		proyectoTpl = require('text!tpl/proyectosItem.html'),
+		proyectosPageTpl = require('text!tpl/proyectosPage.html');
 
 	var ProyectoView = Backbone.View.extend({
 		tagName: 'li',
