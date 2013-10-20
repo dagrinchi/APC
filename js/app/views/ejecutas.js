@@ -14,11 +14,11 @@ define(function(require) {
 
     var $           = require('jquery'),
         Backbone    = require('backbone'),        
-        introTpl   = require('text!tpl/intro.html');
+        tpl   = require('text!tpl/ejecutas.html');
 
     return Backbone.View.extend({
-        el: "#content",
-        template: _.template(introTpl),
+        el: "body",
+        template: _.template(tpl),
         render: function() {
             this.$el.html(this.template);
             return this;

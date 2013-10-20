@@ -29,7 +29,7 @@ define(function(require) {
         },
 
         initialize: function() {
-            require(['app/views/header', 'app/views/footer', 'app/views/map'], function(headerView, footerView, MapView) {
+            require(['app/views/map'], function(MapView) {
 
                 if (typeof APC.views.mapDemanda === 'undefined')
                     APC.views.mapDemanda = new MapView({
@@ -42,9 +42,6 @@ define(function(require) {
                         id : "#map-canvas-b",
                         className : "map-canvas"
                     });
-
-                APC.views.HeaderView = new headerView();
-                APC.views.FooterView = new footerView();
             });
         },
 
@@ -74,9 +71,6 @@ define(function(require) {
                 }
                 APC.views.homeView.render();
             });
-
-            //APC.views.HeaderView.remove();
-            //APC.views.FooterView.remove();
         },
 
         prioridades: function() {
@@ -122,10 +116,7 @@ define(function(require) {
                     APC.collections.demTerritoriosCollection.findAll(),
                     APC.collections.demMunicipiosCollection.findAll(),
                     APC.collections.demAreasCollection.findAll(),
-                    APC.collections.demSectoresCollection.findAll()).done(function() {
-                        
-                    //APC.views.HeaderView.render();
-                    //APC.views.FooterView.remove();                    
+                    APC.collections.demSectoresCollection.findAll()).done(function() {                 
 
                     APC.views.prioridadesPageView = new PrioridadesPageView();
                     APC.views.prioridadesPageView.render();
@@ -140,9 +131,6 @@ define(function(require) {
 
         proyectos: function() {
             require(['app/collections/proyectos', 'app/views/proyectos'], function(ProyectosCollection, ProyectosPageView) {
-                //APC.views.HeaderView.render();
-                //APC.views.FooterView.render();
-
                 if (typeof APC.collections.proCollection === 'undefined')
                     APC.collections.proCollection = new ProyectosCollection();
                 $.when(APC.collections.proCollection.findAll()).done(function() {
@@ -170,11 +158,17 @@ define(function(require) {
         },
 
         ejecutas: function() {
-
+            require(['app/views/ejecutas'], function(EjecutasView) {
+                APC.views.ejecutasView = new EjecutasView();
+                APC.views.ejecutasView.render();
+            });
         },
 
         acercade: function() {
-
+            require(['app/views/acercade'], function(AcercadeView) {
+                APC.views.acercadeView = new AcercadeView();
+                APC.views.acercadeView.render();
+            });
         }
 
     });

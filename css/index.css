@@ -73,8 +73,6 @@ h1 {
 .map-canvas {
     float: left;
     position: relative;
-    width: 100%;
-    height: 400px;
     margin-top: 41px;
 }
 
