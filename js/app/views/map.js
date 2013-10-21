@@ -19,15 +19,15 @@ define(function(require) {
 
 		tagName: 'div',
 
-		zoom : 3,
+		zoom : 5,
 
 		minZoom : 3,
 
 		maxZoom : 18,
 
-		latitude : 4.6,
+		latitude : 4,
 
-		longitude : -74.2,
+		longitude : -74,
 
 		map : {},
 		

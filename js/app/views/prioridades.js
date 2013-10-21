@@ -48,7 +48,7 @@ define(function(require) {
         template: _.template(tpl),
 
         initialize: function() {
-
+            
         },
 
         events: {
@@ -133,6 +133,10 @@ define(function(require) {
             this.$el.html(this.template);
             $("#map-canvas-a").replaceWith(APC.views.mapDemanda.el);
             $("#map-canvas-b").replaceWith(APC.views.mapCooperacion.el);
+
+            var wh = $(window).height() - 152;
+            $(".map-canvas").width("100%");
+            $(".map-canvas").height(wh / 2);
 
             google.maps.event.trigger(APC.views.mapDemanda.map, 'resize');
             google.maps.event.trigger(APC.views.mapCooperacion.map, 'resize');

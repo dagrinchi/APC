@@ -62,8 +62,14 @@
 }
 
 #logoApc {
-    width: 100%;
-    height: auto;
-    margin-top: -20px;
+   width: 254px;
+   height: 108px;
 }
 
+#introContainer{
+    padding: 30px 30px 30px 30px;
+}
+
+#introBody {
+    background-color: #fff;
+}

@@ -120,6 +120,7 @@ define(function(require) {
 
                     APC.views.prioridadesPageView = new PrioridadesPageView();
                     APC.views.prioridadesPageView.render();
+                    APC.collections.demCollection.initMapMarkers();
                 });
 
             });

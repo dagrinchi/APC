@@ -17,10 +17,20 @@ define(function(require) {
         tpl   = require('text!tpl/home.html');
 
     return Backbone.View.extend({
+
         el: "body",
+        
         template: _.template(tpl),
+        
+        initialize: function() {
+            
+        },
+        
         render: function() {
-            this.$el.html(tpl);
+            this.$el.html(this.template);
+
+            var wh = $(window).height() / 3;
+            $(".thumbnails li").height(wh);
             return this;
         }
     });
