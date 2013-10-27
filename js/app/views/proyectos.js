@@ -41,7 +41,7 @@ define(function(require) {
 		},
 		search: function(event) {
 			var key = $('.search-key').val();
-			this.collection.findByName(key);
+			APC.collections.proCollection.findByName(key);
 		}
 	});
 

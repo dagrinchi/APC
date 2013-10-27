@@ -14,6 +14,7 @@ define(function(require) {
 
 	var $        = require('jquery'),
 	    deferred = $.Deferred();
+    var dane = require('app/fixtures/dane');
 
 	var app = {	
 
@@ -32,6 +33,8 @@ define(function(require) {
 		dataDirectorio: [],
 
 		dataDemanda: [],
+
+		dataDane: dane,
 
 		checkUpdatedData: function() {
 			console.log("checkUpdatedData: Comprobando si los datos están actualizados!");
@@ -163,6 +166,10 @@ define(function(require) {
 				name: "demanda",
 				fields: [],
 				data: "dataDemanda"
+			}, {
+				name: "dane",
+				fields: [],
+				data: "dataDane"
 			}];
 
 			$.each(tables, function(k, v) {
