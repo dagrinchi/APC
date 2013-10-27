@@ -81,6 +81,8 @@ define(function(require) {
                 'app/collections/demMunicipios',
                 'app/collections/demAreas',
                 'app/collections/demSectores',
+                'app/collections/proTerritorios',
+                'app/collections/proAreas',
                 'app/collections/cooperacion',
                 'app/views/prioridades'
             ], function(
@@ -90,6 +92,8 @@ define(function(require) {
                 DemMunicipiosCollection,
                 DemAreasCollection,
                 DemSectoresCollection,
+                ProTerritoriosCollection,
+                ProAreasCollection,
                 CooperacionCollection,
                 PrioridadesPageView) {
 
@@ -107,6 +111,11 @@ define(function(require) {
                 if (typeof APC.collections.demSectoresCollection === 'undefined')
                     APC.collections.demSectoresCollection = new DemSectoresCollection();
 
+                if (typeof APC.collections.proTerritoriosCollection === 'undefined')
+                    APC.collections.proTerritoriosCollection = new ProTerritoriosCollection();
+                if (typeof APC.collections.proAreasCollection === 'undefined')
+                    APC.collections.proAreasCollection = new ProAreasCollection();
+
                 if (typeof APC.collections.coopCollection === 'undefined')
                     APC.collections.coopCollection = new CooperacionCollection();
 
@@ -116,7 +125,9 @@ define(function(require) {
                     APC.collections.demTerritoriosCollection.findAll(),
                     APC.collections.demMunicipiosCollection.findAll(),
                     APC.collections.demAreasCollection.findAll(),
-                    APC.collections.demSectoresCollection.findAll()).done(function() {                 
+                    APC.collections.demSectoresCollection.findAll(),
+                    APC.collections.proTerritoriosCollection.findAll(),
+                    APC.collections.proAreasCollection.findAll()).done(function() {                 
 
                     APC.views.prioridadesPageView = new PrioridadesPageView();
                     APC.views.prioridadesPageView.render();

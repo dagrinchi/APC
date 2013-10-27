@@ -42,6 +42,22 @@ define(function(require) {
         }
     });
 
+    var modalList = Backbone.View.extend({
+
+        el: "#modalList",
+
+        initialize: function() {
+            var self = this;   
+            $("#modalLabel").html(self.options.title);
+            $("#modalBody").html(self.options.list);
+        },
+
+        render: function() {                     
+            $(this.el).modal('show');            
+            return this;
+        }
+    });
+
     return Backbone.View.extend({
         el: "body",
 
@@ -56,7 +72,9 @@ define(function(require) {
             "click #btnDemTerritorios": "btnDemTerritorios",
             "click #btnDemMunicipios": "btnDemMunicipios",
             "click #btnDemAreas": "btnDemAreas",
-            "click #btnDemSectores": "btnDemSectores"
+            "click #btnDemSectores": "btnDemSectores",
+            "click #btnProTerritorios": "btnProTerritorios",
+            "click #btnProAreas": "btnProAreas"
         },
 
         btnDemActores: function() {
@@ -64,13 +82,12 @@ define(function(require) {
                 collection: APC.collections.demActoresCollection
             });
             APC.views.demActoresListView.render();
-
-            var modal = _.template(modalTpl, {
-                title: "Actores",
-                list: APC.views.demActoresListView.$el.html()
+            
+            var modal = new modalList({
+                title : "Cooperantes",
+                list : APC.views.demActoresListView.el
             });
-            this.$el.append(modal);
-            $('#modalList').modal('show');
+            modal.render();
         },
 
         btnDemTerritorios: function() {
@@ -79,12 +96,11 @@ define(function(require) {
             });
             APC.views.demTerritoriosListView.render();
 
-            var modal = _.template(modalTpl, {
+            var modal = new modalList({
                 title: "Territorios",
-                list: APC.views.demTerritoriosListView.$el.html()
+                list: APC.views.demTerritoriosListView.el
             });
-            this.$el.append(modal);
-            $('#modalList').modal('show');
+            modal.render();
         },
 
         btnDemMunicipios: function() {
@@ -93,12 +109,11 @@ define(function(require) {
             });
             APC.views.demMunicipiosListView.render();
 
-            var modal = _.template(modalTpl, {
+            var modal = new modalList({
                 title: "Municipios",
-                list: APC.views.demMunicipiosListView.$el.html()
+                list: APC.views.demMunicipiosListView.el
             });
-            this.$el.append(modal);
-            $('#modalList').modal('show');
+            modal.render();
         },
 
         btnDemAreas: function() {
@@ -107,12 +122,11 @@ define(function(require) {
             });
             APC.views.demAreasListView.render();
 
-            var modal = _.template(modalTpl, {
+            var modal = new modalList({
                 title: "Áreas",
-                list: APC.views.demAreasListView.$el.html()
+                list: APC.views.demAreasListView.el
             });
-            this.$el.append(modal);
-            $('#modalList').modal('show');
+            modal.render();            
         },
 
         btnDemSectores: function() {
@@ -121,12 +135,37 @@ define(function(require) {
             });
             APC.views.demSectoresListView.render();
 
-            var modal = _.template(modalTpl, {
+            var modal = new modalList({
                 title: "Sectores",
-                list: APC.views.demSectoresListView.$el.html()
+                list: APC.views.demSectoresListView.el
             });
-            this.$el.append(modal);
-            $('#modalList').modal('show');
+            modal.render();
+        },
+
+        btnProTerritorios: function() {
+            APC.views.proTerritoriosListView = new listEl({
+                collection: APC.collections.proTerritoriosCollection
+            });
+            APC.views.proTerritoriosListView.render();
+
+            var modal = new modalList({
+                title: "Territorios",
+                list: APC.views.proTerritoriosListView.el
+            });
+            modal.render();
+        },
+
+        btnProAreas: function() {
+            APC.views.proAreasListView = new listEl({
+                collection: APC.collections.proAreasCollection
+            });
+            APC.views.proAreasListView.render();
+
+            var modal = new modalList({
+                title: "Áreas",
+                list: APC.views.proAreasListView.el
+            });
+            modal.render();       
         },
 
         render: function() {
@@ -140,6 +179,8 @@ define(function(require) {
 
             google.maps.event.trigger(APC.views.mapDemanda.map, 'resize');
             google.maps.event.trigger(APC.views.mapCooperacion.map, 'resize');
+
+            this.$el.append(_.template(modalTpl));
             return this;
         }
     });

@@ -1,13 +1,9 @@
 <div class="modal hide fade" id="modalList">
      <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-        <h3 id="myModalLabel"><%= title  %></h3>
+        <h3 id="modalLabel"></h3>
       </div>
-      <div class="modal-body">
-        <ul>
-          <%= list  %>
-        </ul>
-      </div>
+      <div class="modal-body" id="modalBody"></div>
       <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true">Cancelar</button>
         <button class="btn btn-primary">Aceptar</button>
