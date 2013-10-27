@@ -1,5 +1,4 @@
 #demandProyects {
-    /*background-color: #ff5500;*/
     color: #ffffff;
     text-shadow: none;
     border: none;
@@ -10,7 +9,6 @@
 }
 
 #southProyects {
-    /*background-color: #8c44ae;*/
     color: #ffffff;
     text-shadow: none;
     border: none;
@@ -21,8 +19,7 @@
 }
 
 #descriptionText {
-    padding: 20px 45px 0px 45px;
-    
+    padding: 20px 45px 0px 45px;  
 }
 
 #agree {
@@ -73,3 +70,53 @@
 #introBody {
     background-color: #fff;
 }
+
+#header-wrap {
+    background: #eeeeff;
+    position: fixed;
+    width: 100%;
+    height: 4.375rem;
+    top: 0;
+    z-index: 1;
+}
+#containerBig{ 
+    /*margin-top: 4.375rem;*/
+    margin-top: 7.375rem;      
+}
+
+/*** colores headers ***/
+#header-prioridades-coop{
+    background-color: #2e8bcc;
+    opacity: 0.75;       
+}
+
+#header-sur-sur{
+    /*background-color: #27ae27;
+    opacity: 0.75;*/       
+}
+
+#header-proyectos{
+    background-color: #27ae27;
+    opacity: 0.75;       
+}
+
+#header-directorio{
+    background-color: #f1c40f;
+    opacity: 0.75;       
+}
+
+#header-directorio{
+    background-color: #f1c40f;
+    opacity: 0.75;       
+}
+
+#header-ejecutas-proyectos{
+    background-color: #ff5500;
+    opacity: 0.75;       
+}
+
+#header-acerca-de{
+    background-color: #f31212;;
+    opacity: 0.75;       
+}
+

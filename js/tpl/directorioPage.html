@@ -1,10 +1,11 @@
-<div class="topcoat-navigation-bar">
+<div id="header-wrap">
+  <div id="header-directorio" class="topcoat-navigation-bar">
     <div class="topcoat-navigation-bar__item left quarter">
         <a id="slide-menu-button" class="topcoat-icon-button--quiet slide-menu-button" href="#inicio">
             <img src="img/home.svg" width="27px" height="28px">
         </a>    
     </div>
-    <div class="topcoat-navigation-bar__item center half">  
+    <div class="topcoat-navigation-bar__item center half" style="margin-top: 15px;">  
         <h1 class="topcoat-navigation-bar__title">Directorio</h1>
     </div>
     <div class="topcoat-navigation-bar__item right quarter"> 
@@ -12,18 +13,20 @@
             <img src="img/share.svg" width="27px" height="28px">
         </a>
     </div>
-</div>
-
-<div class="container">
-    <div class="topcoat-navigation-bar" style="height: 3.5rem;">
-          <input type="search" value="" placeholder="Buscar..." class="topcoat-search-input full" style="margin-top: 3px; padding-left: 30px;">
-    </div>
+  </div>
+  <div class="topcoat-navigation-bar" style="height: 3.5rem; padding-right: 54px;">
+       <input type="search" value="" placeholder="Buscar..." class="topcoat-search-input full" style="margin-top: 9px; padding-left: 30px;">
+    </div>    
+</div>    
+<div id="containerBig">
+  <div class="container">
     <div class="topcoat-list">
       <ul class="topcoat-list__container">
       	<%= list  %>
-      </ul>
+     </ul>
+     </div>
     </div>
-</div>
+</div>    
  <div class="topcoat-tab-bar full" style="position: fixed; bottom: 0px;">
         <div class="topcoat-button-bar__item">
           <button class="topcoat-button-bar__button full">Bilateral</button>
