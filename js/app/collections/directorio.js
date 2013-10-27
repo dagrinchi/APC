@@ -23,14 +23,23 @@ define(function(require) {
         
         model: model,
 
+        baseapc: {},
+
         initialize: function() {
-            
+            this.baseapc = new DB(window.openDatabase("apc", "1.0", "APC - Agencia Presidencial de la Cooperación en Colombia", 4145728));
         },
 
-        findAll: function() {
-            var baseapc = new DB(window.openDatabase("apc", "1.0", "APC - Agencia Presidencial de la Cooperación en Colombia", 4145728));
+        findByName: function(key) {            
+            var self = this;
+            var sql = "SELECT * FROM directorio WHERE nombredelaorganizacion LIKE '%" + key + "%'";            
+            this.baseapc.execute(sql, model, function(data) {
+                self.reset(data);               
+            });
+        },
+
+        findAll: function() {            
             var self = this;            
-            baseapc.execute("select * from directorio", model, function(data) {
+            this.baseapc.execute("select * from directorio", model, function(data) {
                 self.reset(data);
                 deferred.resolve();
             });

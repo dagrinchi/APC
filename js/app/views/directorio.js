@@ -29,7 +29,16 @@ define(function(require) {
 	});
 
 	var DirectorioListView = Backbone.View.extend({
+		
+		tagName: "ul",
+		className: 'topcoat-list__container',
+		
+		initialize: function() {
+			this.collection.bind("reset", this.render, this);
+		},
+
 		render: function() {
+			this.$el.empty();
 			this.collection.each(function(m) {
 				var directorioItemView = new DirectorioItemView({
 					model: m
@@ -42,15 +51,23 @@ define(function(require) {
 
 	return Backbone.View.extend({
 		el: "body",
-		initialize: function() {
+
+		events: {
+			"keyup #search-dir": "search"
+		},
+		
+		search: function(event) {
+			var key = $('#search-dir').val();
+			this.collection.findByName(key);
+		},
+		
+		render: function() {
 			var self = this;
 			var list = new DirectorioListView({
 				collection: self.collection
 			});
-			this.page = _.template(directorioPageTpl, { list : list.render().$el.html() });
-		},
-		render: function() {
-			this.$el.html(this.page);			
+			this.$el.html(_.template(directorioPageTpl));			
+			$("#dirList").html(list.render().el);
 			return this;
 		}
 	});

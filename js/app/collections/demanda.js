@@ -28,16 +28,19 @@ define(function(require) {
 
         model: model,
 
+        baseapc: {},
+
         initialize: function() {
             this.geo = new google.maps.Geocoder();
             this.bounds = new google.maps.LatLngBounds();
             this.infowindow = new google.maps.InfoWindow();
+            this.baseapc = new DB(window.openDatabase("apc", "1.0", "APC - Agencia Presidencial de la Cooperación en Colombia", 4145728));
         },
 
         findAll: function() {
-            var baseapc = new DB(window.openDatabase("apc", "1.0", "APC - Agencia Presidencial de la Cooperación en Colombia", 4145728));
+            
             var self = this;
-            baseapc.execute("select * from demanda where demanda.territorio like '%SANTANDER%' and demanda.municipio is not null and demanda.municipio <> ''", model, function(data) {
+            this.baseapc.execute("select * from demanda where demanda.territorio like '%SANTANDER%' and demanda.municipio is not null and demanda.municipio <> ''", model, function(data) {
                 self.reset(data);
                 deferred.resolve();
             });

@@ -19,36 +19,28 @@ define(function(require) {
 		proyectosPageTpl = require('text!tpl/proyectosPage.html');
 
 	var ProyectoView = Backbone.View.extend({
+		
 		tagName: 'li',
 		className: 'topcoat-list__item',
 		template: _.template(proyectoTpl),
+		
 		render: function() {
 			this.$el.html(this.template(this.model.toJSON()));
 			return this;
 		}
 	});
 
-	var ProyectosSearchView = Backbone.View.extend({
-		el: "#searchPage",
-		initialize: function() {
-			
-		},
-		render: function(eventName) {
-			
-		},
-		events: {
-			"keyup .search-key": "search"
-		},
-		search: function(event) {
-			var key = $('.search-key').val();
-			APC.collections.proCollection.findByName(key);
-		}
-	});
-
 	var ProyectosView = Backbone.View.extend({
+		
 		tagName: "ul",
-		className: 'media-list',
+		className: 'topcoat-list__container',
+		
+		initialize: function() {
+			this.collection.bind("reset", this.render, this);
+		},
+		
 		render: function() {
+			this.$el.empty();
 			this.collection.each(function(proyecto) {
 				var proyectoView = new ProyectoView({
 					model: proyecto
@@ -60,16 +52,25 @@ define(function(require) {
 	});
 
 	return Backbone.View.extend({
+
 		el: "body",
-		initialize: function() {
+		
+		events: {
+			"keyup #search-project": "search"
+		},
+		
+		search: function(event) {
+			var key = $('#search-project').val();
+			this.collection.findByName(key);
+		},
+		
+		render: function() {
 			var self = this;
 			var list = new ProyectosView({
 				collection: self.collection
 			});
-			this.page = _.template(proyectosPageTpl, { list : list.render().$el.html() });
-		},
-		render: function() {
-			this.$el.html(this.page);			
+			this.$el.html(_.template(proyectosPageTpl));
+			$("#projectList").html(list.render().el);
 			return this;
 		}
 	});
