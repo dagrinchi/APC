@@ -46,6 +46,10 @@
 }
 
 #apcVocabulary {
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    text-rendering: optimizelegibility;
+    font-size: 1.2rem;
     background-color: #8d1016;
     color: #ffffff;
     text-shadow: none;
@@ -54,6 +58,7 @@
     background-size: 32px;
     background-position: 120px 3px;
     background-repeat: no-repeat;
+    cursor: pointer;   
 }
 
 #aboutUs{
@@ -101,7 +106,8 @@
 /*** colores headers ***/
 #header-prioridades-coop{
     background-color: #2e8bcc;
-    opacity: 0.75;       
+    opacity: 0.75;     
+    box-shadow: none;
 }
 
 #header-sur-sur{
