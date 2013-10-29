@@ -1,21 +1,35 @@
 #demandProyects {
-    color: #ffffff;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    text-rendering: optimizelegibility;
+    font-size: 1.1rem;
+    color: #fff;
     text-shadow: none;
     border: none;
     background-image: url(../img/colombia.svg);
     background-size: 32px;
     background-position: 4px center;
     background-repeat: no-repeat;
+    background-color: #f5a932;
+    box-shadow: none;
+    cursor: pointer;
 }
 
 #southProyects {
-    color: #ffffff;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    text-rendering: optimizelegibility;
+    font-size: 1.1rem;
+    color: #fff;
     text-shadow: none;
     border: none;
     background-image: url(../img/south.svg);
     background-size: 32px;
     background-position: 4px center;
     background-repeat: no-repeat;
+    background-color: #8c44ae;
+    box-shadow: none;
+    cursor: pointer;
 }
 
 #descriptionText {
@@ -119,4 +133,67 @@
     background-color: #f31212;;
     opacity: 0.75;       
 }
+
+#text-head-prioridades{
+    font-weight: 400;
+    color: #F8F2F2;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#text-head-proyectos{
+    font-weight: 400;
+    color: #F8F2F2;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    color: #fff;
+    font-size: 1.5rem; 
+}
+
+#text-head-directorio{
+    font-weight: 400;
+    color: #F8F2F2;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#text-head-ejeccutas-proyectos{
+    font-weight: 400;
+    color: #F8F2F2;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#text-head-acerca{
+    font-weight: 400;
+    color: #F8F2F2;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+
+
 
