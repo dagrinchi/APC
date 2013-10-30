@@ -42,6 +42,16 @@ define(function(require) {
                         id : "#map-canvas-b",
                         className : "map-canvas"
                     });
+
+                if (typeof APC.views.mapSursur === 'undefined')
+                    APC.views.mapSursur = new MapView({
+                        id : "#map-canvas-c",
+                        className : "map-canvas",
+                        zoom : 3,
+                        latitude : 0,
+                        longitude : 0
+                    });
+
             });
         },
 
@@ -138,7 +148,10 @@ define(function(require) {
         },
 
         sursur: function() {
-
+            require(['app/views/sursur'],function(sursurview){
+                APC.views.sursurview = new sursurview();
+                APC.views.sursurview.render();
+            });
         },
 
         proyectos: function() {
