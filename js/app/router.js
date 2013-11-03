@@ -47,7 +47,7 @@ define(function(require) {
                     APC.views.mapSursur = new MapView({
                         id : "#map-canvas-c",
                         className : "map-canvas",
-                        zoom : 3,
+                        zoom : 2,
                         latitude : 0,
                         longitude : 0
                     });
@@ -148,9 +148,15 @@ define(function(require) {
         },
 
         sursur: function() {
-            require(['app/views/sursur'],function(sursurview){
-                APC.views.sursurview = new sursurview();
-                APC.views.sursurview.render();
+            require(['app/views/sursur','app/collections/sursur'],function(sursurview,sursurCollection){
+                if (typeof APC.collections.sursurCollection === 'undefined')
+                    APC.collections.sursurCollection = new sursurCollection();
+                $.when(APC.collections.sursurCollection.findAll()).done(function(){
+                    APC.views.sursurview = new sursurview();
+                    APC.views.sursurview.render();
+                    APC.collections.sursurCollection.initMapMarkers();
+                });
+               
             });
         },
 

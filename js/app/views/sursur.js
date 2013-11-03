@@ -34,7 +34,7 @@ define(function(require) {
             $(".map-canvas").width("100%");
             $(".map-canvas").height(wh);
 
-            google.maps.event.trigger(APC.views.mapSursur, 'resize');
+            google.maps.event.trigger(APC.views.mapSursur.map, 'resize');
             
             return this;
         }
