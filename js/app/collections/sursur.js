@@ -41,7 +41,7 @@ define(function(require) {
         findAll: function(){
 
         	var self = this;
-            this.baseapc.execute("select distinct sursur.pais from sursur", model, function(data) {
+            this.baseapc.execute("select pais, group_concat(programaproyectoactividad,' +++ ') as contenido from sursur where pais like '%C%' group by pais", model, function(data) {
                 self.reset(data);
                 deferred.resolve();
             });
@@ -57,10 +57,13 @@ define(function(require) {
         },
 
         geoCoder: function() { 
-            var search = this.models[this.nextAddress].get("pais");            
-            console.log(search + " >>> " + this.length + " >>>> " + this.nextAddress);
+            var search = this.models[this.nextAddress].get("pais"); 
+            var windowContent = this.models[this.nextAddress].get("contenido");
+
+
+            console.log(search + " >>> " + this.length + " >>>> " + this.nextAddress + "--" + windowContent);
             if (this.nextAddress < this.length-1) {
-                setTimeout("APC.collections.sursurCollection.getAddress('" + search +"')", this.delay);                
+                setTimeout("APC.collections.sursurCollection.getAddress('" + search +"','" +windowContent+"')", this.delay);                
                 this.nextAddress++;
             } else {                
                 geoDeferred.resolve();
@@ -68,7 +71,7 @@ define(function(require) {
             return geoDeferred.promise();
         },
 
-        getAddress: function(search) {
+        getAddress: function(search,winContent) {
             var self = this;
             this.geo.geocode({
                 address: search
@@ -77,7 +80,7 @@ define(function(require) {
                     var p = results[0].geometry.location;
                     var lat = p.lat();
                     var lng = p.lng();   
-                    self.createMarker(search, lat, lng);                 
+                    self.createMarker(winContent, lat, lng);                 
                     console.log('address=' + search + ' lat=' + lat + ' lng=' + lng + '(delay=' + self.delay + 'ms)');
                     self.delay = 100;
                 } else {
