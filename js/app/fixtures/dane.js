@@ -5,7 +5,7 @@
  * Alejandro Zarate: azarate@cool4code.com,
  * Marcos Aguilera: maguilera@cool4code.com,
  * Paola Vanegas: pvanegas@cool4code.com,
- * David Alméciga: walmeciga@cool4code.com"
+ * David Almeciga: walmeciga@cool4code.com"
  */
 
 define(function(require) {
@@ -13,6 +13,237 @@ define(function(require) {
 	"use strict";
 
 	return [{
+		"codmun": "0",
+		"nommun": "0",
+		"coddep": "0",
+		"nomdep": "AMBITO NACIONAL",
+		"lat": "4.6",
+		"long": "-74.0833333"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "91",
+		"nomdep": "Amazonas",
+		"lat": "-1.0197222",
+		"long": "-71.9383333"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "05",
+		"nomdep": "Antioquia",
+		"lat": "7",
+		"long": "-75.5"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "81",
+		"nomdep": "Arauca",
+		"lat": "7.0902778",
+		"long": "-70.7616667"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "08",
+		"nomdep": "Atlantico",
+		"lat": "10.75",
+		"long": "-75"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "13",
+		"nomdep": "Bolivar",
+		"lat": "9",
+		"long": "-74.3333333"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "15",
+		"nomdep": "Boyaca",
+		"lat": "5.5",
+		"long": "-72.5"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "17",
+		"nomdep": "Caldas",
+		"lat": "5.25",
+		"long": "-75.5"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "18",
+		"nomdep": "Caqueta",
+		"lat": "1",
+		"long": "-74"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "85",
+		"nomdep": "Casanare",
+		"lat": "5.5",
+		"long": "-71.5"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "19",
+		"nomdep": "Cauca",
+		"lat": "2.5",
+		"long": "-76.8333333"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "20",
+		"nomdep": "Cesar",
+		"lat": "9.3333333",
+		"long": "-73.5"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "27",
+		"nomdep": "Choco",
+		"lat": "6",
+		"long": "-77"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "25",
+		"nomdep": "Cundinamarca",
+		"lat": "5",
+		"long": "-74.1666667"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "23",
+		"nomdep": "Cordoba",
+		"lat": "8.3333333",
+		"long": "-75.6666667"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "94",
+		"nomdep": "Guainia",
+		"lat": "2.5",
+		"long": "-69"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "95",
+		"nomdep": "Guaviare",
+		"lat": "1.6894444",
+		"long": "-72.8202778"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "41",
+		"nomdep": "Huila",
+		"lat": "2.5",
+		"long": "-75.75"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "44",
+		"nomdep": "La Guajira",
+		"lat": "11.5",
+		"long": "-72.5"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "47",
+		"nomdep": "Magdalena",
+		"lat": "10",
+		"long": "-74.5"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "50",
+		"nomdep": "Meta",
+		"lat": "3.5",
+		"long": "-73"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "52",
+		"nomdep": "Nariño",
+		"lat": "1.5",
+		"long": "-78"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "54",
+		"nomdep": "Norte de Santander",
+		"lat": "8",
+		"long": "-73"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "86",
+		"nomdep": "Putumayo",
+		"lat": "0.5",
+		"long": "-76"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "63",
+		"nomdep": "Quindio",
+		"lat": "4.5",
+		"long": "-75.6666667"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "66",
+		"nomdep": "Risaralda",
+		"lat": "5",
+		"long": "-76"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "88",
+		"nomdep": "ARCHIPIELAGO DE SAN ANDRES",
+		"lat": "12.5847222",
+		"long": "-81.7005556"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "68",
+		"nomdep": "Santander",
+		"lat": "7",
+		"long": "-73.25"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "70",
+		"nomdep": "Sucre",
+		"lat": "9",
+		"long": "-75"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "73",
+		"nomdep": "Tolima",
+		"lat": "3.75",
+		"long": "-75.25"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "76",
+		"nomdep": "Valle del Cauca",
+		"lat": "3.75",
+		"long": "-76.5"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "97",
+		"nomdep": "Vaupes",
+		"lat": "0.25",
+		"long": "-70.75"
+	}, {
+		"codmun": "",
+		"nommun": "",
+		"coddep": "99",
+		"nomdep": "Vichada",
+		"lat": "5",
+		"long": "-69.5"
+	}, {
 		"codmun": "05002",
 		"nommun": "Abejorral",
 		"coddep": "05",
@@ -21,23 +252,23 @@ define(function(require) {
 		"long": "-75.4166667"
 	}, {
 		"codmun": "05004",
-		"nommun": "Abriaquí­",
+		"nommun": "Abriaqui­",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.6666667",
 		"long": "-76.0833333"
 	}, {
 		"codmun": "50006",
-		"nommun": "Acací­as",
+		"nommun": "Acaci­as",
 		"coddep": "50",
 		"nomdep": "Meta",
 		"lat": "3.9166667",
 		"long": "-73.8333333"
 	}, {
 		"codmun": "27006",
-		"nommun": "Acandí­",
+		"nommun": "Acandi­",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "8.3333333",
 		"long": "-77.1666667"
 	}, {
@@ -49,9 +280,9 @@ define(function(require) {
 		"long": "-75.9166667"
 	}, {
 		"codmun": "13006",
-		"nommun": "Achí­",
+		"nommun": "Achi­",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.25",
 		"long": "-74.5"
 	}, {
@@ -98,7 +329,7 @@ define(function(require) {
 		"long": "-72.5547222"
 	}, {
 		"codmun": "20013",
-		"nommun": "Agustí­n Codazzi",
+		"nommun": "Agusti­n Codazzi",
 		"coddep": "20",
 		"nomdep": "Cesar",
 		"lat": "9.9166667",
@@ -114,7 +345,7 @@ define(function(require) {
 		"codmun": "18029",
 		"nommun": "Albania",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "1.3316667",
 		"long": "-75.8822222"
 	}, {
@@ -133,21 +364,21 @@ define(function(require) {
 		"long": "-73.75"
 	}, {
 		"codmun": "25019",
-		"nommun": "Albán",
+		"nommun": "Alban",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.9166667",
 		"long": "-74.45"
 	}, {
 		"codmun": "52019",
-		"nommun": "Albán (San José)",
+		"nommun": "Alban (San Jose)",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "1.4744444",
 		"long": "-77.0836111"
 	}, {
 		"codmun": "76020",
-		"nommun": "Alcalá",
+		"nommun": "Alcala",
 		"coddep": "76",
 		"nomdep": "Valle del Cauca",
 		"lat": "4.6666667",
@@ -191,7 +422,7 @@ define(function(require) {
 		"codmun": "15022",
 		"nommun": "Almeida",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "4.9166667",
 		"long": "-73.3333333"
 	}, {
@@ -210,16 +441,16 @@ define(function(require) {
 		"long": "-75.8333333"
 	}, {
 		"codmun": "27025",
-		"nommun": "Alto Baudó (Pie de Pato)",
+		"nommun": "Alto Baudo (Pie de Pato)",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.6666667",
 		"long": "-77"
 	}, {
 		"codmun": "13030",
 		"nommun": "Altos del Rosario",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.7944444",
 		"long": "-74.1658333"
 	}, {
@@ -231,7 +462,7 @@ define(function(require) {
 		"long": "-75"
 	}, {
 		"codmun": "05030",
-		"nommun": "Amagá",
+		"nommun": "Amaga",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.05",
@@ -266,7 +497,7 @@ define(function(require) {
 		"long": "-77.5"
 	}, {
 		"codmun": "76036",
-		"nommun": "Andalucí­a",
+		"nommun": "Andaluci­a",
 		"coddep": "76",
 		"nomdep": "Valle del Cauca",
 		"lat": "4.1741667",
@@ -280,7 +511,7 @@ define(function(require) {
 		"long": "-75.9166667"
 	}, {
 		"codmun": "05036",
-		"nommun": "Angelópolis",
+		"nommun": "Angelopolis",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.1333333",
@@ -301,7 +532,7 @@ define(function(require) {
 		"long": "-74.5"
 	}, {
 		"codmun": "05040",
-		"nommun": "Anorí­",
+		"nommun": "Anori­",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "7.1666667",
@@ -322,21 +553,21 @@ define(function(require) {
 		"long": "-75.995"
 	}, {
 		"codmun": "73043",
-		"nommun": "Anzoátegui",
+		"nommun": "Anzoategui",
 		"coddep": "73",
 		"nomdep": "Tolima",
 		"lat": "4.6666667",
 		"long": "-75.25"
 	}, {
 		"codmun": "05044",
-		"nommun": "Anzá",
+		"nommun": "Anza",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.3333333",
 		"long": "-75.9166667"
 	}, {
 		"codmun": "05045",
-		"nommun": "Apartadó",
+		"nommun": "Apartado",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "7.8855556",
@@ -350,7 +581,7 @@ define(function(require) {
 		"long": "-74.5833333"
 	}, {
 		"codmun": "66045",
-		"nommun": "Apí­a",
+		"nommun": "Api­a",
 		"coddep": "66",
 		"nomdep": "Risaralda",
 		"lat": "5.1666667",
@@ -359,7 +590,7 @@ define(function(require) {
 		"codmun": "15047",
 		"nommun": "Aquitania",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5197222",
 		"long": "-72.8875"
 	}, {
@@ -399,7 +630,7 @@ define(function(require) {
 		"long": "-71.3236111"
 	}, {
 		"codmun": "25053",
-		"nommun": "Arbeláez",
+		"nommun": "Arbelaez",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.3",
@@ -429,14 +660,14 @@ define(function(require) {
 		"codmun": "15051",
 		"nommun": "Arcabuco",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.8",
 		"long": "-73.3833333"
 	}, {
 		"codmun": "13042",
 		"nommun": "Arenal",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.4666667",
 		"long": "-73.95"
 	}, {
@@ -462,7 +693,7 @@ define(function(require) {
 		"long": "-76.1333333"
 	}, {
 		"codmun": "47058",
-		"nommun": "Ariguaní­ (El Difí­cil)",
+		"nommun": "Ariguani­ (El Difi­cil)",
 		"coddep": "47",
 		"nomdep": "Magdalena",
 		"lat": "10.25",
@@ -471,7 +702,7 @@ define(function(require) {
 		"codmun": "13052",
 		"nommun": "Arjona",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.1666667",
 		"long": "-75.3333333"
 	}, {
@@ -485,7 +716,7 @@ define(function(require) {
 		"codmun": "63001",
 		"nommun": "Armenia",
 		"coddep": "63",
-		"nomdep": "Quindí­o",
+		"nomdep": "Quindi­o",
 		"lat": "4.5338889",
 		"long": "-75.6811111"
 	}, {
@@ -499,7 +730,7 @@ define(function(require) {
 		"codmun": "13062",
 		"nommun": "Arroyohondo",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.2497222",
 		"long": "-75.0113889"
 	}, {
@@ -520,35 +751,35 @@ define(function(require) {
 		"codmun": "27050",
 		"nommun": "Atrato (Yuto)",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.5333333",
 		"long": "-76.6333333"
 	}, {
 		"codmun": "23068",
 		"nommun": "Ayapel",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.25",
 		"long": "-75.25"
 	}, {
 		"codmun": "27073",
-		"nommun": "Bagadó",
+		"nommun": "Bagado",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.5",
 		"long": "-76.25"
 	}, {
 		"codmun": "27075",
-		"nommun": "Bahí­a Solano (Míºtis)",
+		"nommun": "Bahi­a Solano (Miºtis)",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "6.2191667",
 		"long": "-77.4077778"
 	}, {
 		"codmun": "27077",
-		"nommun": "Bajo Baudó (Pizarro)",
+		"nommun": "Bajo Baudo (Pizarro)",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5,0",
 		"long": "-77.0833333"
 	}, {
@@ -569,7 +800,7 @@ define(function(require) {
 		"codmun": "08078",
 		"nommun": "Baranoa",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.8",
 		"long": "-74.9166667"
 	}, {
@@ -609,7 +840,7 @@ define(function(require) {
 		"long": "-73.1666667"
 	}, {
 		"codmun": "50110",
-		"nommun": "Barranca de Upí­a",
+		"nommun": "Barranca de Upi­a",
 		"coddep": "50",
 		"nomdep": "Meta",
 		"lat": "4.5755556",
@@ -632,26 +863,26 @@ define(function(require) {
 		"codmun": "13074",
 		"nommun": "Barranco de Loba",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.8333333",
 		"long": "-74.1666667"
 	}, {
 		"codmun": "08001",
 		"nommun": "Barranquilla",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.9638889",
 		"long": "-74.7963889"
 	}, {
 		"codmun": "20045",
-		"nommun": "Becerrí­l",
+		"nommun": "Becerri­l",
 		"coddep": "20",
 		"nomdep": "Cesar",
 		"lat": "9.705",
 		"long": "-73.2847222"
 	}, {
 		"codmun": "17088",
-		"nommun": "Belalcázar",
+		"nommun": "Belalcazar",
 		"coddep": "17",
 		"nomdep": "Caldas",
 		"lat": "5",
@@ -672,51 +903,51 @@ define(function(require) {
 		"long": "-75.6666667"
 	}, {
 		"codmun": "25086",
-		"nommun": "Beltrán",
+		"nommun": "Beltran",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.8",
 		"long": "-74.75"
 	}, {
 		"codmun": "15087",
-		"nommun": "Belén",
+		"nommun": "Belen",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.0833333",
 		"long": "-72.9166667"
 	}, {
 		"codmun": "52083",
-		"nommun": "Belén",
+		"nommun": "Belen",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "1.5975",
 		"long": "-77.0175"
 	}, {
 		"codmun": "27086",
-		"nommun": "Belén de Bajirá",
+		"nommun": "Belen de Bajira",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "7.3725",
 		"long": "-76.7147222"
 	}, {
 		"codmun": "66088",
-		"nommun": "Belén de Umbrí­a",
+		"nommun": "Belen de Umbri­a",
 		"coddep": "66",
 		"nomdep": "Risaralda",
 		"lat": "5.25",
 		"long": "-75.9166667"
 	}, {
 		"codmun": "18094",
-		"nommun": "Belén de los Andaquí­es",
+		"nommun": "Belen de los Andaqui­es",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "1.4166667",
 		"long": "-75.9166667"
 	}, {
 		"codmun": "15090",
 		"nommun": "Berbeo",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.3333333",
 		"long": "-73"
 	}, {
@@ -730,7 +961,7 @@ define(function(require) {
 		"codmun": "15092",
 		"nommun": "Beteitiva",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6",
 		"long": "-72.8333333"
 	}, {
@@ -758,7 +989,7 @@ define(function(require) {
 		"codmun": "15097",
 		"nommun": "Boavita",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.4166667",
 		"long": "-72.5833333"
 	}, {
@@ -770,49 +1001,49 @@ define(function(require) {
 		"long": "-72.5833333"
 	}, {
 		"codmun": "11001",
-		"nommun": "Bogotá D.C.",
+		"nommun": "BOGOTA D.C.",
 		"coddep": "25",
-		"nomdep": "Cundinamarca",
+		"nomdep": "BOGOTA D.C.",
 		"lat": "4.6",
 		"long": "-74.0833333"
 	}, {
 		"codmun": "25099",
-		"nommun": "Bojacá",
+		"nommun": "Bojaca",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.75",
 		"long": "-74.3333333"
 	}, {
 		"codmun": "27099",
-		"nommun": "Bojayá (Bellavista)",
+		"nommun": "Bojaya (Bellavista)",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "6.5236111",
 		"long": "-76.9744444"
 	}, {
 		"codmun": "05101",
-		"nommun": "Bolí­var",
+		"nommun": "Boli­var",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "5.8333333",
 		"long": "-76"
 	}, {
 		"codmun": "19100",
-		"nommun": "Bolí­var",
+		"nommun": "Boli­var",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "1.8333333",
 		"long": "-76.9166667"
 	}, {
 		"codmun": "68101",
-		"nommun": "Bolí­var",
+		"nommun": "Boli­var",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.25",
 		"long": "-74"
 	}, {
 		"codmun": "76100",
-		"nommun": "Bolí­var",
+		"nommun": "Boli­var",
 		"coddep": "76",
 		"nomdep": "Valle del Cauca",
 		"lat": "4.3333333",
@@ -826,9 +1057,9 @@ define(function(require) {
 		"long": "-73.8902778"
 	}, {
 		"codmun": "15104",
-		"nommun": "Boyacá",
+		"nommun": "Boyaca",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5",
 		"long": "-72.5"
 	}, {
@@ -842,7 +1073,7 @@ define(function(require) {
 		"codmun": "15106",
 		"nommun": "Briceño",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.75",
 		"long": "-73.8333333"
 	}, {
@@ -870,21 +1101,21 @@ define(function(require) {
 		"codmun": "15109",
 		"nommun": "Buenavista",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5",
 		"long": "-73.9666667"
 	}, {
 		"codmun": "23079",
 		"nommun": "Buenavista",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.7575",
 		"long": "-75.89"
 	}, {
 		"codmun": "63111",
 		"nommun": "Buenavista",
 		"coddep": "63",
-		"nomdep": "Quindí­o",
+		"nomdep": "Quindi­o",
 		"lat": "4.3622222",
 		"long": "-75.7394444"
 	}, {
@@ -924,7 +1155,7 @@ define(function(require) {
 		"long": "-76.1602778"
 	}, {
 		"codmun": "05113",
-		"nommun": "Burí­tica",
+		"nommun": "Buri­tica",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.75",
@@ -933,7 +1164,7 @@ define(function(require) {
 		"codmun": "15114",
 		"nommun": "Busbanza",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.9166667",
 		"long": "-72.85"
 	}, {
@@ -994,14 +1225,14 @@ define(function(require) {
 		"long": "-75.5"
 	}, {
 		"codmun": "19130",
-		"nommun": "Cajibí­o",
+		"nommun": "Cajibi­o",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "2.6666667",
 		"long": "-76.6666667"
 	}, {
 		"codmun": "25126",
-		"nommun": "Cajicá",
+		"nommun": "Cajica",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5",
@@ -1010,7 +1241,7 @@ define(function(require) {
 		"codmun": "13140",
 		"nommun": "Calamar",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.25",
 		"long": "-75"
 	}, {
@@ -1022,9 +1253,9 @@ define(function(require) {
 		"long": "-72.6538889"
 	}, {
 		"codmun": "63130",
-		"nommun": "Calarcá",
+		"nommun": "Calarca",
 		"coddep": "63",
-		"nomdep": "Quindí­o",
+		"nomdep": "Quindi­o",
 		"lat": "4.5325",
 		"long": "-75.6436111"
 	}, {
@@ -1038,7 +1269,7 @@ define(function(require) {
 		"codmun": "15131",
 		"nommun": "Caldas",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.55",
 		"long": "-73.8833333"
 	}, {
@@ -1057,7 +1288,7 @@ define(function(require) {
 		"long": "-72.85"
 	}, {
 		"codmun": "76126",
-		"nommun": "Calima (Darién)",
+		"nommun": "Calima (Darien)",
 		"coddep": "76",
 		"nomdep": "Valle del Cauca",
 		"lat": "3.9166667",
@@ -1071,7 +1302,7 @@ define(function(require) {
 		"long": "-76.3333333"
 	}, {
 		"codmun": "76001",
-		"nommun": "Calí­",
+		"nommun": "Cali­",
 		"coddep": "76",
 		"nomdep": "Valle del Cauca",
 		"lat": "3.4372222",
@@ -1087,7 +1318,7 @@ define(function(require) {
 		"codmun": "08137",
 		"nommun": "Campo de la Cruz",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.4166667",
 		"long": "-74.9166667"
 	}, {
@@ -1101,21 +1332,21 @@ define(function(require) {
 		"codmun": "15135",
 		"nommun": "Campohermoso",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.0833333",
 		"long": "-73"
 	}, {
 		"codmun": "23090",
 		"nommun": "Canalete",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.6761111",
 		"long": "-76.2041667"
 	}, {
 		"codmun": "08141",
 		"nommun": "Candelaria",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.5",
 		"long": "-74.8333333"
 	}, {
@@ -1129,19 +1360,19 @@ define(function(require) {
 		"codmun": "13160",
 		"nommun": "Cantagallo",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "7.3791667",
 		"long": "-73.9180556"
 	}, {
 		"codmun": "27135",
-		"nommun": "Cantón de San Pablo",
+		"nommun": "Canton de San Pablo",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.3388889",
 		"long": "-76.7313889"
 	}, {
 		"codmun": "25148",
-		"nommun": "Caparrapí­",
+		"nommun": "Caparrapi­",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.4166667",
@@ -1155,7 +1386,7 @@ define(function(require) {
 		"long": "-72.6333333"
 	}, {
 		"codmun": "05142",
-		"nommun": "Caracolí­",
+		"nommun": "Caracoli­",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.4119444",
@@ -1169,7 +1400,7 @@ define(function(require) {
 		"long": "-75.5833333"
 	}, {
 		"codmun": "68152",
-		"nommun": "Carcasí­",
+		"nommun": "Carcasi­",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.8333333",
@@ -1183,7 +1414,7 @@ define(function(require) {
 		"long": "-76.6611111"
 	}, {
 		"codmun": "73148",
-		"nommun": "Carmen de Apicalá",
+		"nommun": "Carmen de Apicala",
 		"coddep": "73",
 		"nomdep": "Tolima",
 		"lat": "4.15",
@@ -1204,9 +1435,9 @@ define(function(require) {
 		"long": "-75.3386111"
 	}, {
 		"codmun": "27150",
-		"nommun": "Carmen del Darién (CURBARADí“)",
+		"nommun": "Carmen del Darien (CURBARADi“)",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "7.158",
 		"long": "-76.971"
 	}, {
@@ -1220,14 +1451,14 @@ define(function(require) {
 		"codmun": "13001",
 		"nommun": "Cartagena",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.3997222",
 		"long": "-75.5144444"
 	}, {
 		"codmun": "18150",
-		"nommun": "Cartagena del Chairá",
+		"nommun": "Cartagena del Chaira",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "1.35",
 		"long": "-74.84"
 	}, {
@@ -1239,9 +1470,9 @@ define(function(require) {
 		"long": "-75.9116667"
 	}, {
 		"codmun": "97161",
-		"nommun": "Caruríº",
+		"nommun": "Caruriº",
 		"coddep": "97",
-		"nomdep": "Vaupés",
+		"nomdep": "Vaupes",
 		"lat": "0.9166667",
 		"long": "-70.7333333"
 	}, {
@@ -1281,16 +1512,16 @@ define(function(require) {
 		"long": "-72.9166667"
 	}, {
 		"codmun": "23162",
-		"nommun": "Cereté",
+		"nommun": "Cerete",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.9166667",
 		"long": "-76"
 	}, {
 		"codmun": "15162",
 		"nommun": "Cerinza",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6",
 		"long": "-72.9166667"
 	}, {
@@ -1309,21 +1540,21 @@ define(function(require) {
 		"long": "-74.8333333"
 	}, {
 		"codmun": "52240",
-		"nommun": "Chachaguí­",
+		"nommun": "Chachagui­",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "1.35943053925138",
 		"long": "-77.2836685180664"
 	}, {
 		"codmun": "25168",
-		"nommun": "Chaguaní­",
+		"nommun": "Chaguani­",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5",
 		"long": "-74.65"
 	}, {
 		"codmun": "70230",
-		"nommun": "Chalán",
+		"nommun": "Chalan",
 		"coddep": "70",
 		"nomdep": "Sucre",
 		"lat": "9.5491667",
@@ -1337,7 +1568,7 @@ define(function(require) {
 		"long": "-75.5833333"
 	}, {
 		"codmun": "68167",
-		"nommun": "Charalá",
+		"nommun": "Charala",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.25",
@@ -1351,7 +1582,7 @@ define(function(require) {
 		"long": "-72.9666667"
 	}, {
 		"codmun": "05172",
-		"nommun": "Chigorodó",
+		"nommun": "Chigorodo",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "7.6666667",
@@ -1372,37 +1603,37 @@ define(function(require) {
 		"long": "-73.8177778"
 	}, {
 		"codmun": "23168",
-		"nommun": "Chimá",
+		"nommun": "Chima",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "9.0833333",
 		"long": "-75.6333333"
 	}, {
 		"codmun": "15172",
 		"nommun": "Chinavita",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.25",
 		"long": "-73.3333333"
 	}, {
 		"codmun": "17174",
-		"nommun": "Chinchiná",
+		"nommun": "Chinchina",
 		"coddep": "17",
 		"nomdep": "Caldas",
 		"lat": "5",
 		"long": "-75.6666667"
 	}, {
 		"codmun": "54172",
-		"nommun": "Chinácota",
+		"nommun": "Chinacota",
 		"coddep": "54",
 		"nomdep": "Norte de Santander",
 		"lat": "7.75",
 		"long": "-72.55"
 	}, {
 		"codmun": "23182",
-		"nommun": "Chiníº",
+		"nommun": "Chiniº",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "9.0833333",
 		"long": "-75.3333333"
 	}, {
@@ -1414,21 +1645,21 @@ define(function(require) {
 		"long": "-74.0833333"
 	}, {
 		"codmun": "68179",
-		"nommun": "Chipatá",
+		"nommun": "Chipata",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.1333333",
 		"long": "-73.55"
 	}, {
 		"codmun": "15176",
-		"nommun": "Chiquinquirá",
+		"nommun": "Chiquinquira",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.6333333",
 		"long": "-73.75"
 	}, {
 		"codmun": "20178",
-		"nommun": "Chiriguaná",
+		"nommun": "Chiriguana",
 		"coddep": "20",
 		"nomdep": "Cesar",
 		"lat": "9.5",
@@ -1437,19 +1668,19 @@ define(function(require) {
 		"codmun": "15180",
 		"nommun": "Chiscas",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.75",
 		"long": "-72.3333333"
 	}, {
 		"codmun": "15183",
 		"nommun": "Chita",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.1666667",
 		"long": "-72.4166667"
 	}, {
 		"codmun": "54174",
-		"nommun": "Chitagá",
+		"nommun": "Chitaga",
 		"coddep": "54",
 		"nomdep": "Norte de Santander",
 		"lat": "7.1666667",
@@ -1458,14 +1689,14 @@ define(function(require) {
 		"codmun": "15185",
 		"nommun": "Chitaraque",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.0833333",
 		"long": "-73.3666667"
 	}, {
 		"codmun": "15187",
-		"nommun": "Chivatá",
+		"nommun": "Chivata",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5333333",
 		"long": "-73.2666667"
 	}, {
@@ -1477,51 +1708,51 @@ define(function(require) {
 		"long": "-74.6436111"
 	}, {
 		"codmun": "25181",
-		"nommun": "Choachí­",
+		"nommun": "Choachi­",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.5833333",
 		"long": "-73.9166667"
 	}, {
 		"codmun": "25183",
-		"nommun": "Chocontá",
+		"nommun": "Choconta",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.1666667",
 		"long": "-73.6666667"
 	}, {
 		"codmun": "85015",
-		"nommun": "Chámeza",
+		"nommun": "Chameza",
 		"coddep": "85",
 		"nomdep": "Casanare",
 		"lat": "5",
 		"long": "-72.75"
 	}, {
 		"codmun": "25175",
-		"nommun": "Chí­a",
+		"nommun": "Chi­a",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.9166667",
 		"long": "-74.05"
 	}, {
 		"codmun": "15232",
-		"nommun": "Chí­quiza",
+		"nommun": "Chi­quiza",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.6083333",
 		"long": "-73.4886111"
 	}, {
 		"codmun": "15236",
-		"nommun": "Chí­vor",
+		"nommun": "Chi­vor",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "4.8855556",
 		"long": "-73.3688889"
 	}, {
 		"codmun": "13188",
 		"nommun": "Cicuco",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "9.4166667",
 		"long": "-74.7333333"
 	}, {
@@ -1535,7 +1766,7 @@ define(function(require) {
 		"codmun": "63190",
 		"nommun": "Circasia",
 		"coddep": "63",
-		"nomdep": "Quindí­o",
+		"nomdep": "Quindi­o",
 		"lat": "4.6166667",
 		"long": "-75.6333333"
 	}, {
@@ -1547,35 +1778,35 @@ define(function(require) {
 		"long": "-75.0833333"
 	}, {
 		"codmun": "15189",
-		"nommun": "Ciénaga",
+		"nommun": "Cienaga",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.4666667",
 		"long": "-73.25"
 	}, {
 		"codmun": "47189",
-		"nommun": "Ciénaga",
+		"nommun": "Cienaga",
 		"coddep": "47",
 		"nomdep": "Magdalena",
 		"lat": "10.8333333",
 		"long": "-74.0833333"
 	}, {
 		"codmun": "23189",
-		"nommun": "Ciénaga de Oro",
+		"nommun": "Cienaga de Oro",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.8333333",
 		"long": "-75.6666667"
 	}, {
 		"codmun": "13222",
 		"nommun": "Clemencia",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.5891667",
 		"long": "-75.3341667"
 	}, {
 		"codmun": "05197",
-		"nommun": "Cocorná",
+		"nommun": "Cocorna",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6",
@@ -1603,35 +1834,35 @@ define(function(require) {
 		"long": "-75.75"
 	}, {
 		"codmun": "70204",
-		"nommun": "Colosó (Ricaurte)",
+		"nommun": "Coloso (Ricaurte)",
 		"coddep": "70",
 		"nomdep": "Sucre",
 		"lat": "9.4966667",
 		"long": "-75.3555556"
 	}, {
 		"codmun": "86219",
-		"nommun": "Colón",
+		"nommun": "Colon",
 		"coddep": "86",
 		"nomdep": "Putumayo",
 		"lat": "1.1936111",
 		"long": "-76.9769444"
 	}, {
 		"codmun": "52203",
-		"nommun": "Colón (Génova)",
+		"nommun": "Colon (Genova)",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "1.5833333",
 		"long": "-77"
 	}, {
 		"codmun": "05206",
-		"nommun": "Concepción",
+		"nommun": "Concepcion",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.4166667",
 		"long": "-75.25"
 	}, {
 		"codmun": "68207",
-		"nommun": "Concepción",
+		"nommun": "Concepcion",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.9166667",
@@ -1654,7 +1885,7 @@ define(function(require) {
 		"codmun": "27205",
 		"nommun": "Condoto",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.1666667",
 		"long": "-76.5"
 	}, {
@@ -1680,14 +1911,14 @@ define(function(require) {
 		"long": "-77.5333333"
 	}, {
 		"codmun": "68211",
-		"nommun": "Contratación",
+		"nommun": "Contratacion",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.3333333",
 		"long": "-73.4166667"
 	}, {
 		"codmun": "54206",
-		"nommun": "Convención",
+		"nommun": "Convencion",
 		"coddep": "54",
 		"nomdep": "Norte de Santander",
 		"lat": "8.8333333",
@@ -1703,14 +1934,14 @@ define(function(require) {
 		"codmun": "15212",
 		"nommun": "Coper",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.4333333",
 		"long": "-74.0333333"
 	}, {
 		"codmun": "63212",
-		"nommun": "Cordobá",
+		"nommun": "Cordoba",
 		"coddep": "63",
-		"nomdep": "Quindí­o",
+		"nomdep": "Quindi­o",
 		"lat": "4.3905556",
 		"long": "-75.6888889"
 	}, {
@@ -1738,7 +1969,7 @@ define(function(require) {
 		"codmun": "15215",
 		"nommun": "Corrales",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.8666667",
 		"long": "-72.8333333"
 	}, {
@@ -1752,14 +1983,14 @@ define(function(require) {
 		"codmun": "23300",
 		"nommun": "Cotorra",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "9.05",
 		"long": "-75.8"
 	}, {
 		"codmun": "15218",
-		"nommun": "Covarachí­a",
+		"nommun": "Covarachi­a",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.5833333",
 		"long": "-72.7"
 	}, {
@@ -1799,21 +2030,21 @@ define(function(require) {
 		"long": "-73.8377778"
 	}, {
 		"codmun": "15223",
-		"nommun": "Cubará",
+		"nommun": "Cubara",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "7.0411111",
 		"long": "-72.0608333"
 	}, {
 		"codmun": "15224",
 		"nommun": "Cucaita",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5333333",
 		"long": "-73.4666667"
 	}, {
 		"codmun": "25224",
-		"nommun": "Cucunubá",
+		"nommun": "Cucunuba",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.25",
@@ -1829,7 +2060,7 @@ define(function(require) {
 		"codmun": "15226",
 		"nommun": "Cuitiva",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.65",
 		"long": "-72.9166667"
 	}, {
@@ -1871,82 +2102,82 @@ define(function(require) {
 		"codmun": "18205",
 		"nommun": "Curillo",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "1.0352778",
 		"long": "-75.9247222"
 	}, {
 		"codmun": "68229",
-		"nommun": "Curití­",
+		"nommun": "Curiti­",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.6666667",
 		"long": "-73"
 	}, {
 		"codmun": "20228",
-		"nommun": "Curumaní­",
+		"nommun": "Curumani­",
 		"coddep": "20",
 		"nomdep": "Cesar",
 		"lat": "9.2041667",
 		"long": "-73.5486111"
 	}, {
 		"codmun": "05120",
-		"nommun": "Cáceres",
+		"nommun": "Caceres",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "7.6666667",
 		"long": "-75.3333333"
 	}, {
 		"codmun": "54128",
-		"nommun": "Cáchira",
+		"nommun": "Cachira",
 		"coddep": "54",
 		"nomdep": "Norte de Santander",
 		"lat": "7.75",
 		"long": "-73.1666667"
 	}, {
 		"codmun": "54125",
-		"nommun": "Cácota",
+		"nommun": "Cacota",
 		"coddep": "54",
 		"nomdep": "Norte de Santander",
 		"lat": "7.25",
 		"long": "-72.5833333"
 	}, {
 		"codmun": "25151",
-		"nommun": "Cáqueza",
+		"nommun": "Caqueza",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.45",
 		"long": "-73.95"
 	}, {
 		"codmun": "27160",
-		"nommun": "Cértegui",
+		"nommun": "Certegui",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.4",
 		"long": "-76.6"
 	}, {
 		"codmun": "15204",
-		"nommun": "Cómbita",
+		"nommun": "Combita",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.75",
 		"long": "-73.25"
 	}, {
 		"codmun": "13212",
-		"nommun": "Córdoba",
+		"nommun": "Cordoba",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "9.5",
 		"long": "-74.9166667"
 	}, {
 		"codmun": "52215",
-		"nommun": "Córdoba",
+		"nommun": "Cordoba",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "0.7833333",
 		"long": "-77.3333333"
 	}, {
 		"codmun": "54001",
-		"nommun": "Cíºcuta",
+		"nommun": "Ciºcuta",
 		"coddep": "54",
 		"nomdep": "Norte de Santander",
 		"lat": "7.8833333",
@@ -1974,7 +2205,7 @@ define(function(require) {
 		"long": "-73.3055556"
 	}, {
 		"codmun": "44098",
-		"nommun": "Distracción",
+		"nommun": "Distraccion",
 		"coddep": "44",
 		"nomdep": "La Guajira",
 		"lat": "10.8977778",
@@ -1988,7 +2219,7 @@ define(function(require) {
 		"long": "-74.75"
 	}, {
 		"codmun": "05237",
-		"nommun": "Don Matí­as",
+		"nommun": "Don Mati­as",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.5",
@@ -2004,7 +2235,7 @@ define(function(require) {
 		"codmun": "15238",
 		"nommun": "Duitama",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.8269444",
 		"long": "-73.0202778"
 	}, {
@@ -2016,7 +2247,7 @@ define(function(require) {
 		"long": "-72.6333333"
 	}, {
 		"codmun": "05240",
-		"nommun": "Ebéjico",
+		"nommun": "Ebejico",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.3333333",
@@ -2067,14 +2298,14 @@ define(function(require) {
 		"codmun": "27245",
 		"nommun": "El Carmen de Atrato",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "",
 		"long": ""
 	}, {
 		"codmun": "13244",
-		"nommun": "El Carmen de Bolí­var",
+		"nommun": "El Carmen de Boli­var",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "9.75",
 		"long": "-75.1666667"
 	}, {
@@ -2102,7 +2333,7 @@ define(function(require) {
 		"codmun": "15244",
 		"nommun": "El Cocuy",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.4166667",
 		"long": "-72.4166667"
 	}, {
@@ -2123,7 +2354,7 @@ define(function(require) {
 		"codmun": "18247",
 		"nommun": "El Doncello",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "1.6794444",
 		"long": "-75.2791667"
 	}, {
@@ -2144,7 +2375,7 @@ define(function(require) {
 		"codmun": "15248",
 		"nommun": "El Espino",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.5833333",
 		"long": "-72.4166667"
 	}, {
@@ -2158,7 +2389,7 @@ define(function(require) {
 		"codmun": "13248",
 		"nommun": "El Guamo",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.0833333",
 		"long": "-74.9166667"
 	}, {
@@ -2179,7 +2410,7 @@ define(function(require) {
 		"codmun": "18256",
 		"nommun": "El Paujil",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "1.564",
 		"long": "-75.332"
 	}, {
@@ -2193,7 +2424,7 @@ define(function(require) {
 		"codmun": "13268",
 		"nommun": "El Peñon",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.9833333",
 		"long": "-73.95"
 	}, {
@@ -2205,7 +2436,7 @@ define(function(require) {
 		"long": "-72.8333333"
 	}, {
 		"codmun": "25258",
-		"nommun": "El Peñón",
+		"nommun": "El Peñon",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.3333333",
@@ -2219,7 +2450,7 @@ define(function(require) {
 		"long": "-74.6666667"
 	}, {
 		"codmun": "68255",
-		"nommun": "El Playón",
+		"nommun": "El Playon",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "7.4766667",
@@ -2233,7 +2464,7 @@ define(function(require) {
 		"long": "-72.6277778"
 	}, {
 		"codmun": "47268",
-		"nommun": "El Retén",
+		"nommun": "El Reten",
 		"coddep": "47",
 		"nomdep": "Magdalena",
 		"lat": "10.6166667",
@@ -2261,7 +2492,7 @@ define(function(require) {
 		"long": "-77.3333333"
 	}, {
 		"codmun": "52258",
-		"nommun": "El Tablón de Gómez",
+		"nommun": "El Tablon de Gomez",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "",
@@ -2296,14 +2527,14 @@ define(function(require) {
 		"long": "-72.605"
 	}, {
 		"codmun": "76243",
-		"nommun": "El íguila",
+		"nommun": "El iguila",
 		"coddep": "76",
 		"nomdep": "Valle del Cauca",
 		"lat": "4.9166667",
 		"long": "-76.0833333"
 	}, {
 		"codmun": "41244",
-		"nommun": "Elí­as",
+		"nommun": "Eli­as",
 		"coddep": "41",
 		"nomdep": "Huila",
 		"lat": "2.0833333",
@@ -2324,7 +2555,7 @@ define(function(require) {
 		"long": "-72.6333333"
 	}, {
 		"codmun": "05264",
-		"nommun": "Entrerrí­os",
+		"nommun": "Entrerri­os",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.5833333",
@@ -2345,7 +2576,7 @@ define(function(require) {
 		"long": "-74.8333333"
 	}, {
 		"codmun": "25269",
-		"nommun": "Facatativá",
+		"nommun": "Facatativa",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.8166667",
@@ -2368,14 +2599,14 @@ define(function(require) {
 		"codmun": "63272",
 		"nommun": "Filandia",
 		"coddep": "63",
-		"nomdep": "Quindí­o",
+		"nomdep": "Quindi­o",
 		"lat": "4.6666667",
 		"long": "-75.6333333"
 	}, {
 		"codmun": "15272",
 		"nommun": "Firavitoba",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.75",
 		"long": "-72.9666667"
 	}, {
@@ -2389,7 +2620,7 @@ define(function(require) {
 		"codmun": "18001",
 		"nommun": "Florencia",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "1.6175",
 		"long": "-75.6175"
 	}, {
@@ -2403,7 +2634,7 @@ define(function(require) {
 		"codmun": "15276",
 		"nommun": "Floresta",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.9166667",
 		"long": "-72.9166667"
 	}, {
@@ -2422,7 +2653,7 @@ define(function(require) {
 		"long": "-73.0897222"
 	}, {
 		"codmun": "68271",
-		"nommun": "Florián",
+		"nommun": "Florian",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "5.8047222",
@@ -2436,7 +2667,7 @@ define(function(require) {
 		"long": "-72.8333333"
 	}, {
 		"codmun": "81300",
-		"nommun": "Fortíºl",
+		"nommun": "Fortiºl",
 		"coddep": "81",
 		"nomdep": "Arauca",
 		"lat": "6.7461111",
@@ -2485,7 +2716,7 @@ define(function(require) {
 		"long": "-73.6127778"
 	}, {
 		"codmun": "47288",
-		"nommun": "Fundación",
+		"nommun": "Fundacion",
 		"coddep": "47",
 		"nomdep": "Magdalena",
 		"lat": "10.4166667",
@@ -2506,49 +2737,49 @@ define(function(require) {
 		"long": "-74.2"
 	}, {
 		"codmun": "25290",
-		"nommun": "Fusagasugá",
+		"nommun": "Fusagasuga",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.4166667",
 		"long": "-74.4"
 	}, {
 		"codmun": "25279",
-		"nommun": "Fómeque",
+		"nommun": "Fomeque",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.5833333",
 		"long": "-73.8333333"
 	}, {
 		"codmun": "25288",
-		"nommun": "Fíºquene",
+		"nommun": "Fiºquene",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.4166667",
 		"long": "-73.8"
 	}, {
 		"codmun": "25293",
-		"nommun": "Gachalá",
+		"nommun": "Gachala",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.6666667",
 		"long": "-73.5"
 	}, {
 		"codmun": "25295",
-		"nommun": "Gachancipá",
+		"nommun": "Gachancipa",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.0833333",
 		"long": "-73.8833333"
 	}, {
 		"codmun": "15293",
-		"nommun": "Gachantivá",
+		"nommun": "Gachantiva",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.75",
 		"long": "-73.5"
 	}, {
 		"codmun": "25297",
-		"nommun": "Gachetá",
+		"nommun": "Gacheta",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.9166667",
@@ -2557,7 +2788,7 @@ define(function(require) {
 		"codmun": "08296",
 		"nommun": "Galapa",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.9166667",
 		"long": "-74.8333333"
 	}, {
@@ -2569,7 +2800,7 @@ define(function(require) {
 		"long": "-75.0525"
 	}, {
 		"codmun": "68296",
-		"nommun": "Galán",
+		"nommun": "Galan",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.7",
@@ -2592,12 +2823,12 @@ define(function(require) {
 		"codmun": "15299",
 		"nommun": "Garagoa",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.1333333",
 		"long": "-73.3"
 	}, {
 		"codmun": "41298",
-		"nommun": "Garzón",
+		"nommun": "Garzon",
 		"coddep": "41",
 		"nomdep": "Huila",
 		"lat": "2.25",
@@ -2639,7 +2870,7 @@ define(function(require) {
 		"long": "-75.45"
 	}, {
 		"codmun": "68306",
-		"nommun": "Girón",
+		"nommun": "Giron",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "7.0708333",
@@ -2690,33 +2921,33 @@ define(function(require) {
 		"codmun": "15317",
 		"nommun": "Guacamayas",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.5",
 		"long": "-72.5"
 	}, {
 		"codmun": "76318",
-		"nommun": "Guacarí­",
+		"nommun": "Guacari­",
 		"coddep": "76",
 		"nomdep": "Valle del Cauca",
 		"lat": "3.7694444",
 		"long": "-76.3380556"
 	}, {
 		"codmun": "52699",
-		"nommun": "Guachavés",
+		"nommun": "Guachaves",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "1.2247222",
 		"long": "-77.68"
 	}, {
 		"codmun": "19300",
-		"nommun": "Guachené",
+		"nommun": "Guachene",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "3.1333333",
 		"long": "-76.3833333"
 	}, {
 		"codmun": "25317",
-		"nommun": "Guachetá",
+		"nommun": "Guacheta",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.4166667",
@@ -2765,7 +2996,7 @@ define(function(require) {
 		"long": "-77.5"
 	}, {
 		"codmun": "52323",
-		"nommun": "Gualmatán",
+		"nommun": "Gualmatan",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "0.8333333",
@@ -2800,7 +3031,7 @@ define(function(require) {
 		"long": "-73.25"
 	}, {
 		"codmun": "19318",
-		"nommun": "Guapí­",
+		"nommun": "Guapi­",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "2.4166667",
@@ -2828,14 +3059,14 @@ define(function(require) {
 		"long": "-73.8333333"
 	}, {
 		"codmun": "05321",
-		"nommun": "Guatapé",
+		"nommun": "Guatape",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.25",
 		"long": "-75.1666667"
 	}, {
 		"codmun": "25324",
-		"nommun": "Guataquí­",
+		"nommun": "Guataqui­",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.5833333",
@@ -2851,12 +3082,12 @@ define(function(require) {
 		"codmun": "15322",
 		"nommun": "Guateque",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.0833333",
 		"long": "-73.5"
 	}, {
 		"codmun": "68324",
-		"nommun": "Guavatá",
+		"nommun": "Guavata",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6",
@@ -2877,9 +3108,9 @@ define(function(require) {
 		"long": "-73.8133333"
 	}, {
 		"codmun": "15325",
-		"nommun": "Guayatá",
+		"nommun": "Guayata",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5",
 		"long": "-73.5"
 	}, {
@@ -2891,56 +3122,56 @@ define(function(require) {
 		"long": "-73.5"
 	}, {
 		"codmun": "15332",
-		"nommun": "Guicán",
+		"nommun": "Guican",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.75",
 		"long": "-72.1666667"
 	}, {
 		"codmun": "25339",
-		"nommun": "Gutiérrez",
+		"nommun": "Gutierrez",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.25",
 		"long": "-74"
 	}, {
 		"codmun": "66318",
-		"nommun": "Guática",
+		"nommun": "Guatica",
 		"coddep": "66",
 		"nomdep": "Risaralda",
 		"lat": "5.3333333",
 		"long": "-75.8333333"
 	}, {
 		"codmun": "68298",
-		"nommun": "Gámbita",
+		"nommun": "Gambita",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6",
 		"long": "-73.25"
 	}, {
 		"codmun": "15296",
-		"nommun": "Gámeza",
+		"nommun": "Gameza",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.85",
 		"long": "-72.75"
 	}, {
 		"codmun": "63302",
-		"nommun": "Génova",
+		"nommun": "Genova",
 		"coddep": "63",
-		"nomdep": "Quindí­o",
+		"nomdep": "Quindi­o",
 		"lat": "4.25",
 		"long": "-75.6666667"
 	}, {
 		"codmun": "05310",
-		"nommun": "Gómez Plata",
+		"nommun": "Gomez Plata",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.75",
 		"long": "-75.8333333"
 	}, {
 		"codmun": "54344",
-		"nommun": "Hacarí­",
+		"nommun": "Hacari­",
 		"coddep": "54",
 		"nomdep": "Norte de Santander",
 		"lat": "8.5",
@@ -2949,7 +3180,7 @@ define(function(require) {
 		"codmun": "13300",
 		"nommun": "Hatillo de Loba",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.9586111",
 		"long": "-74.0808333"
 	}, {
@@ -2982,7 +3213,7 @@ define(function(require) {
 		"long": "-75.75"
 	}, {
 		"codmun": "54347",
-		"nommun": "Herrán",
+		"nommun": "Herran",
 		"coddep": "54",
 		"nomdep": "Norte de Santander",
 		"lat": "7.5",
@@ -3017,7 +3248,7 @@ define(function(require) {
 		"long": "-74.8333333"
 	}, {
 		"codmun": "73001",
-		"nommun": "Ibagué",
+		"nommun": "Ibague",
 		"coddep": "73",
 		"nomdep": "Tolima",
 		"lat": "4.4388889",
@@ -3038,23 +3269,23 @@ define(function(require) {
 		"long": "-77.5333333"
 	}, {
 		"codmun": "52354",
-		"nommun": "Imíºes",
+		"nommun": "Imiºes",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "1.05",
 		"long": "-77.5"
 	}, {
 		"codmun": "19355",
-		"nommun": "Inzá",
+		"nommun": "Inza",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "2.6666667",
 		"long": "-76.0833333"
 	}, {
 		"codmun": "94001",
-		"nommun": "Iní­rida",
+		"nommun": "Ini­rida",
 		"coddep": "94",
-		"nomdep": "Guainí­a",
+		"nomdep": "Guaini­a",
 		"lat": "3.8652778",
 		"long": "-67.9238889"
 	}, {
@@ -3075,12 +3306,12 @@ define(function(require) {
 		"codmun": "27361",
 		"nommun": "Istmina",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.1588889",
 		"long": "-76.6916667"
 	}, {
 		"codmun": "05360",
-		"nommun": "Itagúí­",
+		"nommun": "Itagui­",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.1719444",
@@ -3094,28 +3325,28 @@ define(function(require) {
 		"long": "-76"
 	}, {
 		"codmun": "15362",
-		"nommun": "Izá",
+		"nommun": "Iza",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.6666667",
 		"long": "-72.9166667"
 	}, {
 		"codmun": "19364",
-		"nommun": "Jambaló",
+		"nommun": "Jambalo",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "2.85",
 		"long": "-76.3166667"
 	}, {
 		"codmun": "76364",
-		"nommun": "Jamundí­",
+		"nommun": "Jamundi­",
 		"coddep": "76",
 		"nomdep": "Valle del Cauca",
 		"lat": "3.1666667",
 		"long": "-76.5833333"
 	}, {
 		"codmun": "05364",
-		"nommun": "Jardí­n",
+		"nommun": "Jardi­n",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "5.5833333",
@@ -3124,40 +3355,40 @@ define(function(require) {
 		"codmun": "15367",
 		"nommun": "Jenesano",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.3888889",
 		"long": "-73.3680556"
 	}, {
 		"codmun": "05368",
-		"nommun": "Jericó",
+		"nommun": "Jerico",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "5.75",
 		"long": "-75.75"
 	}, {
 		"codmun": "15368",
-		"nommun": "Jericó",
+		"nommun": "Jerico",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.2",
 		"long": "-72.5833333"
 	}, {
 		"codmun": "25368",
-		"nommun": "Jerusalén",
+		"nommun": "Jerusalen",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.6666667",
 		"long": "-74.6666667"
 	}, {
 		"codmun": "68368",
-		"nommun": "Jesíºs Marí­a",
+		"nommun": "Jesiºs Mari­a",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "5.9166667",
 		"long": "-73.8333333"
 	}, {
 		"codmun": "68370",
-		"nommun": "Jordán",
+		"nommun": "Jordan",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.75",
@@ -3166,28 +3397,28 @@ define(function(require) {
 		"codmun": "08132",
 		"nommun": "Juan de Acosta",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.8333333",
 		"long": "-75.0333333"
 	}, {
 		"codmun": "25372",
-		"nommun": "Juní­n",
+		"nommun": "Juni­n",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.75",
 		"long": "-73.6666667"
 	}, {
 		"codmun": "27372",
-		"nommun": "Juradó",
+		"nommun": "Jurado",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "7",
 		"long": "-77.6666667"
 	}, {
 		"codmun": "23350",
 		"nommun": "La Apartada y La Frontera",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "",
 		"long": ""
 	}, {
@@ -3215,7 +3446,7 @@ define(function(require) {
 		"codmun": "15380",
 		"nommun": "La Capilla",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.15",
 		"long": "-73.45"
 	}, {
@@ -3327,7 +3558,7 @@ define(function(require) {
 		"codmun": "18410",
 		"nommun": "La Montañita",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "1.5833333",
 		"long": "-75.25"
 	}, {
@@ -3404,7 +3635,7 @@ define(function(require) {
 		"codmun": "63401",
 		"nommun": "La Tebaida",
 		"coddep": "63",
-		"nomdep": "Quindí­o",
+		"nomdep": "Quindi­o",
 		"lat": "4.45",
 		"long": "-75.8"
 	}, {
@@ -3416,28 +3647,28 @@ define(function(require) {
 		"long": "-78.2427778"
 	}, {
 		"codmun": "05400",
-		"nommun": "La Unión",
+		"nommun": "La Union",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "5.9166667",
 		"long": "-75.3333333"
 	}, {
 		"codmun": "52399",
-		"nommun": "La Unión",
+		"nommun": "La Union",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "1.5833333",
 		"long": "-77.0833333"
 	}, {
 		"codmun": "70400",
-		"nommun": "La Unión",
+		"nommun": "La Union",
 		"coddep": "70",
 		"nomdep": "Sucre",
 		"lat": "8.8605556",
 		"long": "-75.2805556"
 	}, {
 		"codmun": "76400",
-		"nommun": "La Unión",
+		"nommun": "La Union",
 		"coddep": "76",
 		"nomdep": "Valle del Cauca",
 		"lat": "4.5358333",
@@ -3446,7 +3677,7 @@ define(function(require) {
 		"codmun": "15403",
 		"nommun": "La Uvita",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.3333333",
 		"long": "-72.5"
 	}, {
@@ -3467,7 +3698,7 @@ define(function(require) {
 		"codmun": "15401",
 		"nommun": "La Victoria",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5258333",
 		"long": "-74.2361111"
 	}, {
@@ -3502,12 +3733,12 @@ define(function(require) {
 		"codmun": "15377",
 		"nommun": "Labranzagrande",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5833333",
 		"long": "-72.5833333"
 	}, {
 		"codmun": "68385",
-		"nommun": "Landázuri",
+		"nommun": "Landazuri",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.2238889",
@@ -3528,7 +3759,7 @@ define(function(require) {
 		"long": "-77.3080556"
 	}, {
 		"codmun": "50400",
-		"nommun": "Lejaní­as",
+		"nommun": "Lejani­as",
 		"coddep": "50",
 		"nomdep": "Meta",
 		"lat": "3.5136111",
@@ -3563,23 +3794,23 @@ define(function(require) {
 		"long": "-77.45"
 	}, {
 		"codmun": "27413",
-		"nommun": "Lloró",
+		"nommun": "Lloro",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.5833333",
 		"long": "-76.4166667"
 	}, {
 		"codmun": "23417",
 		"nommun": "Lorica",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "9.1666667",
 		"long": "-75.8333333"
 	}, {
 		"codmun": "23419",
-		"nommun": "Los Córdobas",
+		"nommun": "Los Cordobas",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.9",
 		"long": "-76.3597222"
 	}, {
@@ -3614,26 +3845,26 @@ define(function(require) {
 		"codmun": "08421",
 		"nommun": "Luruaco",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.6141667",
 		"long": "-75.1461111"
 	}, {
 		"codmun": "73408",
-		"nommun": "Lérida",
+		"nommun": "Lerida",
 		"coddep": "73",
 		"nomdep": "Tolima",
 		"lat": "4.9166667",
 		"long": "-74.9166667"
 	}, {
 		"codmun": "73411",
-		"nommun": "Lí­bano",
+		"nommun": "Li­bano",
 		"coddep": "73",
 		"nomdep": "Tolima",
 		"lat": "4.9166667",
 		"long": "-75.1666667"
 	}, {
 		"codmun": "19418",
-		"nommun": "López (Micay)",
+		"nommun": "Lopez (Micay)",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "2.4333333",
@@ -3642,7 +3873,7 @@ define(function(require) {
 		"codmun": "15425",
 		"nommun": "Macanal",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "4.9166667",
 		"long": "-73.25"
 	}, {
@@ -3661,7 +3892,7 @@ define(function(require) {
 		"long": "-74.75"
 	}, {
 		"codmun": "25426",
-		"nommun": "Machetá",
+		"nommun": "Macheta",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.0833333",
@@ -3675,14 +3906,14 @@ define(function(require) {
 		"long": "-74.3"
 	}, {
 		"codmun": "13430",
-		"nommun": "Magangué",
+		"nommun": "Magangue",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "9.2413889",
 		"long": "-74.7533333"
 	}, {
 		"codmun": "52427",
-		"nommun": "Magúi (Payán)",
+		"nommun": "Magui (Payan)",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "1.9166667",
@@ -3691,7 +3922,7 @@ define(function(require) {
 		"codmun": "13433",
 		"nommun": "Mahates",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.1666667",
 		"long": "-75.1666667"
 	}, {
@@ -3712,7 +3943,7 @@ define(function(require) {
 		"codmun": "08433",
 		"nommun": "Malambo",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.8588889",
 		"long": "-74.7730556"
 	}, {
@@ -3724,9 +3955,9 @@ define(function(require) {
 		"long": "-77.8166667"
 	}, {
 		"codmun": "08436",
-		"nommun": "Manatí­",
+		"nommun": "Manati­",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.5",
 		"long": "-75"
 	}, {
@@ -3738,7 +3969,7 @@ define(function(require) {
 		"long": "-72.4494444"
 	}, {
 		"codmun": "20443",
-		"nommun": "Manaure Balcón del Cesar",
+		"nommun": "Manaure Balcon del Cesar",
 		"coddep": "20",
 		"nomdep": "Cesar",
 		"lat": "10.3927778",
@@ -3766,7 +3997,7 @@ define(function(require) {
 		"long": "-75.1666667"
 	}, {
 		"codmun": "85139",
-		"nommun": "Maní­",
+		"nommun": "Mani­",
 		"coddep": "85",
 		"nomdep": "Casanare",
 		"lat": "4.8333333",
@@ -3782,7 +4013,7 @@ define(function(require) {
 		"codmun": "13440",
 		"nommun": "Margarita",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "9.0833333",
 		"long": "-74.2"
 	}, {
@@ -3794,9 +4025,9 @@ define(function(require) {
 		"long": "-75.3"
 	}, {
 		"codmun": "15442",
-		"nommun": "Maripí­",
+		"nommun": "Maripi­",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5833333",
 		"long": "-74"
 	}, {
@@ -3836,9 +4067,9 @@ define(function(require) {
 		"long": "-75.25"
 	}, {
 		"codmun": "13442",
-		"nommun": "Marí­a la Baja",
+		"nommun": "Mari­a la Baja",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10",
 		"long": "-75.3333333"
 	}, {
@@ -3850,7 +4081,7 @@ define(function(require) {
 		"long": "-73.0833333"
 	}, {
 		"codmun": "05001",
-		"nommun": "Medellí­n",
+		"nommun": "Medelli­n",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.2913889",
@@ -3866,21 +4097,21 @@ define(function(require) {
 		"codmun": "27425",
 		"nommun": "Medio Atrato",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "",
 		"long": ""
 	}, {
 		"codmun": "27430",
-		"nommun": "Medio Baudó",
+		"nommun": "Medio Baudo",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "",
 		"long": ""
 	}, {
 		"codmun": "27450",
 		"nommun": "Medio San Juan (ANDAGOYA)",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.1",
 		"long": "-76.683"
 	}, {
@@ -3906,16 +4137,16 @@ define(function(require) {
 		"long": "-74.0447222"
 	}, {
 		"codmun": "18460",
-		"nommun": "Milán",
+		"nommun": "Milan",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "1.3483333",
 		"long": "-75.5116667"
 	}, {
 		"codmun": "15455",
 		"nommun": "Miraflores",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.25",
 		"long": "-73.1666667"
 	}, {
@@ -3934,16 +4165,16 @@ define(function(require) {
 		"long": "-76.25"
 	}, {
 		"codmun": "66456",
-		"nommun": "Mistrató",
+		"nommun": "Mistrato",
 		"coddep": "66",
 		"nomdep": "Risaralda",
 		"lat": "5.4166667",
 		"long": "-76"
 	}, {
 		"codmun": "97001",
-		"nommun": "Mitíº",
+		"nommun": "Mitiº",
 		"coddep": "97",
-		"nomdep": "Vaupés",
+		"nomdep": "Vaupes",
 		"lat": "1.1983333",
 		"long": "-70.1733333"
 	}, {
@@ -3971,35 +4202,35 @@ define(function(require) {
 		"codmun": "23464",
 		"nommun": "Momil",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "9.2372222",
 		"long": "-75.6780556"
 	}, {
 		"codmun": "13468",
-		"nommun": "Mompós",
+		"nommun": "Mompos",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "9.25",
 		"long": "-74.5833333"
 	}, {
 		"codmun": "15464",
 		"nommun": "Mongua",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.8333333",
 		"long": "-72.6666667"
 	}, {
 		"codmun": "15466",
-		"nommun": "Monguí­",
+		"nommun": "Mongui­",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.75",
 		"long": "-72.8333333"
 	}, {
 		"codmun": "15469",
-		"nommun": "Moniquirá",
+		"nommun": "Moniquira",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.9166667",
 		"long": "-73.5"
 	}, {
@@ -4013,28 +4244,28 @@ define(function(require) {
 		"codmun": "13458",
 		"nommun": "Montecristo",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.2994444",
 		"long": "-74.4755556"
 	}, {
 		"codmun": "23466",
-		"nommun": "Montelí­bano",
+		"nommun": "Monteli­bano",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "7.75",
 		"long": "-75.6666667"
 	}, {
 		"codmun": "63470",
 		"nommun": "Montenegro",
 		"coddep": "63",
-		"nomdep": "Quindí­o",
+		"nomdep": "Quindi­o",
 		"lat": "4.5",
 		"long": "-75.8"
 	}, {
 		"codmun": "23001",
 		"nommun": "Monteria",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.7575",
 		"long": "-75.89"
 	}, {
@@ -4048,7 +4279,7 @@ define(function(require) {
 		"codmun": "13473",
 		"nommun": "Morales",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.4166667",
 		"long": "-74"
 	}, {
@@ -4062,7 +4293,7 @@ define(function(require) {
 		"codmun": "18479",
 		"nommun": "Morelia",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "1.4875",
 		"long": "-75.725"
 	}, {
@@ -4090,14 +4321,14 @@ define(function(require) {
 		"codmun": "15476",
 		"nommun": "Motavita",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5797222",
 		"long": "-73.3713889"
 	}, {
 		"codmun": "23500",
 		"nommun": "Moñitos",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.25",
 		"long": "-76.05"
 	}, {
@@ -4109,14 +4340,14 @@ define(function(require) {
 		"long": "-75.1738889"
 	}, {
 		"codmun": "05475",
-		"nommun": "Murindó",
+		"nommun": "Murindo",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.8",
 		"long": "-76.8"
 	}, {
 		"codmun": "05480",
-		"nommun": "Mutatá",
+		"nommun": "Mutata",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "7.3333333",
@@ -4132,12 +4363,12 @@ define(function(require) {
 		"codmun": "15480",
 		"nommun": "Muzo",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5166667",
 		"long": "-74.1166667"
 	}, {
 		"codmun": "68432",
-		"nommun": "Málaga",
+		"nommun": "Malaga",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.7833333",
@@ -4172,14 +4403,14 @@ define(function(require) {
 		"long": "-75.0833333"
 	}, {
 		"codmun": "05495",
-		"nommun": "Nechí­",
+		"nommun": "Nechi­",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "8.0963889",
 		"long": "-74.7758333"
 	}, {
 		"codmun": "05490",
-		"nommun": "Necoclí­",
+		"nommun": "Necocli­",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "8.4238889",
@@ -4200,7 +4431,7 @@ define(function(require) {
 		"long": "-75.3302778"
 	}, {
 		"codmun": "25486",
-		"nommun": "Nemocón",
+		"nommun": "Nemocon",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.1333333",
@@ -4223,7 +4454,7 @@ define(function(require) {
 		"codmun": "15491",
 		"nommun": "Nobsa",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.8333333",
 		"long": "-72.9166667"
 	}, {
@@ -4242,16 +4473,16 @@ define(function(require) {
 		"long": "-74.8833333"
 	}, {
 		"codmun": "13490",
-		"nommun": "Norosí­",
+		"nommun": "Norosi­",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.5333333",
 		"long": "-74.0333333"
 	}, {
 		"codmun": "27491",
 		"nommun": "Novita",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "4.9166667",
 		"long": "-76.5833333"
 	}, {
@@ -4263,28 +4494,28 @@ define(function(require) {
 		"long": "-74.3902778"
 	}, {
 		"codmun": "15494",
-		"nommun": "Nuevo Colón",
+		"nommun": "Nuevo Colon",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.4166667",
 		"long": "-73.4166667"
 	}, {
 		"codmun": "85225",
-		"nommun": "Nunchí­a",
+		"nommun": "Nunchi­a",
 		"coddep": "85",
 		"nomdep": "Casanare",
 		"lat": "5.6405556",
 		"long": "-72.1986111"
 	}, {
 		"codmun": "27495",
-		"nommun": "Nuquí­",
+		"nommun": "Nuqui­",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "6",
 		"long": "-77.3333333"
 	}, {
 		"codmun": "41483",
-		"nommun": "Nátaga",
+		"nommun": "Nataga",
 		"coddep": "41",
 		"nomdep": "Huila",
 		"lat": "2.65",
@@ -4319,9 +4550,9 @@ define(function(require) {
 		"long": "-73.25"
 	}, {
 		"codmun": "15500",
-		"nommun": "Oicatá",
+		"nommun": "Oicata",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.6",
 		"long": "-73.3166667"
 	}, {
@@ -4361,7 +4592,7 @@ define(function(require) {
 		"long": "-76.8747222"
 	}, {
 		"codmun": "85230",
-		"nommun": "Orocué",
+		"nommun": "Orocue",
 		"coddep": "85",
 		"nomdep": "Casanare",
 		"lat": "4.7941667",
@@ -4384,7 +4615,7 @@ define(function(require) {
 		"codmun": "15507",
 		"nommun": "Otanche",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.75",
 		"long": "-74.25"
 	}, {
@@ -4398,7 +4629,7 @@ define(function(require) {
 		"codmun": "15511",
 		"nommun": "Pachavita",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.1333333",
 		"long": "-73.4"
 	}, {
@@ -4440,14 +4671,14 @@ define(function(require) {
 		"codmun": "15516",
 		"nommun": "Paipa",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.8333333",
 		"long": "-73.1"
 	}, {
 		"codmun": "15518",
 		"nommun": "Pajarito",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.4166667",
 		"long": "-72.6666667"
 	}, {
@@ -4482,7 +4713,7 @@ define(function(require) {
 		"codmun": "08520",
 		"nommun": "Palmar de Varela",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.7466667",
 		"long": "-74.7555556"
 	}, {
@@ -4538,7 +4769,7 @@ define(function(require) {
 		"codmun": "15522",
 		"nommun": "Panqueba",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.5",
 		"long": "-72.4166667"
 	}, {
@@ -4557,7 +4788,7 @@ define(function(require) {
 		"long": "-74.2833333"
 	}, {
 		"codmun": "19532",
-		"nommun": "Patí­a (El Bordo)",
+		"nommun": "Pati­a (El Bordo)",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "2.1155556",
@@ -4566,14 +4797,14 @@ define(function(require) {
 		"codmun": "15531",
 		"nommun": "Pauna",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.75",
 		"long": "-73.9166667"
 	}, {
 		"codmun": "15532",
 		"nommun": "Paya",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.6666667",
 		"long": "-72.3816667"
 	}, {
@@ -4585,9 +4816,9 @@ define(function(require) {
 		"long": "-71.9"
 	}, {
 		"codmun": "15537",
-		"nommun": "Paz de Rí­o",
+		"nommun": "Paz de Ri­o",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.0833333",
 		"long": "-72.75"
 	}, {
@@ -4629,7 +4860,7 @@ define(function(require) {
 		"codmun": "15542",
 		"nommun": "Pesca",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5833333",
 		"long": "-73.05"
 	}, {
@@ -4662,7 +4893,7 @@ define(function(require) {
 		"long": "-74.9166667"
 	}, {
 		"codmun": "19548",
-		"nommun": "Piendamó",
+		"nommun": "Piendamo",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "2.75",
@@ -4671,7 +4902,7 @@ define(function(require) {
 		"codmun": "63548",
 		"nommun": "Pijao",
 		"coddep": "63",
-		"nomdep": "Quindí­o",
+		"nomdep": "Quindi­o",
 		"lat": "4.3333333",
 		"long": "-75.6666667"
 	}, {
@@ -4692,21 +4923,21 @@ define(function(require) {
 		"codmun": "13549",
 		"nommun": "Pinillos",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.9172222",
 		"long": "-74.4663889"
 	}, {
 		"codmun": "08549",
 		"nommun": "Piojo",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.75",
 		"long": "-75.1333333"
 	}, {
 		"codmun": "15550",
 		"nommun": "Pisva",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.7427778",
 		"long": "-72.4894444"
 	}, {
@@ -4741,7 +4972,7 @@ define(function(require) {
 		"codmun": "23555",
 		"nommun": "Planeta Rica",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.3333333",
 		"long": "-75.5833333"
 	}, {
@@ -4762,19 +4993,19 @@ define(function(require) {
 		"codmun": "08558",
 		"nommun": "Polonuevo",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.75",
 		"long": "-74.7833333"
 	}, {
 		"codmun": "08560",
 		"nommun": "Ponedera",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.6436111",
 		"long": "-74.7544444"
 	}, {
 		"codmun": "19001",
-		"nommun": "Popayán",
+		"nommun": "Popayan",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "3.2775",
@@ -4788,7 +5019,7 @@ define(function(require) {
 		"long": "-71.93"
 	}, {
 		"codmun": "52560",
-		"nommun": "Potosí­",
+		"nommun": "Potosi­",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "0.75",
@@ -4818,7 +5049,7 @@ define(function(require) {
 		"codmun": "88564",
 		"nommun": "Providencia",
 		"coddep": "88",
-		"nomdep": "San Andrés",
+		"nomdep": "ARCHIPIELAGO DE SAN ANDRES",
 		"lat": "12.5",
 		"long": "-81.75"
 	}, {
@@ -4832,7 +5063,7 @@ define(function(require) {
 		"codmun": "23570",
 		"nommun": "Pueblo Nuevo",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.2333333",
 		"long": "-74.9666667"
 	}, {
@@ -4872,23 +5103,23 @@ define(function(require) {
 		"long": "-77.25"
 	}, {
 		"codmun": "86568",
-		"nommun": "Puerto Así­s",
+		"nommun": "Puerto Asi­s",
 		"coddep": "86",
 		"nomdep": "Putumayo",
 		"lat": "0.5158333",
 		"long": "-76.495"
 	}, {
 		"codmun": "05579",
-		"nommun": "Puerto Berrí­o",
+		"nommun": "Puerto Berri­o",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.4166667",
 		"long": "-74.5"
 	}, {
 		"codmun": "15572",
-		"nommun": "Puerto Boyacá",
+		"nommun": "Puerto Boyaca",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.9780556",
 		"long": "-74.5897222"
 	}, {
@@ -4909,7 +5140,7 @@ define(function(require) {
 		"codmun": "08573",
 		"nommun": "Puerto Colombia",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "11.0166667",
 		"long": "-74.8833333"
 	}, {
@@ -4923,26 +5154,26 @@ define(function(require) {
 		"codmun": "23574",
 		"nommun": "Puerto Escondido",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.95",
 		"long": "-76.25"
 	}, {
 		"codmun": "50568",
-		"nommun": "Puerto Gaitán",
+		"nommun": "Puerto Gaitan",
 		"coddep": "50",
 		"nomdep": "Meta",
 		"lat": "4.3141667",
 		"long": "-72.0825"
 	}, {
 		"codmun": "86571",
-		"nommun": "Puerto Guzmán",
+		"nommun": "Puerto Guzman",
 		"coddep": "86",
 		"nomdep": "Putumayo",
 		"lat": "0.9702778",
 		"long": "-76.5858333"
 	}, {
 		"codmun": "86573",
-		"nommun": "Puerto Leguí­zamo",
+		"nommun": "Puerto Legui­zamo",
 		"coddep": "86",
 		"nomdep": "Putumayo",
 		"lat": "-0.2",
@@ -4951,7 +5182,7 @@ define(function(require) {
 		"codmun": "23580",
 		"nommun": "Puerto Libertador",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "4.6",
 		"long": "-74.1166667"
 	}, {
@@ -4963,7 +5194,7 @@ define(function(require) {
 		"long": "-72.5"
 	}, {
 		"codmun": "50573",
-		"nommun": "Puerto López",
+		"nommun": "Puerto Lopez",
 		"coddep": "50",
 		"nomdep": "Meta",
 		"lat": "4.0833333",
@@ -4993,7 +5224,7 @@ define(function(require) {
 		"codmun": "18592",
 		"nommun": "Puerto Rico",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "1.9141667",
 		"long": "-75.145"
 	}, {
@@ -5005,7 +5236,7 @@ define(function(require) {
 		"long": "-73.2083333"
 	}, {
 		"codmun": "81591",
-		"nommun": "Puerto Rondón",
+		"nommun": "Puerto Rondon",
 		"coddep": "81",
 		"nomdep": "Arauca",
 		"lat": "6.2780556",
@@ -5047,7 +5278,7 @@ define(function(require) {
 		"long": "-73.6666667"
 	}, {
 		"codmun": "25580",
-		"nommun": "Pulí­",
+		"nommun": "Puli­",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.75",
@@ -5061,49 +5292,49 @@ define(function(require) {
 		"long": "-77.6666667"
 	}, {
 		"codmun": "19585",
-		"nommun": "Puracé (Coconuco)",
+		"nommun": "Purace (Coconuco)",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "2.3480556",
 		"long": "-76.5008333"
 	}, {
 		"codmun": "73585",
-		"nommun": "Purificación",
+		"nommun": "Purificacion",
 		"coddep": "73",
 		"nomdep": "Tolima",
 		"lat": "3.9166667",
 		"long": "-74.9166667"
 	}, {
 		"codmun": "23586",
-		"nommun": "Purí­sima",
+		"nommun": "Puri­sima",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "9.3",
 		"long": "-75.6666667"
 	}, {
 		"codmun": "17513",
-		"nommun": "Pácora",
+		"nommun": "Pacora",
 		"coddep": "17",
 		"nomdep": "Caldas",
 		"lat": "5.5",
 		"long": "-75.5"
 	}, {
 		"codmun": "15514",
-		"nommun": "Páez",
+		"nommun": "Paez",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.1044444",
 		"long": "-73.0555556"
 	}, {
 		"codmun": "19517",
-		"nommun": "Páez (Belalcazar)",
+		"nommun": "Paez (Belalcazar)",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "5.1044444",
 		"long": "-73.0555556"
 	}, {
 		"codmun": "68533",
-		"nommun": "Páramo",
+		"nommun": "Paramo",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.5",
@@ -5124,21 +5355,21 @@ define(function(require) {
 		"long": "-73.8333333"
 	}, {
 		"codmun": "27001",
-		"nommun": "Quibdó",
+		"nommun": "Quibdo",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.6947222",
 		"long": "-76.6611111"
 	}, {
 		"codmun": "63594",
 		"nommun": "Quimbaya",
 		"coddep": "63",
-		"nomdep": "Quindí­o",
+		"nomdep": "Quindi­o",
 		"lat": "4.6333333",
 		"long": "-75.75"
 	}, {
 		"codmun": "66594",
-		"nommun": "Quinchí­a",
+		"nommun": "Quinchi­a",
 		"coddep": "66",
 		"nomdep": "Risaralda",
 		"lat": "5.3333333",
@@ -5147,7 +5378,7 @@ define(function(require) {
 		"codmun": "15580",
 		"nommun": "Quipama",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5222222",
 		"long": "-74.1808333"
 	}, {
@@ -5166,9 +5397,9 @@ define(function(require) {
 		"long": "-72.5"
 	}, {
 		"codmun": "15599",
-		"nommun": "Ramiriquí­",
+		"nommun": "Ramiriqui­",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.4166667",
 		"long": "-73.3333333"
 	}, {
@@ -5182,7 +5413,7 @@ define(function(require) {
 		"codmun": "13580",
 		"nommun": "Regidor",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.6666667",
 		"long": "-73.8333333"
 	}, {
@@ -5201,9 +5432,9 @@ define(function(require) {
 		"long": "-74.5833333"
 	}, {
 		"codmun": "08606",
-		"nommun": "Repelón",
+		"nommun": "Repelon",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.55",
 		"long": "-75.1333333"
 	}, {
@@ -5257,7 +5488,7 @@ define(function(require) {
 		"long": "-75.8333333"
 	}, {
 		"codmun": "76616",
-		"nommun": "Riofrí­o",
+		"nommun": "Riofri­o",
 		"coddep": "76",
 		"nomdep": "Valle del Cauca",
 		"lat": "4.0833333",
@@ -5285,7 +5516,7 @@ define(function(require) {
 		"long": "-75.1666667"
 	}, {
 		"codmun": "52621",
-		"nommun": "Roberto Payán (San José)",
+		"nommun": "Roberto Payan (San Jose)",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "1.9166667",
@@ -5306,9 +5537,9 @@ define(function(require) {
 		"long": "-75.5833333"
 	}, {
 		"codmun": "15621",
-		"nommun": "Rondón",
+		"nommun": "Rondon",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.4166667",
 		"long": "-73.1666667"
 	}, {
@@ -5327,58 +5558,58 @@ define(function(require) {
 		"long": "-75.3333333"
 	}, {
 		"codmun": "15600",
-		"nommun": "Ráquira",
+		"nommun": "Raquira",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.6166667",
 		"long": "-73.6333333"
 	}, {
 		"codmun": "27580",
-		"nommun": "Rí­o Iró",
+		"nommun": "Ri­o Iro",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.1",
 		"long": "-76.6666667"
 	}, {
 		"codmun": "27600",
-		"nommun": "Rí­o Quito",
+		"nommun": "Ri­o Quito",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.7",
 		"long": "-76.6666667"
 	}, {
 		"codmun": "17614",
-		"nommun": "Rí­o Sucio",
+		"nommun": "Ri­o Sucio",
 		"coddep": "17",
 		"nomdep": "Caldas",
 		"lat": "5.3791667",
 		"long": "-75.6161111"
 	}, {
 		"codmun": "13600",
-		"nommun": "Rí­o Viejo",
+		"nommun": "Ri­o Viejo",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.59",
 		"long": "-73.8436111"
 	}, {
 		"codmun": "20614",
-		"nommun": "Rí­o de oro",
+		"nommun": "Ri­o de oro",
 		"coddep": "20",
 		"nomdep": "Cesar",
 		"lat": "8",
 		"long": "-73.5"
 	}, {
 		"codmun": "05615",
-		"nommun": "Rí­onegro",
+		"nommun": "Ri­onegro",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.1666667",
 		"long": "-75.4166667"
 	}, {
 		"codmun": "27615",
-		"nommun": "Rí­osucio",
+		"nommun": "Ri­osucio",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "7.4166667",
 		"long": "-77.1666667"
 	}, {
@@ -5392,7 +5623,7 @@ define(function(require) {
 		"codmun": "08634",
 		"nommun": "Sabanagrande",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.8",
 		"long": "-74.75"
 	}, {
@@ -5406,7 +5637,7 @@ define(function(require) {
 		"codmun": "08638",
 		"nommun": "Sabanalarga",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.6333333",
 		"long": "-74.8333333"
 	}, {
@@ -5432,16 +5663,16 @@ define(function(require) {
 		"long": "-75.6"
 	}, {
 		"codmun": "15632",
-		"nommun": "Saboyá",
+		"nommun": "Saboya",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.75",
 		"long": "-73.7"
 	}, {
 		"codmun": "23660",
-		"nommun": "Sahagíºn",
+		"nommun": "Sahagiºn",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.8333333",
 		"long": "-75.4166667"
 	}, {
@@ -5483,7 +5714,7 @@ define(function(require) {
 		"codmun": "63690",
 		"nommun": "Salento",
 		"coddep": "63",
-		"nomdep": "Quindí­o",
+		"nomdep": "Quindi­o",
 		"lat": "4.6666667",
 		"long": "-75.5"
 	}, {
@@ -5495,9 +5726,9 @@ define(function(require) {
 		"long": "-76"
 	}, {
 		"codmun": "15646",
-		"nommun": "Samacá",
+		"nommun": "Samaca",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5",
 		"long": "-73.5"
 	}, {
@@ -5509,21 +5740,21 @@ define(function(require) {
 		"long": "-77.6666667"
 	}, {
 		"codmun": "17662",
-		"nommun": "Samaná",
+		"nommun": "Samana",
 		"coddep": "17",
 		"nomdep": "Caldas",
 		"lat": "5.5833333",
 		"long": "-74.9166667"
 	}, {
 		"codmun": "70670",
-		"nommun": "Sampués",
+		"nommun": "Sampues",
 		"coddep": "70",
 		"nomdep": "Sucre",
 		"lat": "9.1666667",
 		"long": "-75.3"
 	}, {
 		"codmun": "41668",
-		"nommun": "San Agustí­n",
+		"nommun": "San Agusti­n",
 		"coddep": "41",
 		"nomdep": "Huila",
 		"lat": "1.9166667",
@@ -5537,21 +5768,21 @@ define(function(require) {
 		"long": "-73.3891667"
 	}, {
 		"codmun": "68669",
-		"nommun": "San Andrés",
+		"nommun": "San Andres",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.8333333",
 		"long": "-72.75"
 	}, {
 		"codmun": "23670",
-		"nommun": "San Andrés Sotavento",
+		"nommun": "San Andres Sotavento",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "9.1666667",
 		"long": "-75.55"
 	}, {
 		"codmun": "05647",
-		"nommun": "San Andrés de Cuerquí­a",
+		"nommun": "San Andres de Cuerqui­a",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.917",
@@ -5560,7 +5791,7 @@ define(function(require) {
 		"codmun": "23672",
 		"nommun": "San Antero",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "9.35",
 		"long": "-75.75"
 	}, {
@@ -5609,7 +5840,7 @@ define(function(require) {
 		"codmun": "23675",
 		"nommun": "San Bernardo del Viento",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "9.25",
 		"long": "-76"
 	}, {
@@ -5630,7 +5861,7 @@ define(function(require) {
 		"codmun": "23678",
 		"nommun": "San Carlos",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.7",
 		"long": "-75.7"
 	}, {
@@ -5658,7 +5889,7 @@ define(function(require) {
 		"codmun": "13620",
 		"nommun": "San Cristobal",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "9.8833333",
 		"long": "-75.25"
 	}, {
@@ -5672,21 +5903,21 @@ define(function(require) {
 		"codmun": "15660",
 		"nommun": "San Eduardo",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.2166667",
 		"long": "-73.1333333"
 	}, {
 		"codmun": "13647",
 		"nommun": "San Estanislao",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.3983333",
 		"long": "-75.1511111"
 	}, {
 		"codmun": "13650",
 		"nommun": "San Fernando",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "9.0833333",
 		"long": "-74.3333333"
 	}, {
@@ -5712,7 +5943,7 @@ define(function(require) {
 		"long": "-76.8830556"
 	}, {
 		"codmun": "68679",
-		"nommun": "San Gí­l",
+		"nommun": "San Gi­l",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.5833333",
@@ -5721,84 +5952,84 @@ define(function(require) {
 		"codmun": "13654",
 		"nommun": "San Jacinto",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "9.8333333",
 		"long": "-75.0833333"
 	}, {
 		"codmun": "13655",
 		"nommun": "San Jacinto del Cauca",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "9.8316667",
 		"long": "-75.1263889"
 	}, {
 		"codmun": "05656",
-		"nommun": "San Jerónimo",
+		"nommun": "San Jeronimo",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.45",
 		"long": "-75.7"
 	}, {
 		"codmun": "68682",
-		"nommun": "San Joaquí­n",
+		"nommun": "San Joaqui­n",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.4333333",
 		"long": "-72.8666667"
 	}, {
 		"codmun": "17665",
-		"nommun": "San José",
+		"nommun": "San Jose",
 		"coddep": "17",
 		"nomdep": "Caldas",
 		"lat": "5.0858333",
 		"long": "-75.7883333"
 	}, {
 		"codmun": "68686",
-		"nommun": "San José de Miranda",
+		"nommun": "San Jose de Miranda",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.7",
 		"long": "-72.6666667"
 	}, {
 		"codmun": "05658",
-		"nommun": "San José de Montaña",
+		"nommun": "San Jose de Montaña",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.8502778",
 		"long": "-75.6833333"
 	}, {
 		"codmun": "15664",
-		"nommun": "San José de Pare",
+		"nommun": "San Jose de Pare",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.0833333",
 		"long": "-73.4666667"
 	}, {
 		"codmun": "23682",
-		"nommun": "San José de Uré",
+		"nommun": "San Jose de Ure",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "7.767",
 		"long": "-75.517"
 	}, {
 		"codmun": "18610",
-		"nommun": "San José del Fragua",
+		"nommun": "San Jose del Fragua",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "1.3611111",
 		"long": "-75.9883333"
 	}, {
 		"codmun": "95001",
-		"nommun": "San José del Guaviare",
+		"nommun": "San Jose del Guaviare",
 		"coddep": "95",
 		"nomdep": "Guaviare",
 		"lat": "2.5683333",
 		"long": "-72.6416667"
 	}, {
 		"codmun": "27660",
-		"nommun": "San José del Palmar",
+		"nommun": "San Jose del Palmar",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "4.9166667",
 		"long": "-76.25"
 	}, {
@@ -5819,7 +6050,7 @@ define(function(require) {
 		"codmun": "13657",
 		"nommun": "San Juan de Nepomuceno",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "9.9566667",
 		"long": "-75.0866667"
 	}, {
@@ -5831,14 +6062,14 @@ define(function(require) {
 		"long": "-77.2786474227905"
 	}, {
 		"codmun": "25662",
-		"nommun": "San Juan de Rí­o Seco",
+		"nommun": "San Juan de Ri­o Seco",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.9166667",
 		"long": "-74.6666667"
 	}, {
 		"codmun": "05659",
-		"nommun": "San Juan de Urabá",
+		"nommun": "San Juan de Uraba",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "8.7630556",
@@ -5873,21 +6104,21 @@ define(function(require) {
 		"long": "-75.0833333"
 	}, {
 		"codmun": "05660",
-		"nommun": "San Luí­s",
+		"nommun": "San Lui­s",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6",
 		"long": "-74.8333333"
 	}, {
 		"codmun": "15667",
-		"nommun": "San Luí­s de Gaceno",
+		"nommun": "San Lui­s de Gaceno",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "4.8213889",
 		"long": "-73.1675"
 	}, {
 		"codmun": "85325",
-		"nommun": "San Luí­s de Palenque",
+		"nommun": "San Lui­s de Palenque",
 		"coddep": "85",
 		"nomdep": "Casanare",
 		"lat": "5.2805556",
@@ -5901,30 +6132,30 @@ define(function(require) {
 		"long": "-75.1666667"
 	}, {
 		"codmun": "20770",
-		"nommun": "San Martí­n",
+		"nommun": "San Marti­n",
 		"coddep": "20",
 		"nomdep": "Cesar",
 		"lat": "8.0047222",
 		"long": "-73.5152778"
 	}, {
 		"codmun": "50689",
-		"nommun": "San Martí­n",
+		"nommun": "San Marti­n",
 		"coddep": "50",
 		"nomdep": "Meta",
 		"lat": "3.7",
 		"long": "-73.7"
 	}, {
 		"codmun": "13667",
-		"nommun": "San Martí­n de Loba",
+		"nommun": "San Marti­n de Loba",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.8333333",
 		"long": "-73.9166667"
 	}, {
 		"codmun": "15673",
 		"nommun": "San Mateo",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.5",
 		"long": "-72.5"
 	}, {
@@ -5945,7 +6176,7 @@ define(function(require) {
 		"codmun": "15676",
 		"nommun": "San Miguel de Sema",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.55",
 		"long": "-73.75"
 	}, {
@@ -5959,7 +6190,7 @@ define(function(require) {
 		"codmun": "13670",
 		"nommun": "San Pablo",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.0527778",
 		"long": "-75.2680556"
 	}, {
@@ -5973,7 +6204,7 @@ define(function(require) {
 		"codmun": "15681",
 		"nommun": "San Pablo de Borbur",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.75",
 		"long": "-74.0833333"
 	}, {
@@ -6006,7 +6237,7 @@ define(function(require) {
 		"long": "-77.1180556"
 	}, {
 		"codmun": "05665",
-		"nommun": "San Pedro de Urabá",
+		"nommun": "San Pedro de Uraba",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "8.2761111",
@@ -6015,7 +6246,7 @@ define(function(require) {
 		"codmun": "23686",
 		"nommun": "San Pelayo",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "9",
 		"long": "-75.9166667"
 	}, {
@@ -6034,14 +6265,14 @@ define(function(require) {
 		"long": "-74.8333333"
 	}, {
 		"codmun": "19693",
-		"nommun": "San Sebastián",
+		"nommun": "San Sebastian",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "1.9166667",
 		"long": "-76.6666667"
 	}, {
 		"codmun": "47692",
-		"nommun": "San Sebastián de Buenavista",
+		"nommun": "San Sebastian de Buenavista",
 		"coddep": "47",
 		"nomdep": "Magdalena",
 		"lat": "9.3333333",
@@ -6055,28 +6286,28 @@ define(function(require) {
 		"long": "-75.3333333"
 	}, {
 		"codmun": "18753",
-		"nommun": "San Vicente del Caguán",
+		"nommun": "San Vicente del Caguan",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "2.1525",
 		"long": "-74.7888889"
 	}, {
 		"codmun": "68689",
-		"nommun": "San Vicente del Chucurí­",
+		"nommun": "San Vicente del Chucuri­",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.8836111",
 		"long": "-73.4138889"
 	}, {
 		"codmun": "47703",
-		"nommun": "San Zenón",
+		"nommun": "San Zenon",
 		"coddep": "47",
 		"nomdep": "Magdalena",
 		"lat": "9.3333333",
 		"long": "-74.3"
 	}, {
 		"codmun": "52683",
-		"nommun": "Sandoná",
+		"nommun": "Sandona",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "1.25",
@@ -6090,28 +6321,28 @@ define(function(require) {
 		"long": "-74.5833333"
 	}, {
 		"codmun": "05679",
-		"nommun": "Santa Bárbara",
+		"nommun": "Santa Barbara",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "5.8666667",
 		"long": "-75.5833333"
 	}, {
 		"codmun": "68705",
-		"nommun": "Santa Bárbara",
+		"nommun": "Santa Barbara",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.9927778",
 		"long": "-72.9102778"
 	}, {
 		"codmun": "52695",
-		"nommun": "Santa Bárbara (Iscuandé)",
+		"nommun": "Santa Barbara (Iscuande)",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "2.3333333",
 		"long": "-77.9166667"
 	}, {
 		"codmun": "47720",
-		"nommun": "Santa Bárbara de Pinto",
+		"nommun": "Santa Barbara de Pinto",
 		"coddep": "47",
 		"nomdep": "Magdalena",
 		"lat": "10.6",
@@ -6120,26 +6351,26 @@ define(function(require) {
 		"codmun": "13673",
 		"nommun": "Santa Catalina",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.5833333",
 		"long": "-75.25"
 	}, {
 		"codmun": "05042",
-		"nommun": "Santa Fé de Antioquia",
+		"nommun": "Santa Fe de Antioquia",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.5597222",
 		"long": "-75.8280556"
 	}, {
 		"codmun": "27250",
-		"nommun": "Santa Genoveva de Docorodó",
+		"nommun": "Santa Genoveva de Docorodo",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "4.2586111",
 		"long": "-77.3675"
 	}, {
 		"codmun": "68720",
-		"nommun": "Santa Helena del Opón",
+		"nommun": "Santa Helena del Opon",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.3375",
@@ -6153,9 +6384,9 @@ define(function(require) {
 		"long": "-75.1666667"
 	}, {
 		"codmun": "08675",
-		"nommun": "Santa Lucí­a",
+		"nommun": "Santa Luci­a",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.3286111",
 		"long": "-74.9644444"
 	}, {
@@ -6167,14 +6398,14 @@ define(function(require) {
 		"long": "-74.2016667"
 	}, {
 		"codmun": "15690",
-		"nommun": "Santa Marí­a",
+		"nommun": "Santa Mari­a",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "4.8616667",
 		"long": "-73.2641667"
 	}, {
 		"codmun": "41676",
-		"nommun": "Santa Marí­a",
+		"nommun": "Santa Mari­a",
 		"coddep": "41",
 		"nomdep": "Huila",
 		"lat": "3",
@@ -6183,7 +6414,7 @@ define(function(require) {
 		"codmun": "13683",
 		"nommun": "Santa Rosa",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.45",
 		"long": "-75.3333333"
 	}, {
@@ -6211,35 +6442,35 @@ define(function(require) {
 		"codmun": "15693",
 		"nommun": "Santa Rosa de Viterbo",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.9166667",
 		"long": "-73"
 	}, {
 		"codmun": "13688",
 		"nommun": "Santa Rosa del Sur",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "7.9644444",
 		"long": "-74.0544444"
 	}, {
 		"codmun": "99624",
-		"nommun": "Santa Rosalí­a",
+		"nommun": "Santa Rosali­a",
 		"coddep": "99",
 		"nomdep": "Vichada",
 		"lat": "5.1261111",
 		"long": "-70.8758333"
 	}, {
 		"codmun": "15696",
-		"nommun": "Santa Sofí­a",
+		"nommun": "Santa Sofi­a",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.75",
 		"long": "-73.5833333"
 	}, {
 		"codmun": "15686",
 		"nommun": "Santana",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.0572222",
 		"long": "-73.4822222"
 	}, {
@@ -6272,9 +6503,9 @@ define(function(require) {
 		"long": "-75.1647222"
 	}, {
 		"codmun": "08685",
-		"nommun": "Santo Tomás",
+		"nommun": "Santo Tomas",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.75",
 		"long": "-74.8333333"
 	}, {
@@ -6323,14 +6554,14 @@ define(function(require) {
 		"codmun": "15720",
 		"nommun": "Sativanorte",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.1666667",
 		"long": "-72.6666667"
 	}, {
 		"codmun": "15723",
 		"nommun": "Sativasur",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.1333333",
 		"long": "-72.6666667"
 	}, {
@@ -6342,7 +6573,7 @@ define(function(require) {
 		"long": "-74.75"
 	}, {
 		"codmun": "25736",
-		"nommun": "Sesquilé",
+		"nommun": "Sesquile",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.0833333",
@@ -6358,12 +6589,12 @@ define(function(require) {
 		"codmun": "15740",
 		"nommun": "Siachoque",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5833333",
 		"long": "-73.1666667"
 	}, {
 		"codmun": "25740",
-		"nommun": "Sibaté",
+		"nommun": "Sibate",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.4913889",
@@ -6412,9 +6643,9 @@ define(function(require) {
 		"long": "-73.8333333"
 	}, {
 		"codmun": "13744",
-		"nommun": "Simití­",
+		"nommun": "Simiti­",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "7.5833333",
 		"long": "-74.1666667"
 	}, {
@@ -6426,16 +6657,16 @@ define(function(require) {
 		"long": "-75.3977778"
 	}, {
 		"codmun": "70742",
-		"nommun": "Sincé",
+		"nommun": "Since",
 		"coddep": "70",
 		"nomdep": "Sucre",
 		"lat": "9.1666667",
 		"long": "-75"
 	}, {
 		"codmun": "27745",
-		"nommun": "Sipí­",
+		"nommun": "Sipi­",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "4.5833333",
 		"long": "-76.5"
 	}, {
@@ -6454,16 +6685,16 @@ define(function(require) {
 		"long": "-74.2213889"
 	}, {
 		"codmun": "15753",
-		"nommun": "Soatá",
+		"nommun": "Soata",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.4166667",
 		"long": "-72.6666667"
 	}, {
 		"codmun": "15757",
 		"nommun": "Socha",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6",
 		"long": "-72.6666667"
 	}, {
@@ -6475,56 +6706,56 @@ define(function(require) {
 		"long": "-73.2"
 	}, {
 		"codmun": "15755",
-		"nommun": "Socotá",
+		"nommun": "Socota",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.0833333",
 		"long": "-72.5833333"
 	}, {
 		"codmun": "15759",
 		"nommun": "Sogamoso",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.7205556",
 		"long": "-72.9297222"
 	}, {
 		"codmun": "18765",
 		"nommun": "Solano",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "0.7147222",
 		"long": "-75.2486111"
 	}, {
 		"codmun": "08758",
 		"nommun": "Soledad",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.9172222",
 		"long": "-74.7666667"
 	}, {
 		"codmun": "18785",
 		"nommun": "Solita",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "0.9",
 		"long": "-75.623"
 	}, {
 		"codmun": "15761",
 		"nommun": "Somondoco",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "4.9877778",
 		"long": "-73.4361111"
 	}, {
 		"codmun": "05756",
-		"nommun": "Sonsón",
+		"nommun": "Sonson",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "5.75",
 		"long": "-75"
 	}, {
 		"codmun": "05761",
-		"nommun": "Sopetrán",
+		"nommun": "Sopetran",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.5",
@@ -6533,12 +6764,12 @@ define(function(require) {
 		"codmun": "13760",
 		"nommun": "Soplaviento",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.3333333",
 		"long": "-75.1"
 	}, {
 		"codmun": "25758",
-		"nommun": "Sopó",
+		"nommun": "Sopo",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.9166667",
@@ -6547,21 +6778,21 @@ define(function(require) {
 		"codmun": "15762",
 		"nommun": "Sora",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5666667",
 		"long": "-73.4333333"
 	}, {
 		"codmun": "15764",
-		"nommun": "Soracá",
+		"nommun": "Soraca",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5",
 		"long": "-73.3166667"
 	}, {
 		"codmun": "15763",
-		"nommun": "Sotaquirá",
+		"nommun": "Sotaquira",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.8333333",
 		"long": "-73.25"
 	}, {
@@ -6589,7 +6820,7 @@ define(function(require) {
 		"codmun": "08770",
 		"nommun": "Suan",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.3333333",
 		"long": "-74.9166667"
 	}, {
@@ -6636,21 +6867,21 @@ define(function(require) {
 		"long": "-73.8333333"
 	}, {
 		"codmun": "25777",
-		"nommun": "Supatá",
+		"nommun": "Supata",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.0833333",
 		"long": "-74.25"
 	}, {
 		"codmun": "17777",
-		"nommun": "Supí­a",
+		"nommun": "Supi­a",
 		"coddep": "17",
 		"nomdep": "Caldas",
 		"lat": "5.5",
 		"long": "-75.6333333"
 	}, {
 		"codmun": "68780",
-		"nommun": "Suratá",
+		"nommun": "Surata",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "7.5",
@@ -6664,16 +6895,16 @@ define(function(require) {
 		"long": "-73.8333333"
 	}, {
 		"codmun": "15774",
-		"nommun": "Susacón",
+		"nommun": "Susacon",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.2666667",
 		"long": "-72.6666667"
 	}, {
 		"codmun": "15776",
-		"nommun": "Sutamarchán",
+		"nommun": "Sutamarchan",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.6666667",
 		"long": "-73.5833333"
 	}, {
@@ -6687,35 +6918,35 @@ define(function(require) {
 		"codmun": "15778",
 		"nommun": "Sutatenza",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.0166667",
 		"long": "-73.45"
 	}, {
 		"codmun": "19780",
-		"nommun": "Suárez",
+		"nommun": "Suarez",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "2.9588889",
 		"long": "-76.6952778"
 	}, {
 		"codmun": "73770",
-		"nommun": "Suárez",
+		"nommun": "Suarez",
 		"coddep": "73",
 		"nomdep": "Tolima",
 		"lat": "4.0833333",
 		"long": "-74.7833333"
 	}, {
 		"codmun": "85315",
-		"nommun": "Sácama",
+		"nommun": "Sacama",
 		"coddep": "85",
 		"nomdep": "Casanare",
 		"lat": "6.0833333",
 		"long": "-72.0833333"
 	}, {
 		"codmun": "15638",
-		"nommun": "Sáchica",
+		"nommun": "Sachica",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.6666667",
 		"long": "-73.5"
 	}, {
@@ -6727,16 +6958,16 @@ define(function(require) {
 		"long": "-74.0833333"
 	}, {
 		"codmun": "27787",
-		"nommun": "Tadó",
+		"nommun": "Tado",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.3333333",
 		"long": "-76.4166667"
 	}, {
 		"codmun": "13780",
 		"nommun": "Talaigua Nuevo",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "9.3069444",
 		"long": "-74.5686111"
 	}, {
@@ -6771,12 +7002,12 @@ define(function(require) {
 		"codmun": "97666",
 		"nommun": "Taraira",
 		"coddep": "97",
-		"nomdep": "Vaupés",
+		"nomdep": "Vaupes",
 		"lat": "0.4938889",
 		"long": "-69.6669444"
 	}, {
 		"codmun": "05790",
-		"nommun": "Tarazá",
+		"nommun": "Taraza",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "7.5833333",
@@ -6799,7 +7030,7 @@ define(function(require) {
 		"codmun": "15790",
 		"nommun": "Tasco",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.9166667",
 		"long": "-72.7"
 	}, {
@@ -6848,7 +7079,7 @@ define(function(require) {
 		"codmun": "15798",
 		"nommun": "Tenza",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.15",
 		"long": "-73.45"
 	}, {
@@ -6881,16 +7112,16 @@ define(function(require) {
 		"long": "-74.5"
 	}, {
 		"codmun": "15804",
-		"nommun": "Tibaná",
+		"nommun": "Tibana",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.3333333",
 		"long": "-73.3833333"
 	}, {
 		"codmun": "15806",
 		"nommun": "Tibasosa",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.8333333",
 		"long": "-72.9666667"
 	}, {
@@ -6902,7 +7133,7 @@ define(function(require) {
 		"long": "-73.5333333"
 	}, {
 		"codmun": "54810",
-		"nommun": "Tibíº",
+		"nommun": "Tibiº",
 		"coddep": "54",
 		"nomdep": "Norte de Santander",
 		"lat": "8.6480556",
@@ -6911,54 +7142,54 @@ define(function(require) {
 		"codmun": "23807",
 		"nommun": "Tierralta",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.1736111",
 		"long": "-76.0591667"
 	}, {
 		"codmun": "41807",
-		"nommun": "Timaná",
+		"nommun": "Timana",
 		"coddep": "41",
 		"nomdep": "Huila",
 		"lat": "2",
 		"long": "-75.9166667"
 	}, {
 		"codmun": "19809",
-		"nommun": "Timbiquí­",
+		"nommun": "Timbiqui­",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "2.75",
 		"long": "-77.5833333"
 	}, {
 		"codmun": "19807",
-		"nommun": "Timbí­o",
+		"nommun": "Timbi­o",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "2.4166667",
 		"long": "-76.75"
 	}, {
 		"codmun": "15808",
-		"nommun": "Tinjacá",
+		"nommun": "Tinjaca",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.6333333",
 		"long": "-73.65"
 	}, {
 		"codmun": "15810",
 		"nommun": "Tipacoque",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.4233333",
 		"long": "-72.6952778"
 	}, {
 		"codmun": "13810",
 		"nommun": "Tiquisio (Puerto Rico)",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "8.5597222",
 		"long": "-74.2669444"
 	}, {
 		"codmun": "05809",
-		"nommun": "Titiribí­",
+		"nommun": "Titiribi­",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.0833333",
@@ -6967,7 +7198,7 @@ define(function(require) {
 		"codmun": "15814",
 		"nommun": "Toca",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.6666667",
 		"long": "-73.1666667"
 	}, {
@@ -6979,16 +7210,16 @@ define(function(require) {
 		"long": "-74.6666667"
 	}, {
 		"codmun": "25817",
-		"nommun": "Tocancipá",
+		"nommun": "Tocancipa",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5",
 		"long": "-73.9166667"
 	}, {
 		"codmun": "15816",
-		"nommun": "Toguí­",
+		"nommun": "Togui­",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.95",
 		"long": "-73.4166667"
 	}, {
@@ -7007,14 +7238,14 @@ define(function(require) {
 		"long": "-72.25"
 	}, {
 		"codmun": "70820",
-		"nommun": "Tolíº",
+		"nommun": "Toliº",
 		"coddep": "70",
 		"nomdep": "Sucre",
 		"lat": "9.5",
 		"long": "-75.5333333"
 	}, {
 		"codmun": "70823",
-		"nommun": "Tolíº Viejo",
+		"nommun": "Toliº Viejo",
 		"coddep": "70",
 		"nomdep": "Sucre",
 		"lat": "",
@@ -7028,21 +7259,21 @@ define(function(require) {
 		"long": "-72.9"
 	}, {
 		"codmun": "15820",
-		"nommun": "Topagá",
+		"nommun": "Topaga",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.8333333",
 		"long": "-72.8333333"
 	}, {
 		"codmun": "25823",
-		"nommun": "Topaipí­",
+		"nommun": "Topaipi­",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.4166667",
 		"long": "-74.3333333"
 	}, {
 		"codmun": "19821",
-		"nommun": "Toribí­o",
+		"nommun": "Toribi­o",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "3",
@@ -7058,12 +7289,12 @@ define(function(require) {
 		"codmun": "15822",
 		"nommun": "Tota",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5",
 		"long": "-73"
 	}, {
 		"codmun": "19824",
-		"nommun": "Totoró",
+		"nommun": "Totoro",
 		"coddep": "19",
 		"nomdep": "Cauca",
 		"lat": "2.5833333",
@@ -7084,21 +7315,21 @@ define(function(require) {
 		"long": "-76.3333333"
 	}, {
 		"codmun": "08832",
-		"nommun": "Tubará",
+		"nommun": "Tubara",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.9166667",
 		"long": "-74.95"
 	}, {
 		"codmun": "23815",
-		"nommun": "Tuchí­n",
+		"nommun": "Tuchi­n",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "9.1833333",
 		"long": "-75.55"
 	}, {
 		"codmun": "76834",
-		"nommun": "Tulíºa",
+		"nommun": "Tuliºa",
 		"coddep": "76",
 		"nomdep": "Valle del Cauca",
 		"lat": "4.0866667",
@@ -7114,28 +7345,28 @@ define(function(require) {
 		"codmun": "15001",
 		"nommun": "Tunja",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5352778",
 		"long": "-73.3677778"
 	}, {
 		"codmun": "15832",
 		"nommun": "Tunungua",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.7333333",
 		"long": "-73.9333333"
 	}, {
 		"codmun": "13836",
 		"nommun": "Turbaco",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.35",
 		"long": "-75.3333333"
 	}, {
 		"codmun": "13838",
-		"nommun": "Turbaná",
+		"nommun": "Turbana",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.25",
 		"long": "-75.4166667"
 	}, {
@@ -7147,49 +7378,49 @@ define(function(require) {
 		"long": "-76.5833333"
 	}, {
 		"codmun": "15835",
-		"nommun": "Turmequé",
+		"nommun": "Turmeque",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.3333333",
 		"long": "-73.5"
 	}, {
 		"codmun": "15837",
 		"nommun": "Tuta",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.75",
 		"long": "-73.1666667"
 	}, {
 		"codmun": "15839",
-		"nommun": "Tutasá",
+		"nommun": "Tutasa",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "6.1666667",
 		"long": "-72.8333333"
 	}, {
 		"codmun": "85400",
-		"nommun": "Támara",
+		"nommun": "Tamara",
 		"coddep": "85",
 		"nomdep": "Casanare",
 		"lat": "5.8297222",
 		"long": "-72.1633333"
 	}, {
 		"codmun": "05789",
-		"nommun": "Támesis",
+		"nommun": "Tamesis",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "5.6666667",
 		"long": "-75.6666667"
 	}, {
 		"codmun": "52838",
-		"nommun": "Tíºquerres",
+		"nommun": "Tiºquerres",
 		"coddep": "52",
 		"nomdep": "Nariño",
 		"lat": "1.1666667",
 		"long": "-77.5833333"
 	}, {
 		"codmun": "25839",
-		"nommun": "Ubalá",
+		"nommun": "Ubala",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.8333333",
@@ -7203,7 +7434,7 @@ define(function(require) {
 		"long": "-74"
 	}, {
 		"codmun": "25843",
-		"nommun": "Ubaté",
+		"nommun": "Ubate",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.35",
@@ -7224,16 +7455,16 @@ define(function(require) {
 		"long": "-74.0833333"
 	}, {
 		"codmun": "27800",
-		"nommun": "Unguí­a",
+		"nommun": "Ungui­a",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "8.0430556",
 		"long": "-77.0961111"
 	}, {
 		"codmun": "27810",
-		"nommun": "Unión Panamericana (íNIMAS)",
+		"nommun": "Union Panamericana (iNIMAS)",
 		"coddep": "27",
-		"nomdep": "Chocó",
+		"nomdep": "Choco",
 		"lat": "5.283",
 		"long": "-76.617"
 	}, {
@@ -7275,7 +7506,7 @@ define(function(require) {
 		"codmun": "08849",
 		"nommun": "Usiacuri",
 		"coddep": "08",
-		"nomdep": "Atlántico",
+		"nomdep": "Atlantico",
 		"lat": "10.75",
 		"long": "-74.9666667"
 	}, {
@@ -7289,12 +7520,12 @@ define(function(require) {
 		"codmun": "23855",
 		"nommun": "Valencia",
 		"coddep": "23",
-		"nomdep": "Córdoba",
+		"nomdep": "Cordoba",
 		"lat": "8.3",
 		"long": "-76.1666667"
 	}, {
 		"codmun": "68855",
-		"nommun": "Valle de San José",
+		"nommun": "Valle de San Jose",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.5",
@@ -7331,12 +7562,12 @@ define(function(require) {
 		"codmun": "18860",
 		"nommun": "Valparaiso",
 		"coddep": "18",
-		"nomdep": "Caquetá",
+		"nomdep": "Caqueta",
 		"lat": "1.1991667",
 		"long": "-75.7097222"
 	}, {
 		"codmun": "05858",
-		"nommun": "Vegachí­",
+		"nommun": "Vegachi­",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.7730556",
@@ -7357,7 +7588,7 @@ define(function(require) {
 		"long": "-75.75"
 	}, {
 		"codmun": "25506",
-		"nommun": "Venecia (Ospina Pérez)",
+		"nommun": "Venecia (Ospina Perez)",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.1333333",
@@ -7366,7 +7597,7 @@ define(function(require) {
 		"codmun": "15861",
 		"nommun": "Ventaquemada",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.4166667",
 		"long": "-73.5"
 	}, {
@@ -7399,7 +7630,7 @@ define(function(require) {
 		"long": "-74.55"
 	}, {
 		"codmun": "05873",
-		"nommun": "Vigí­a del Fuerte",
+		"nommun": "Vigi­a del Fuerte",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.5919444",
@@ -7429,7 +7660,7 @@ define(function(require) {
 		"codmun": "15407",
 		"nommun": "Villa de Leiva",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.6333333",
 		"long": "-73.5333333"
 	}, {
@@ -7441,14 +7672,14 @@ define(function(require) {
 		"long": "-72.4741667"
 	}, {
 		"codmun": "86885",
-		"nommun": "Villagarzón",
+		"nommun": "Villagarzon",
 		"coddep": "86",
 		"nomdep": "Putumayo",
 		"lat": "1.038",
 		"long": "-76.627"
 	}, {
 		"codmun": "25871",
-		"nommun": "Villagómez",
+		"nommun": "Villagomez",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.2761111",
@@ -7462,7 +7693,7 @@ define(function(require) {
 		"long": "-75.1666667"
 	}, {
 		"codmun": "17873",
-		"nommun": "Villamarí­a",
+		"nommun": "Villamari­a",
 		"coddep": "17",
 		"nomdep": "Caldas",
 		"lat": "5",
@@ -7471,7 +7702,7 @@ define(function(require) {
 		"codmun": "13873",
 		"nommun": "Villanueva",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "10.45",
 		"long": "-75.25"
 	}, {
@@ -7497,7 +7728,7 @@ define(function(require) {
 		"long": "-71.9666667"
 	}, {
 		"codmun": "25873",
-		"nommun": "Villapinzón",
+		"nommun": "Villapinzon",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.2833333",
@@ -7532,16 +7763,16 @@ define(function(require) {
 		"long": "-74.5"
 	}, {
 		"codmun": "25878",
-		"nommun": "Viotá",
+		"nommun": "Viota",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.5",
 		"long": "-74.5"
 	}, {
 		"codmun": "15879",
-		"nommun": "Viracachá",
+		"nommun": "Viracacha",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.5",
 		"long": "-73.25"
 	}, {
@@ -7560,14 +7791,14 @@ define(function(require) {
 		"long": "-75.8666667"
 	}, {
 		"codmun": "68861",
-		"nommun": "Vélez",
+		"nommun": "Velez",
 		"coddep": "68",
 		"nomdep": "Santander",
 		"lat": "6.0833333",
 		"long": "-73.5833333"
 	}, {
 		"codmun": "25885",
-		"nommun": "Yacopí­",
+		"nommun": "Yacopi­",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.6666667",
@@ -7581,14 +7812,14 @@ define(function(require) {
 		"long": "-77.4166667"
 	}, {
 		"codmun": "41885",
-		"nommun": "Yaguará",
+		"nommun": "Yaguara",
 		"coddep": "41",
 		"nomdep": "Huila",
 		"lat": "2.6666667",
 		"long": "-75.5833333"
 	}, {
 		"codmun": "05885",
-		"nommun": "Yalí­",
+		"nommun": "Yali­",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.8333333",
@@ -7602,14 +7833,14 @@ define(function(require) {
 		"long": "-75.5"
 	}, {
 		"codmun": "05890",
-		"nommun": "Yolombó",
+		"nommun": "Yolombo",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "6.6666667",
 		"long": "-75"
 	}, {
 		"codmun": "05893",
-		"nommun": "Yondó (Casabe)",
+		"nommun": "Yondo (Casabe)",
 		"coddep": "05",
 		"nomdep": "Antioquia",
 		"lat": "7.0077778",
@@ -7639,7 +7870,7 @@ define(function(require) {
 		"codmun": "13894",
 		"nommun": "Zambrano",
 		"coddep": "13",
-		"nomdep": "Bolí­var",
+		"nomdep": "Boli­var",
 		"lat": "9.75",
 		"long": "-74.8333333"
 	}, {
@@ -7651,7 +7882,7 @@ define(function(require) {
 		"long": "-73.25"
 	}, {
 		"codmun": "47960",
-		"nommun": "Zapayán (PUNTA DE PIEDRAS)",
+		"nommun": "Zapayan (PUNTA DE PIEDRAS)",
 		"coddep": "47",
 		"nomdep": "Magdalena",
 		"lat": "10.171",
@@ -7672,21 +7903,21 @@ define(function(require) {
 		"long": "-76.0772222"
 	}, {
 		"codmun": "15897",
-		"nommun": "Zetaquirá",
+		"nommun": "Zetaquira",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.35",
 		"long": "-73.1666667"
 	}, {
 		"codmun": "25888",
-		"nommun": "Zipacón",
+		"nommun": "Zipacon",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "4.8333333",
 		"long": "-74.4166667"
 	}, {
 		"codmun": "25899",
-		"nommun": "Zipaquirá",
+		"nommun": "Zipaquira",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.0283333",
@@ -7700,28 +7931,28 @@ define(function(require) {
 		"long": ""
 	}, {
 		"codmun": "54003",
-		"nommun": "íbrego",
+		"nommun": "ibrego",
 		"coddep": "54",
 		"nomdep": "Norte de Santander",
 		"lat": "8",
 		"long": "-73.2"
 	}, {
 		"codmun": "41357",
-		"nommun": "íquira",
+		"nommun": "iquira",
 		"coddep": "41",
 		"nomdep": "Huila",
 		"lat": "2.75",
 		"long": "-75.75"
 	}, {
 		"codmun": "15842",
-		"nommun": "Úmbita",
+		"nommun": "Umbita",
 		"coddep": "15",
-		"nomdep": "Boyacá",
+		"nomdep": "Boyaca",
 		"lat": "5.2333333",
 		"long": "-73.45"
 	}, {
 		"codmun": "25851",
-		"nommun": "Útica",
+		"nommun": "Utica",
 		"coddep": "25",
 		"nomdep": "Cundinamarca",
 		"lat": "5.25",
