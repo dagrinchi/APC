@@ -8,8 +8,11 @@
 }
 
 .onoffswitch-label {
-    display: block; overflow: hidden; cursor: pointer;
-    border: 2px solid #4EBD4A; border-radius: 20px;
+    display: block; 
+    overflow: hidden; 
+    cursor: pointer;
+    border: 1px solid #fff; 
+    border-radius: 20px;
 }
 
 .onoffswitch-inner {
@@ -19,31 +22,49 @@
 }
 
 .onoffswitch-inner:before, .onoffswitch-inner:after {
-    float: left; width: 50%; height: 32px; padding: 0; line-height: 32px;
-    font-size: 17px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
-    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    float: left; 
+    width: 50%; 
+    height: 32px; 
+    padding: 0; 
+    line-height: 32px;
+    font-size: 17px; 
+    color: white; 
+    font-family: Trebuchet, Arial, sans-serif; 
+    font-weight: bold;
+    -moz-box-sizing: border-box; 
+    -webkit-box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 .onoffswitch-inner:before {
     content: "SI";
     padding-left: 16px;
-    background-color: #4EBD4A; color: #FFFFFF;
+    background-color: #2fca6c; 
+    color: #FFFFFF;
 }
 
 .onoffswitch-inner:after {
     content: "NO";
     padding-right: 16px;
-    background-color: #FFFFFF; color: #999999;
+    background-color: #e9513a; 
+    color: #fff;
     text-align: right;
 }
 
 .onoffswitch-switch {
-    width: 26px; margin: 3px;
+    width: 26px; 
+    margin: 3px;
     background: #FFFFFF;
-    border: 2px solid #4EBD4A; border-radius: 20px;
-    position: absolute; top: 0; bottom: 0; right: 76px;
-    -moz-transition: all 0.3s ease-in 0s; -webkit-transition: all 0.3s ease-in 0s;
-    -o-transition: all 0.3s ease-in 0s; transition: all 0.3s ease-in 0s; 
+    border: 2px solid #fff; 
+    border-radius: 20px;
+    position: absolute; 
+    top: 0; 
+    bottom: 0; 
+    right: 76px;
+    -moz-transition: all 0.3s ease-in 0s; 
+    -webkit-transition: all 0.3s ease-in 0s;
+    -o-transition: all 0.3s ease-in 0s; 
+    transition: all 0.3s ease-in 0s; 
 }
 
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {

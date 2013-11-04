@@ -14,7 +14,8 @@ define(function(require) {
 
     var $           = require('jquery'),
         Backbone    = require('backbone'),        
-        tpl   = require('text!tpl/ejecutas.html');
+        tpl    = require('text!tpl/ejecutas.html'),
+        action = require('action');
 
     return Backbone.View.extend({
         el: "body",

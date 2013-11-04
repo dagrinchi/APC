@@ -78,8 +78,8 @@
 }
 
 #logoApc {
-   width: 254px;
-   height: 108px;
+    width: 254px;
+    height: 108px;
 }
 
 #introContainer{
@@ -198,6 +198,42 @@
     text-rendering: optimizelegibility;
     color: #fff;
     font-size: 1.5rem;
+}
+
+/*All the css for text content and paragraph*/
+#textLong1{
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+#textLong2{
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.aceptar {  
+    display:none;
+    height:300px;
+    background-color: #ECF0F1;
+    padding:20px;
+    margin-top:10px;
+    border-bottom:8px solid #27AE60;
+}
+
+.denegar { 
+    height: 300px;
+    background-color: #ECF0F1;
+    padding: 20px;
+    margin-top: 10px;
+    border-bottom: 8px solid #D35400;
+}
+
+#hightligher1{
+    background-color: #27AE60;
+    color: #fff;
+}
+
+#hightligher2{
+    background-color: #D35400;
+    color: #fff;
 }
 
 
