@@ -1,20 +1,20 @@
 /**
-* COOL4CODE
-* Authors:
-*
-* Alejandro Zarate: azarate@cool4code.com,
-* Marcos Aguilera: maguilera@cool4code.com,
-* Paola Vanegas: pvanegas@cool4code.com,
-* David Alméciga: walmeciga@cool4code.com"
-*/
+ * COOL4CODE
+ * Authors:
+ *
+ * Alejandro Zarate: azarate@cool4code.com,
+ * Marcos Aguilera: maguilera@cool4code.com,
+ * Paola Vanegas: pvanegas@cool4code.com,
+ * David Alméciga: walmeciga@cool4code.com"
+ */
 
 define(function(require) {
 
     "use strict";
 
-    var $           = require('jquery'),
-        Backbone    = require('backbone'),        
-        tpl    = require('text!tpl/ejecutas.html'),
+    var $ = require('jquery'),
+        Backbone = require('backbone'),
+        tpl = require('text!tpl/ejecutas.html'),
         action = require('action');
 
     return Backbone.View.extend({
@@ -22,6 +22,19 @@ define(function(require) {
         template: _.template(tpl),
         render: function() {
             this.$el.html(this.template);
+
+            $("#myonoffswitch").change(function() {
+                if ($("#myonoffswitch").is(':checked')) {
+                    //alert("Está activado");  
+                    $('.denegar').slideUp();
+                    $('.aceptar').slideDown();
+                } else {
+                    //alert("No está activado");  
+                    $('.aceptar').slideUp();
+                    $('.denegar').slideDown();
+                }
+            });
+
             return this;
         }
     });
