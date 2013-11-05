@@ -1,21 +1,35 @@
 #demandProyects {
-    color: #ffffff;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    text-rendering: optimizelegibility;
+    font-size: 1.1rem;
+    color: #fff;
     text-shadow: none;
     border: none;
     background-image: url(../img/colombia.svg);
     background-size: 32px;
     background-position: 4px center;
     background-repeat: no-repeat;
+    background-color: #f5a932;
+    box-shadow: none;
+    cursor: pointer;
 }
 
 #southProyects {
-    color: #ffffff;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    text-rendering: optimizelegibility;
+    font-size: 1.1rem;
+    color: #fff;
     text-shadow: none;
     border: none;
     background-image: url(../img/south.svg);
     background-size: 32px;
     background-position: 4px center;
     background-repeat: no-repeat;
+    background-color: #8c44ae;
+    box-shadow: none;
+    cursor: pointer;
 }
 
 #descriptionText {
@@ -32,6 +46,10 @@
 }
 
 #apcVocabulary {
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    text-rendering: optimizelegibility;
+    font-size: 1.2rem;
     background-color: #8d1016;
     color: #ffffff;
     text-shadow: none;
@@ -40,6 +58,7 @@
     background-size: 32px;
     background-position: 120px 3px;
     background-repeat: no-repeat;
+    cursor: pointer;   
 }
 
 #aboutUs{
@@ -59,8 +78,8 @@
 }
 
 #logoApc {
-   width: 254px;
-   height: 108px;
+    width: 254px;
+    height: 108px;
 }
 
 #introContainer{
@@ -87,7 +106,8 @@
 /*** colores headers ***/
 #header-prioridades-coop{
     background-color: #2e8bcc;
-    opacity: 0.75;       
+    opacity: 0.75;     
+    box-shadow: none;
 }
 
 #header-sur-sur{
@@ -119,4 +139,103 @@
     background-color: #f31212;;
     opacity: 0.75;       
 }
+
+#text-head-prioridades{
+    font-weight: 400;
+    color: #F8F2F2;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#text-head-proyectos{
+    font-weight: 400;
+    color: #F8F2F2;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    color: #fff;
+    font-size: 1.5rem; 
+}
+
+#text-head-directorio{
+    font-weight: 400;
+    color: #F8F2F2;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#text-head-ejeccutas-proyectos{
+    font-weight: 400;
+    color: #F8F2F2;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#text-head-acerca{
+    font-weight: 400;
+    color: #F8F2F2;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+/*All the css for text content and paragraph*/
+#textLong1{
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+#textLong2{
+    font-family: 'Didact Gothic', sans-serif;
+}
+
+.aceptar {  
+    display:none;
+    height:300px;
+    background-color: #ECF0F1;
+    padding:20px;
+    margin-top:10px;
+    border-bottom:8px solid #27AE60;
+}
+
+.denegar { 
+    height: 300px;
+    background-color: #ECF0F1;
+    padding: 20px;
+    margin-top: 10px;
+    border-bottom: 8px solid #D35400;
+}
+
+#hightligher1{
+    background-color: #27AE60;
+    color: #fff;
+}
+
+#hightligher2{
+    background-color: #D35400;
+    color: #fff;
+}
+
+
+
 

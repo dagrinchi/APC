@@ -26,7 +26,8 @@ require.config({
         tpl: '../tpl',
         bootstrap: '../../bootstrap/js',
         async : '../lib/requirejs-plugins/async',
-        goog : '../lib/requirejs-plugins/goog'
+        goog : '../lib/requirejs-plugins/goog',
+        action: '../lib/custom-actions'
     },
 
     shim: {
