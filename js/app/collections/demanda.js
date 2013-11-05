@@ -42,7 +42,7 @@ define(function(require) {
         findAll: function() {
 
             var self = this;
-            this.baseapc.execute("select * from demanda", model, function(data) {
+            this.baseapc.execute("select * from demanda limit 50", model, function(data) {
                 self.reset(data);
                 deferred.resolve();
             });

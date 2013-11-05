@@ -180,7 +180,11 @@ define(function(require) {
             google.maps.event.trigger(APC.views.mapDemanda.map, 'resize');
             google.maps.event.trigger(APC.views.mapCooperacion.map, 'resize');
 
-            this.$el.append(_.template(modalTpl));
+            setTimeout(function(){
+                APC.collections.demCollection.initMapMarkersWithDb();
+            }, 2000);
+
+            this.$el.append(_.template(modalTpl));            
             return this;
         }
     });

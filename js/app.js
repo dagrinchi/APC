@@ -26,8 +26,7 @@ require.config({
         tpl: '../tpl',
         bootstrap: '../../bootstrap/js',
         async : '../lib/requirejs-plugins/async',
-        goog : '../lib/requirejs-plugins/goog',
-        action: '../lib/custom-actions'
+        goog : '../lib/requirejs-plugins/goog'
     },
 
     shim: {
@@ -41,12 +40,16 @@ require.config({
     }
 });
 
-// require(['../../phonegap', 'app/init'], function(phonegap, init) {
-//     document.addEventListener('deviceready', init);
-// });
-
-require(['fastclick', 'app/router'], function(fclick, router) {    
-    fclick.attach(document.body);
-    APC.router = new router();
-    Backbone.history.start();
+require(['../../phonegap', 'fastclick', 'app/router'], function(phonegap, fclick, router) {
+    document.addEventListener('deviceready', function() {
+        fclick.attach(document.body);
+        APC.router = new router();
+        Backbone.history.start();
+    });
 });
+
+// require(['fastclick', 'app/router'], function(fclick, router) {    
+//     fclick.attach(document.body);
+//     APC.router = new router();
+//     Backbone.history.start();
+// });
