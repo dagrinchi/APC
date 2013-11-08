@@ -111,8 +111,8 @@
 }
 
 #header-sur-sur{
-    /*background-color: #27ae27;
-    opacity: 0.75;*/       
+    background-color: #8c44ae;
+    opacity: 0.75;     
 }
 
 #header-proyectos{
@@ -141,6 +141,18 @@
 }
 
 #text-head-prioridades{
+    font-weight: 400;
+    color: #F8F2F2;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+#text-head-sur-sur{
     font-weight: 400;
     color: #F8F2F2;
     font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
