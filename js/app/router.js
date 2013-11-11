@@ -23,33 +23,125 @@ define(function(require) {
             "prioridadesdecooperacion": "prioridades",
             "cooperacionsursur": "sursur",
             "proyectos": "proyectos",
+            "proyectos/:RowKey": "detalleProyecto",
             "directorio": "directorio",
             "ejecutasproyectos": "ejecutas",
             "acercade": "acercade"
         },
 
         initialize: function() {
+
             require(['app/views/map'], function(MapView) {
 
                 if (typeof APC.views.mapDemanda === 'undefined')
                     APC.views.mapDemanda = new MapView({
-                        id : "#map-canvas-a",
-                        className : "map-canvas"
+                        id: "#map-canvas-a",
+                        className: "map-canvas",
+                        zoom: 4,
+                        minZoom: 4,
+                        latitude: 4.9804330197477364,
+                        longitude: -73.49274741249998,
+                        styles: [{
+                            "stylers": [{
+                                "invert_lightness": true
+                            }]
+                        }, {
+                            "featureType": "landscape",
+                            "stylers": [{
+                                "color": "#003c81"
+                            }]
+                        }, {
+                            "featureType": "road",
+                            "stylers": [{
+                                "color": "#d4e4e4"
+                            }, {
+                                "lightness": -19
+                            }]
+                        }, {
+                            "featureType": "poi",
+                            "stylers": [{
+                                "visibility": "off"
+                            }]
+                        }, {
+                            "featureType": "administrative",
+                            "stylers": [{
+                                "lightness": 25
+                            }]
+                        }]
                     });
 
                 if (typeof APC.views.mapCooperacion === 'undefined')
                     APC.views.mapCooperacion = new MapView({
-                        id : "#map-canvas-b",
-                        className : "map-canvas"
+                        id: "#map-canvas-b",
+                        className: "map-canvas",
+                        zoom: 4,
+                        minZoom: 4,
+                        latitude: 4.9804330197477364,
+                        longitude: -73.49274741249998,
+                        styles: [{
+                            "stylers": [{
+                                "invert_lightness": true
+                            }]
+                        }, {
+                            "featureType": "landscape",
+                            "stylers": [{
+                                "color": "#003c81"
+                            }]
+                        }, {
+                            "featureType": "road",
+                            "stylers": [{
+                                "color": "#d4e4e4"
+                            }, {
+                                "lightness": -19
+                            }]
+                        }, {
+                            "featureType": "poi",
+                            "stylers": [{
+                                "visibility": "off"
+                            }]
+                        }, {
+                            "featureType": "administrative",
+                            "stylers": [{
+                                "lightness": 25
+                            }]
+                        }]
                     });
 
                 if (typeof APC.views.mapSursur === 'undefined')
                     APC.views.mapSursur = new MapView({
-                        id : "#map-canvas-c",
-                        className : "map-canvas",
-                        zoom : 2,
-                        latitude : 0,
-                        longitude : 0
+                        id: "#map-canvas-c",
+                        className: "map-canvas",
+                        zoom: 1,
+                        minZoom: 1,
+                        latitude: 6.412237489539958,
+                        longitude: 0,
+                        styles: [{
+                            "stylers": [{
+                                "invert_lightness": true
+                            }]
+                        }, {
+                            "featureType": "landscape",
+                            "stylers": [{
+                                "color": "#8c44ae"
+                            }]
+                        }, {
+                            "featureType": "road",
+                            "stylers": [{
+                                "color": "#d4e4e4"
+                            }, {
+                                "lightness": -19
+                            }]
+                        }, {
+                            "featureType": "poi",
+                            "stylers": [{
+                                "visibility": "off"
+                            }]
+                        }, {
+                            "featureType": "administrative",
+                            "stylers": [{
+                                "lightness": 25
+                            }]
+                        }]
                     });
 
             });
@@ -113,7 +205,7 @@ define(function(require) {
                 if (typeof APC.collections.demActoresCollection === 'undefined')
                     APC.collections.demActoresCollection = new DemActoresCollection();
                 if (typeof APC.collections.demTerritoriosCollection === 'undefined')
-                    APC.collections.demTerritoriosCollection = new DemTerritoriosCollection();                
+                    APC.collections.demTerritoriosCollection = new DemTerritoriosCollection();
                 if (typeof APC.collections.demMunicipiosCollection === 'undefined')
                     APC.collections.demMunicipiosCollection = new DemMunicipiosCollection();
                 if (typeof APC.collections.demAreasCollection === 'undefined')
@@ -137,7 +229,7 @@ define(function(require) {
                     APC.collections.demAreasCollection.findAll(),
                     APC.collections.demSectoresCollection.findAll(),
                     APC.collections.proTerritoriosCollection.findAll(),
-                    APC.collections.proAreasCollection.findAll()).done(function() {                 
+                    APC.collections.proAreasCollection.findAll()).done(function() {
 
                     APC.views.prioridadesPageView = new PrioridadesPageView();
                     APC.views.prioridadesPageView.render();
@@ -147,34 +239,48 @@ define(function(require) {
         },
 
         sursur: function() {
-            require(['app/views/sursur','app/collections/sursur'],function(sursurview,sursurCollection){
+            require(['app/views/sursur', 'app/collections/sursur'], function(sursurview, sursurCollection) {
                 if (typeof APC.collections.sursurCollection === 'undefined')
                     APC.collections.sursurCollection = new sursurCollection();
-                $.when(APC.collections.sursurCollection.findAll()).done(function(){
+                $.when(APC.collections.sursurCollection.findAll()).done(function() {
                     APC.views.sursurview = new sursurview();
                     APC.views.sursurview.render();
                     APC.collections.sursurCollection.initMapMarkers();
                 });
-               
+
             });
         },
 
         proyectos: function() {
+            var self = this;
             require(['app/collections/proyectos', 'app/views/proyectos'], function(ProyectosCollection, ProyectosPageView) {
                 if (typeof APC.collections.proCollection === 'undefined')
                     APC.collections.proCollection = new ProyectosCollection();
                 $.when(APC.collections.proCollection.findAll()).done(function() {
                     APC.views.ProyectosPageView = new ProyectosPageView({
                         collection: APC.collections.proCollection
-                    });
+                    });                    
                     APC.views.ProyectosPageView.render();
                 });
             });
         },
 
+        detalleProyecto: function(RowKey) {
+            var self = this;
+            require(['app/models/proyectos', 'app/views/detalleProyecto'], function(proyectoModel, detalleProyectoView) {
+                APC.models.proyecto = new proyectoModel();
+                APC.models.proyecto.findByRowKey(RowKey, function(model) {
+                    APC.views.detalleProyectoPage = new detalleProyectoView({
+                        model : model
+                    });
+                    APC.views.detalleProyectoPage.render();
+                });
+            });            
+        },
+
         directorio: function() {
 
-             require(['app/collections/directorio', 'app/views/directorio'], function(DirectorioCollection, DirectorioPageView) { 
+            require(['app/collections/directorio', 'app/views/directorio'], function(DirectorioCollection, DirectorioPageView) {
                 if (typeof APC.collections.directorioCollection === 'undefined')
                     APC.collections.directorioCollection = new DirectorioCollection();
                 $.when(APC.collections.directorioCollection.findAll()).done(function() {

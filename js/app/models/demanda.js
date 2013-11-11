@@ -36,7 +36,7 @@ define(function(require) {
 
 		constructor: function() {
 			Backbone.Model.apply(this, arguments);
-			this.latLon = [];			
+			this.latLon = [];
 			var self = this;
 
 			var territoriosData = this.get("territorio").split(";");
@@ -66,7 +66,6 @@ define(function(require) {
 				}
 			});
 		}
-
 	});
 
 });

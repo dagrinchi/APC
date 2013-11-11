@@ -47,13 +47,13 @@ define(function(require) {
         el: "#modalList",
 
         initialize: function() {
-            var self = this;   
+            var self = this;
             $("#modalLabel").html(self.options.title);
             $("#modalBody").html(self.options.list);
         },
 
-        render: function() {                     
-            $(this.el).modal('show');            
+        render: function() {
+            $(this.el).modal('show');
             return this;
         }
     });
@@ -64,7 +64,12 @@ define(function(require) {
         template: _.template(tpl),
 
         initialize: function() {
-            
+            google.maps.event.addListener(APC.views.mapDemanda.map, 'center_changed', function() {
+                APC.views.mapCooperacion.map.setCenter(APC.views.mapDemanda.map.getCenter());
+            });
+            google.maps.event.addListener(APC.views.mapDemanda.map, 'zoom_changed', function() {
+                APC.views.mapCooperacion.map.setZoom(APC.views.mapDemanda.map.getZoom());
+            });
         },
 
         events: {
@@ -82,10 +87,10 @@ define(function(require) {
                 collection: APC.collections.demActoresCollection
             });
             APC.views.demActoresListView.render();
-            
+
             var modal = new modalList({
-                title : "Cooperantes",
-                list : APC.views.demActoresListView.el
+                title: "Cooperantes",
+                list: APC.views.demActoresListView.el
             });
             modal.render();
         },
@@ -126,7 +131,7 @@ define(function(require) {
                 title: "Áreas",
                 list: APC.views.demAreasListView.el
             });
-            modal.render();            
+            modal.render();
         },
 
         btnDemSectores: function() {
@@ -165,7 +170,7 @@ define(function(require) {
                 title: "Áreas",
                 list: APC.views.proAreasListView.el
             });
-            modal.render();       
+            modal.render();
         },
 
         render: function() {
@@ -180,11 +185,11 @@ define(function(require) {
             google.maps.event.trigger(APC.views.mapDemanda.map, 'resize');
             google.maps.event.trigger(APC.views.mapCooperacion.map, 'resize');
 
-            setTimeout(function(){
+            setTimeout(function() {
                 APC.collections.demCollection.initMapMarkersWithDb();
             }, 2000);
 
-            this.$el.append(_.template(modalTpl));            
+            this.$el.append(_.template(modalTpl));
             return this;
         }
     });

@@ -20,6 +20,21 @@ define(function(require) {
 		
 		constructor: baseapc,
 
+		executeOne : function(sql, model, cb) {
+			this.odb.transaction(
+			
+			function(tx){
+				tx.executeSql(sql, [],function(tx, results){					
+					model.set(results.rows.item(0));
+                    cb(model);
+				});
+			},
+
+			function(tx, error) {
+				console.log("Transaction Error: " + error);
+			});
+		},
+
 		execute : function(sql, model, cb) {
 			
 			this.odb.transaction(

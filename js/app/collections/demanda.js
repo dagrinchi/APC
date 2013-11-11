@@ -16,9 +16,7 @@ define(function(require) {
         DB = require('app/utils/db'),
         model = require('app/models/demanda');
 
-    var $ = require('jquery'),
-        deferred = $.Deferred(),
-        geoDeferred = $.Deferred();
+    var $ = require('jquery');
 
     return Backbone.Collection.extend({
 
@@ -41,6 +39,8 @@ define(function(require) {
 
         findAll: function() {
 
+            var deferred = $.Deferred();
+
             var self = this;
             this.baseapc.execute("select * from demanda limit 50", model, function(data) {
                 self.reset(data);
@@ -49,7 +49,7 @@ define(function(require) {
 
             return deferred.promise();
         },
-
+        
         initMapMarkersWithDb: function() {
             var self = this;
             $.each(this.models, function(k1, v1) {
@@ -77,6 +77,8 @@ define(function(require) {
         },
 
         geoCoder: function() {
+            var geoDeferred = $.Deferred();
+
             var search = this.models[this.nextAddress].get("municipio");
             if (this.nextAddress < this.length - 1) {
                 setTimeout("APC.collections.demCollection.getAddress('" + search + "')", this.delay);

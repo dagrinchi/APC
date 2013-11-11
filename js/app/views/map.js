@@ -17,38 +17,29 @@ define(function(require) {
 
 	return Backbone.View.extend({
 
-		tagName: 'div',
+		tagName: 'div',		
 
-		zoom : 5,
+		map: {},
 
-		minZoom : 3,
-
-		maxZoom : 18,
-
-		latitude : 4,
-
-		longitude : -74,
-
-		map : {},
-		
 		initialize: function() {
-			var self = this;			
+			var self = this;
 
 			require(['async!http://maps.googleapis.com/maps/api/js?key=AIzaSyCtA2EQoKD1VLTpg1De7-smoxI2o1YygBo&sensor=true&amp;language=es'], function() {
 
 				var mapOptions = {
-					zoom: self.zoom,
-					minZoom: self.minZoom,
-					maxZoom: self.maxZoom,
-					center: new google.maps.LatLng(self.latitude, self.longitude),
+					zoom: self.options.zoom,
+					minZoom: self.options.minZoom,
+					maxZoom: self.options.maxZoom,
+					center: new google.maps.LatLng(self.options.latitude, self.options.longitude),
 					mapTypeId: google.maps.MapTypeId.ROADMAP,
-					mapTypeControl: false
+					mapTypeControl: false,
+					styles: self.options.styles
 				};
 				self.map = new google.maps.Map(self.el, mapOptions);
 			});
 		},
 
-		render: function() {			
+		render: function() {
 			return this;
 		}
 	});
