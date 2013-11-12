@@ -36,11 +36,11 @@ define(function(require) {
                 if (typeof APC.views.mapDemanda === 'undefined')
                     APC.views.mapDemanda = new MapView({
                         id: "#map-canvas-a",
-                        className: "map-canvas",
+                        className: "map-canvas map-canvas-a",
                         zoom: 4,
                         minZoom: 4,
-                        latitude: 4.9804330197477364,
-                        longitude: -73.49274741249998,
+                        latitude: 19.872195816700884,
+                        longitude: -106.65585937499998,
                         styles: [{
                             "stylers": [{
                                 "invert_lightness": true
@@ -73,11 +73,11 @@ define(function(require) {
                 if (typeof APC.views.mapCooperacion === 'undefined')
                     APC.views.mapCooperacion = new MapView({
                         id: "#map-canvas-b",
-                        className: "map-canvas",
+                        className: "map-canvas map-canvas-b",
                         zoom: 4,
                         minZoom: 4,
-                        latitude: 4.9804330197477364,
-                        longitude: -73.49274741249998,
+                        latitude: 19.872195816700884,
+                        longitude: -106.65585937499998,
                         styles: [{
                             "stylers": [{
                                 "invert_lightness": true
@@ -110,11 +110,11 @@ define(function(require) {
                 if (typeof APC.views.mapSursur === 'undefined')
                     APC.views.mapSursur = new MapView({
                         id: "#map-canvas-c",
-                        className: "map-canvas",
+                        className: "map-canvas map-canvas-c",
                         zoom: 1,
                         minZoom: 1,
-                        latitude: 6.412237489539958,
-                        longitude: 0,
+                        latitude: 84.82717505894134,
+                        longitude: -182.87009974999998,
                         styles: [{
                             "stylers": [{
                                 "invert_lightness": true
@@ -259,7 +259,7 @@ define(function(require) {
                 $.when(APC.collections.proCollection.findAll()).done(function() {
                     APC.views.ProyectosPageView = new ProyectosPageView({
                         collection: APC.collections.proCollection
-                    });                    
+                    });
                     APC.views.ProyectosPageView.render();
                 });
             });
@@ -271,11 +271,11 @@ define(function(require) {
                 APC.models.proyecto = new proyectoModel();
                 APC.models.proyecto.findByRowKey(RowKey, function(model) {
                     APC.views.detalleProyectoPage = new detalleProyectoView({
-                        model : model
+                        model: model
                     });
                     APC.views.detalleProyectoPage.render();
                 });
-            });            
+            });
         },
 
         directorio: function() {

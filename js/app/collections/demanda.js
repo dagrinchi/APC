@@ -55,7 +55,7 @@ define(function(require) {
             $.each(this.models, function(k1, v1) {
                 $.each(v1.latLon, function(k2, v2) {
                     $.each(v2.models, function(k3, v3) {
-                        self.createMarker(v1.get("proyectoprograma").trim(), parseFloat(v3.get("lat")), parseFloat(v3.get("long")));
+                        self.createMarker(v1.get("RowKey"), v1.get("proyectoprograma").trim(), parseFloat(v3.get("lat")), parseFloat(v3.get("long")));
                     });
                 });
             });
@@ -113,9 +113,9 @@ define(function(require) {
             });
         },
 
-        createMarker: function(add, lat, lng) {
+        createMarker: function(RowKey, add, lat, lng) {
             var self = this;
-            var contentString = add;
+            var contentString = '<a href="#proyectos/' + RowKey + '">' + add + '</a>';
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(lat, lng),
                 map: APC.views.mapDemanda.map,

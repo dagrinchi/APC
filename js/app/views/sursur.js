@@ -30,9 +30,8 @@ define(function(require) {
             this.$el.html(this.template);
             $("#map-canvas-c").replaceWith(APC.views.mapSursur.el);
             
-            var wh = $(window).height() - 152;
-            $(".map-canvas").width("100%");
-            $(".map-canvas").height(wh);
+            var wh = $(window).height() - 70;            
+            $(".map-canvas-c").height(wh);
 
             google.maps.event.trigger(APC.views.mapSursur.map, 'resize');
             

@@ -76,8 +76,16 @@ h1, h2, h3 {
 
 .map-canvas {
     float: left;
-    position: relative;
+    position: relative;    
+    width: 100%;
+}
+
+.map-canvas-a, .map-canvas-b{
     margin-top: 41px;
+}
+
+.map-canvas-c {
+    margin-top: 70px;
 }
 
 .overlay-a {
