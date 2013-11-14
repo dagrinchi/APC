@@ -1,21 +1,138 @@
-<%= PartitionKey %><br />
-<%= RowKey %><br />
-<%= actor %><br />
-<%= codigoenci %><br />
-<%= codigoproyecto %><br />
-<%= ejecutor %><br />
-<%= enci %><br />
-<%= estadoproyecto %><br />
-<%= fechafinalizacion %><br />
-<%= fechainicio %><br />
-<%= moneda %><br />
-<%= municipio %><br />
-<%= otrossectoresrelacionados %><br />
-<%= poblacionbeneficiada %><br />
-<%= proyectoprograma %><br />
-<%= sectorliderpolitica %><br />
-<%= territorio %><br />
-<%= tipoactor %><br />
-<%= totalaporteintercional %><br />
-<%= totalaportenacional %><br />
-<%= totalaportes %><br />
+<div id="header-wrap">
+    <div id="header-detalles" class="topcoat-navigation-bar">
+        <div class="topcoat-navigation-bar__item left quarter">
+            <a id="slide-menu-button" class="topcoat-icon-button--quiet slide-menu-button" href="#inicio">
+                <img src="img/home.svg" width="27px" height="28px">
+            </a>    
+        </div>
+        <div class="topcoat-navigation-bar__item center half" style="margin-top: 15px;">  
+            <h1 id="text-head-detalles" class="topcoat-navigation-bar__title">Detalles del proyecto</h1>
+        </div>
+        <div class="topcoat-navigation-bar__item right quarter"> 
+            <a id="slide-menu-button" class="topcoat-icon-button--quiet slide-menu-button">
+                <img src="img/share.svg" width="27px" height="28px">
+            </a>
+        </div>
+    </div>
+    <span style="height: 5px; margin-top: -6px; display: block; background-color: #16a085;" id="anonymous_element_6"></span>
+</div>    
+
+<div class="container" style="top: 4.375rem;">
+  <div id="descriptionText-detalles">   
+    <div id="blocksList-detalles">
+        <div>
+            <div id="titulo"><%= enci %></div>
+          </div>
+          <div id="panel-detalles">
+            <div id="col-left-detalles">
+                Código
+            </div>
+            <div id="col-right-detalles">
+                #<%= codigoenci %>
+            </div>
+            <div id="col-left-detalles">
+                Tipo de actor
+            </div>
+            <div id="col-right-detalles">
+                <%= tipoactor %>
+            </div>     
+            <div id="col-left-detalles">
+                Actor
+            </div>
+            <div id="col-right-detalles">
+                <%= actor %>
+            </div>
+              <div id="col-left-detalles">
+                Código proyecto
+            </div>
+            <div id="col-right-detalles">
+                <%= codigoproyecto %>
+            </div>
+              <div id="col-left-detalles">
+                Ejecutor
+            </div>
+            <div id="col-right-detalles">
+                <%= ejecutor %>
+            </div>
+              <div id="col-left-detalles">
+                Estado
+            </div>
+            <div id="col-right-detalles">
+                <%= estadoproyecto %>
+            </div>
+            <div id="col-left-detalles">
+                Fecha inicio
+            </div>
+            <div id="col-right-detalles">
+                <%= fechainicio %>
+            </div>
+            <div id="col-left-detalles">
+                Fecha finalización
+            </div>
+            <div id="col-right-detalles">
+                <%= fechafinalizacion %>
+            </div>
+            <div id="col-left-detalles">
+                Moneda
+            </div>
+            <div id="col-right-detalles">
+                <%= moneda %>
+            </div>
+            <div id="col-left-detalles">
+                Municipio
+            </div>
+            <div id="col-right-detalles">
+                <%= municipio %>
+            </div> 
+            <div id="col-left-detalles">
+                Otros sectores
+            </div>
+            <div id="col-right-detalles">
+                <%= otrossectoresrelacionados %>
+            </div> 
+            <div id="col-left-detalles">
+                Población beneficiada
+            </div>
+            <div id="col-right-detalles">
+                <%= poblacionbeneficiada %>
+            </div> 
+            <div id="col-left-detalles">
+                Sector lider
+            </div>
+            <div id="col-right-detalles">
+                <%= sectorliderpolitica %>
+            </div> 
+            <div id="col-left-detalles">
+                Territorio
+            </div>
+            <div id="col-right-detalles">
+                <%= territorio %>
+            </div> 
+            <div id="col-left-detalles">
+                Aporte internacional
+            </div>
+            <div id="col-right-detalles">
+                <%= totalaporteintercional %>&nbsp;<%= moneda %>
+            </div>  
+            <div id="col-left-detalles">
+                Aporte nacional
+            </div>
+            <div id="col-right-detalles">
+                <%= totalaportenacional %>&nbsp;<%= moneda %>
+            </div>
+            <div id="col-left-detalles">
+                Total aportes
+            </div>
+            <div id="col-right-detalles">
+                <%= totalaportes %>&nbsp;<%= moneda %>
+            </div>    
+          </div>
+          <div id="container-botton-panel">
+            <div id="bottom-panel">
+              <%= proyectoprograma %>
+            </div>  
+          </div>                 
+        </div>         
+    </div>  
+  </div>      
+</div>

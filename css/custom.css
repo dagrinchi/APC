@@ -141,6 +141,11 @@
     opacity: 0.75;       
 }
 
+#header-detalles{
+    background-color: #1abc9c;
+    opacity: 0.85;       
+}
+
 #text-head-prioridades{
     font-weight: 400;
     color: #F8F2F2;
@@ -166,6 +171,18 @@
 }
 
 #text-head-proyectos{
+    font-weight: 400;
+    color: #F8F2F2;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    color: #fff;
+    font-size: 1.5rem; 
+}
+
+#text-head-detalles{
     font-weight: 400;
     color: #F8F2F2;
     font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
@@ -248,6 +265,106 @@
     background-color: #D35400;
     color: #fff;
 }
+
+#h4-custom{
+    line-height: 16px;
+    margin-top: 3px;
+    margin-bottom: 3px;
+    padding-bottom: 0px;  
+}
+
+#h4-directorio{
+    color: #575656;
+    text-decoration: none;
+    font-weight: 200;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+}
+
+#p1,#p2{
+    margin: 0 0 0.5px;
+}
+
+/*estilos para pagina de detalles*/
+#descriptionText-detalles {
+    padding: 10px 30px 0px 30px;  
+}
+
+#titulo {
+    margin: 12.5px 0;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-weight: 100;
+    line-height: 25px;
+    color: inherit;
+    text-rendering: optimizelegibility;
+    background-color: #1abc9c;
+    color: #fff;
+    font-size: 1.3rem;
+    padding: 5px;
+    border-radius: 3px 3px 0px 0px;
+    height: 2.8rem;
+}
+
+#detalles-contenedor {
+    background-color: #ecf0f1;
+    padding: 15px;
+    margin-top: -13px;
+    width: 100%;
+    padding: 0px 0px 0px 10px;
+}
+
+#panel-detalles{
+    background: #ecf0f1;
+    padding: 5px; 
+    border: 0px solid #000; 
+    height: 1%; 
+    overflow: hidden;
+    margin-top: -13px;
+}
+
+#col-left-detalles{
+    border: 0px solid #000000; 
+    float: left; 
+    width: 40%;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    height: 1.4rem;
+}
+
+#col-right-detalles{
+    border: 0px solid #000000; 
+    float: right; 
+    width: 59%;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+    height: 1.4rem;
+    line-height: 11px;
+}
+
+#bottom-panel{
+    width: 100%;
+    color: #fff;
+    height: 6rem;
+    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    font-style: normal;
+    text-rendering: optimizeLegibility;
+}
+
+#container-botton-panel{
+    padding: 7px;
+    background-color: #1abc9c;
+    border-radius: 0px 0px 3px 3px;
+}
+/*fin de estilos pagina detalles*/
 
 
 
