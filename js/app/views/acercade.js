@@ -19,6 +19,15 @@ define(function(require) {
     return Backbone.View.extend({
         el: "body",
         template: _.template(tpl),
+
+        events: {
+            "click #apcVocabulary" : "btnGlosario"
+        },
+
+        btnGlosario : function() {
+             var ref = window.open(encodeURI('http://www.apccolombia.gov.co/?idcategoria=118#&panel1-1'), '_blank', 'location=yes');
+        },
+
         render: function() {
             this.$el.html(this.template);
             return this;

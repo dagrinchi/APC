@@ -19,21 +19,33 @@ define(function(require) {
     return Backbone.View.extend({
         el: "body",
         template: _.template(tpl),
+
+        events: {
+            "click #registrate": "btnRegistrate",
+            "click #informate": "btnInformate",
+            "click #myonoffswitch": "chkSwitch"
+        },
+
+        btnRegistrate: function() {            
+            var ref = window.open(encodeURI('http://www.apccolombia.gov.co/recursos_user/Documentos/Ficha-Presentacion-Proyectos-2013.doc'), '_system', 'location=yes');
+        },
+
+        btnInformate: function() {
+            var ref = window.open(encodeURI('http://www.apccolombia.gov.co/?idcategoria=40#&panel1-1'), '_system', 'location=yes');
+        },
+
+        chkSwitch: function(e) {
+            if (e.currentTarget.checked) {
+                $('#denegar').slideUp();
+                $('#aceptar').slideDown();
+            } else {
+                $('#aceptar').slideUp();
+                $('#denegar').slideDown();
+            }
+        },
+
         render: function() {
             this.$el.html(this.template);
-
-            $("#myonoffswitch").change(function() {
-                if ($("#myonoffswitch").is(':checked')) {
-                    //alert("Está activado");  
-                    $('.denegar').slideUp();
-                    $('.aceptar').slideDown();
-                } else {
-                    //alert("No está activado");  
-                    $('.aceptar').slideUp();
-                    $('.denegar').slideDown();
-                }
-            });
-
             return this;
         }
     });

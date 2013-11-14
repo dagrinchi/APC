@@ -21,7 +21,7 @@ define(function(require) {
         bootstrap = require('bootstrap/bootstrap');
 
     var listItemView = Backbone.View.extend({
-        tagName: 'li',
+        tagName: 'div',
         className: '',
         template: _.template(listItemTpl),
         render: function() {
@@ -89,6 +89,7 @@ define(function(require) {
             APC.views.demActoresListView.render();
 
             var modal = new modalList({
+                id: "demActores",
                 title: "Cooperantes",
                 list: APC.views.demActoresListView.el
             });
@@ -102,6 +103,7 @@ define(function(require) {
             APC.views.demTerritoriosListView.render();
 
             var modal = new modalList({
+                id: "demTerritorios",
                 title: "Territorios",
                 list: APC.views.demTerritoriosListView.el
             });
@@ -115,6 +117,7 @@ define(function(require) {
             APC.views.demMunicipiosListView.render();
 
             var modal = new modalList({
+                id: "demMunicipios",
                 title: "Municipios",
                 list: APC.views.demMunicipiosListView.el
             });
@@ -128,6 +131,7 @@ define(function(require) {
             APC.views.demAreasListView.render();
 
             var modal = new modalList({
+                id: "demAreas",
                 title: "Áreas",
                 list: APC.views.demAreasListView.el
             });
@@ -141,6 +145,7 @@ define(function(require) {
             APC.views.demSectoresListView.render();
 
             var modal = new modalList({
+                id: "demSectores",
                 title: "Sectores",
                 list: APC.views.demSectoresListView.el
             });
@@ -187,6 +192,7 @@ define(function(require) {
 
             setTimeout(function() {
                 APC.collections.demCollection.initMapMarkersWithDb();
+                APC.collections.coopCollection.initMapMarkersWithDb();
             }, 2000);
 
             this.$el.append(_.template(modalTpl));

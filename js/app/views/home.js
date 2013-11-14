@@ -31,6 +31,7 @@ define(function(require) {
 
             var wh = $(window).height() / 3;
             $(".thumbnails li").height(wh);
+            $("#loadingBox").height($(window).height());
             return this;
         }
     });
