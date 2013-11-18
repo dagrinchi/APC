@@ -44,16 +44,58 @@ define(function(require) {
 
     var modalList = Backbone.View.extend({
 
-        el: "#modalList",
+        className: "modal hide fade",
 
         initialize: function() {
             var self = this;
-            $("#modalLabel").html(self.options.title);
-            $("#modalBody").html(self.options.list);
+            this.template = _.template(modalTpl, {
+                title: self.options.title,
+                list: self.options.list
+            });
+        },
+
+        events: {
+            "click .items": "chkItem",
+            "click .ok": "btnOK"
+        },
+
+        btnOK: function() {
+            if (this.options.table === "demanda")
+                $.when(APC.collections.demCollection.findBySelection()).done(function() {
+                    APC.selection.demanda = {
+                        cols: {
+                            actor: [],
+                            territorio: [],
+                            municipio: [],
+                            otrossectoresrelacionados: [],
+                            sectorliderpolitica: []
+                        }
+                    };
+                });
+
+            if (this.options.table === "dci")
+                $.when(APC.collections.coopCollection.findBySelection()).done(function() {
+                    APC.selection.dci = {
+                        cols: {
+                            terrirorio: [],
+                            areacooperacion: []
+                        }
+                    };
+                });
+        },
+
+        chkItem: function(e) {
+            var self = this;
+            if (e.currentTarget.checked) {
+                APC.selection[self.options.table]["cols"][self.options.cols].push(e.currentTarget.value);
+            } else {
+                APC.selection[self.options.table]["cols"][self.options.cols].splice(APC.selection[self.options.table]["cols"][self.options.cols].indexOf(e.currentTarget.value), 1);
+            }
         },
 
         render: function() {
-            $(this.el).modal('show');
+            this.$el.html(this.template);
+            this.$el.modal('show');
             return this;
         }
     });
@@ -83,99 +125,121 @@ define(function(require) {
         },
 
         btnDemActores: function() {
-            APC.views.demActoresListView = new listEl({
-                collection: APC.collections.demActoresCollection
-            });
-            APC.views.demActoresListView.render();
+            if (typeof APC.views.demActoresListView === "undefined")
+                APC.views.demActoresListView = new listEl({
+                    collection: APC.collections.demActoresCollection
+                });
 
-            var modal = new modalList({
-                id: "demActores",
+
+            APC.views.demActoresModal = new modalList({
+                id: "demActoresModal",
                 title: "Cooperantes",
-                list: APC.views.demActoresListView.el
+                list: APC.views.demActoresListView.render().$el.html(),
+                table: "demanda",
+                cols: "actor"
             });
-            modal.render();
+            APC.views.demActoresModal.render();
         },
 
         btnDemTerritorios: function() {
-            APC.views.demTerritoriosListView = new listEl({
-                collection: APC.collections.demTerritoriosCollection
-            });
-            APC.views.demTerritoriosListView.render();
+            if (typeof APC.views.demTerritoriosListView === "undefined")
+                APC.views.demTerritoriosListView = new listEl({
+                    collection: APC.collections.demTerritoriosCollection
+                });
 
-            var modal = new modalList({
-                id: "demTerritorios",
+
+            APC.views.demTerritoriosModal = new modalList({
+                id: "demTerritoriosModal",
                 title: "Territorios",
-                list: APC.views.demTerritoriosListView.el
+                list: APC.views.demTerritoriosListView.render().$el.html(),
+                table: "demanda",
+                cols: "territorio"
             });
-            modal.render();
+            APC.views.demTerritoriosModal.render();
         },
 
         btnDemMunicipios: function() {
-            APC.views.demMunicipiosListView = new listEl({
-                collection: APC.collections.demMunicipiosCollection
-            });
-            APC.views.demMunicipiosListView.render();
+            if (typeof APC.views.demMunicipiosListView === "undefined")
+                APC.views.demMunicipiosListView = new listEl({
+                    collection: APC.collections.demMunicipiosCollection
+                });
 
-            var modal = new modalList({
-                id: "demMunicipios",
+
+            APC.views.demMunicipiosModalListView = new modalList({
+                id: "demMunicipiosModal",
                 title: "Municipios",
-                list: APC.views.demMunicipiosListView.el
+                list: APC.views.demMunicipiosListView.render().$el.html(),
+                table: "demanda",
+                cols: "municipio"
             });
-            modal.render();
+            APC.views.demMunicipiosModalListView.render();
         },
 
         btnDemAreas: function() {
-            APC.views.demAreasListView = new listEl({
-                collection: APC.collections.demAreasCollection
-            });
-            APC.views.demAreasListView.render();
+            if (typeof APC.views.demAreasListView === "undefined")
+                APC.views.demAreasListView = new listEl({
+                    collection: APC.collections.demAreasCollection
+                });
 
-            var modal = new modalList({
-                id: "demAreas",
+
+            APC.views.demAreasModalListView = new modalList({
+                id: "demAreasModal",
                 title: "Áreas",
-                list: APC.views.demAreasListView.el
+                list: APC.views.demAreasListView.render().$el.html(),
+                table: "demanda",
+                cols: "otrossectoresrelacionados"
             });
-            modal.render();
+            APC.views.demAreasModalListView.render();
         },
 
         btnDemSectores: function() {
-            APC.views.demSectoresListView = new listEl({
-                collection: APC.collections.demSectoresCollection
-            });
-            APC.views.demSectoresListView.render();
+            if (typeof APC.views.demSectoresListView === "undefined")
+                APC.views.demSectoresListView = new listEl({
+                    collection: APC.collections.demSectoresCollection
+                });
 
-            var modal = new modalList({
-                id: "demSectores",
+
+            APC.views.demSectoresModalListView = new modalList({
+                id: "demSectoresModal",
                 title: "Sectores",
-                list: APC.views.demSectoresListView.el
+                list: APC.views.demSectoresListView.render().$el.html(),
+                table: "demanda",
+                cols: "sectorliderpolitica"
             });
-            modal.render();
+            APC.views.demSectoresModalListView.render();
         },
 
         btnProTerritorios: function() {
-            APC.views.proTerritoriosListView = new listEl({
-                collection: APC.collections.proTerritoriosCollection
-            });
-            APC.views.proTerritoriosListView.render();
+            if (typeof APC.views.proTerritoriosListView === "undefined")
+                APC.views.proTerritoriosListView = new listEl({
+                    collection: APC.collections.proTerritoriosCollection
+                });
 
-            var modal = new modalList({
+
+            APC.views.proTerritoriosModalListView = new modalList({
+                id: "proTerritoriosModal",
                 title: "Territorios",
-                list: APC.views.proTerritoriosListView.el
+                list: APC.views.proTerritoriosListView.render().$el.html(),
+                table: "dci",
+                cols: "terrirorio"
             });
-            modal.render();
+            APC.views.proTerritoriosModalListView.render();
         },
 
         btnProAreas: function() {
-            APC.views.proAreasListView = new listEl({
-                collection: APC.collections.proAreasCollection
-            });
-            APC.views.proAreasListView.render();
+            if (typeof APC.views.proAreasListView === "undefined")
+                APC.views.proAreasListView = new listEl({
+                    collection: APC.collections.proAreasCollection
+                });
 
-            var modal = new modalList({
+            APC.views.proAreasModalListView = new modalList({
+                id: "proAreasModal",
                 title: "Áreas",
-                list: APC.views.proAreasListView.el
+                list: APC.views.proAreasListView.render().$el.html(),
+                table: "dci",
+                cols: "areacooperacion"
             });
-            modal.render();
+            APC.views.proAreasModalListView.render();
         },
 
         render: function() {
@@ -190,12 +254,6 @@ define(function(require) {
             google.maps.event.trigger(APC.views.mapDemanda.map, 'resize');
             google.maps.event.trigger(APC.views.mapCooperacion.map, 'resize');
 
-            setTimeout(function() {
-                APC.collections.demCollection.initMapMarkersWithDb();
-                APC.collections.coopCollection.initMapMarkersWithDb();
-            }, 2000);
-
-            this.$el.append(_.template(modalTpl));
             return this;
         }
     });

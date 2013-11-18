@@ -232,10 +232,11 @@ define(function(require) {
                         APC.collections.proTerritoriosCollection.findAll(),
                         APC.collections.proAreasCollection.findAll()).done(function() {
 
-                        APC.views.prioridadesPageView = new PrioridadesPageView();
+                        if (typeof APC.views.prioridadesPageView === 'undefined')
+                            APC.views.prioridadesPageView = new PrioridadesPageView();
                         APC.views.prioridadesPageView.render();
                     });
-                }); 
+                });
             });
         },
 
@@ -263,9 +264,9 @@ define(function(require) {
                         APC.views.ProyectosPageView = new ProyectosPageView({
                             collection: APC.collections.proCollection
                         });
-                        APC.views.ProyectosPageView.render();                       
+                        APC.views.ProyectosPageView.render();
                     });
-                });                    
+                });
             });
         },
 
@@ -303,7 +304,7 @@ define(function(require) {
                 $("#loadingBox").fadeIn(500, function() {
                     APC.views.ejecutasView = new EjecutasView();
                     APC.views.ejecutasView.render();
-                });    
+                });
             });
         },
 

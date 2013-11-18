@@ -12,12 +12,29 @@ var APC = {
     models: {},
     collections: {},
     views: {},
-    utils: {}
+    utils: {},
+    selection: {
+        demanda: {
+            cols: {
+                actor: [],
+                territorio: [],
+                municipio: [],
+                otrossectoresrelacionados: [],
+                sectorliderpolitica: []
+            }
+        },
+        dci: {
+            cols: {
+                terrirorio: [],
+                areacooperacion: []
+            }
+        }
+    }
 };
 
 require.config({
 
-    waitSeconds : 120,
+    waitSeconds: 120,
 
     baseUrl: 'js/lib',
 
@@ -25,8 +42,8 @@ require.config({
         app: '../app',
         tpl: '../tpl',
         bootstrap: '../../bootstrap/js',
-        async : '../lib/requirejs-plugins/async',
-        goog : '../lib/requirejs-plugins/goog'
+        async: '../lib/requirejs-plugins/async',
+        goog: '../lib/requirejs-plugins/goog'
     },
 
     shim: {
@@ -47,9 +64,8 @@ require(['../../phonegap', 'fastclick', 'app/router'], function(phonegap, fclick
        Backbone.history.start();
    });
 });
-
- // require(['fastclick', 'app/router'], function(fclick, router) {    
- //     fclick.attach(document.body);
- //     APC.router = new router();
- //     Backbone.history.start();
- // });
+// require(['fastclick', 'app/router'], function(fclick, router) {
+//     fclick.attach(document.body);
+//     APC.router = new router();
+//     Backbone.history.start();
+// });
