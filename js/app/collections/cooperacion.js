@@ -41,7 +41,7 @@ define(function(require) {
         findAll: function() {
             var deferred = $.Deferred();
             var self = this;
-            this.baseapc.execute("SELECT * FROM dci LIMIT 50", model, function(data) {
+            this.baseapc.execute("SELECT * FROM dci LIMIT 20", model, function(data) {
                 self.reset(data);
                 deferred.resolve();
                 setTimeout(function() {

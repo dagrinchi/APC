@@ -42,7 +42,7 @@ define(function(require) {
             var deferred = $.Deferred();
 
             var self = this;
-            this.baseapc.execute("select * from demanda limit 50", model, function(data) {
+            this.baseapc.execute("select * from demanda limit 20", model, function(data) {
                 self.reset(data);
                 deferred.resolve();
                 setTimeout(function() {

@@ -24,7 +24,7 @@ define(function(require) {
 		initialize: function() {
 			var self = this;
 
-			require(['async!http://maps.googleapis.com/maps/api/js?key=AIzaSyCtA2EQoKD1VLTpg1De7-smoxI2o1YygBo&sensor=true&amp;language=es'], function() {
+			require(['async!http://maps.googleapis.com/maps/api/js?sensor=true&amp;language=es'], function() {
 
 				var mapOptions = {
 					zoom: self.options.zoom,
