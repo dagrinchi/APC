@@ -30,8 +30,8 @@ define(function(require) {
 				});
 			},
 
-			function(tx, error) {
-				console.log("Transaction Error: " + error);
+			function(err) {
+				console.log(err);
 			});
 		},
 
@@ -50,8 +50,8 @@ define(function(require) {
 				});
 			},
 
-			function(tx, error) {
-				console.log("Transaction Error: " + error);
+			function(err) {
+				console.log(err);
 			});
 		}
 

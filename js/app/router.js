@@ -154,12 +154,18 @@ define(function(require) {
                 APC.views.introView.render();
 
                 APC.utils.initdb = new Initdb();
-                $.when(APC.utils.initdb).done(function() {
+                $.when(APC.utils.initdb).then(function(r) {                    
+                    APC.views.introView.progressBar(r.count, r.msg);
                     setTimeout(function() {
                         APC.router.navigate("inicio", {
                             trigger: true
                         });
-                    }, 2000);
+                    }, 1000);
+                }, function(err) {
+                    navigator.notification.alert('El repositorio de datos Open Data no está disponible ó se ha perdido la conexión con la red, inténtalo más tarde!', function() {
+                    }, 'Atención', 'Reintentar');
+                }, function(r) {
+                    APC.views.introView.progressBar(r.count, r.msg);
                 });
             });
 
