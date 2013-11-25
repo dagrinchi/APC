@@ -30,7 +30,7 @@ define(function(require) {
 
         findByName: function(key) {            
             var self = this;
-            var sql = "SELECT DISTINCT RowKey, codigoproyecto, proyectoprograma FROM demanda WHERE demanda.proyectoprograma LIKE '%" + key + "%' GROUP BY codigoproyecto ORDER BY codigoproyecto";            
+            var sql = "SELECT DISTINCT RowKey, proyectoprograma FROM demanda WHERE demanda.proyectoprograma LIKE '%" + key + "%' GROUP BY codigoproyecto ORDER BY codigoproyecto";            
             this.baseapc.execute(sql, model, function(data) {
                 self.reset(data);               
             });
@@ -38,12 +38,19 @@ define(function(require) {
 
         findAll: function() {            
             var self = this;
-            this.baseapc.execute("SELECT DISTINCT RowKey, codigoproyecto, proyectoprograma FROM demanda GROUP BY codigoproyecto ORDER BY codigoproyecto", model, function(data) {
+            this.baseapc.execute("SELECT DISTINCT RowKey, proyectoprograma FROM demanda GROUP BY codigoproyecto ORDER BY codigoproyecto", model, function(data) {
                 self.reset(data);
                 deferred.resolve();
             });
 
             return deferred.promise();
+        },
+
+        findAllSursur: function() {            
+            var self = this;
+            this.baseapc.execute("SELECT DISTINCT RowKey, programaproyectoactividad proyectoprograma FROM sursur GROUP BY programaproyectoactividad ORDER BY programaproyectoactividad", model, function(data) {
+                self.reset(data);                
+            });
         }
     });
 

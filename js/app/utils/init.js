@@ -39,7 +39,7 @@ define(function(require) {
 
 		checkUpdatedData: function() {
 			console.log("checkUpdatedData: Comprobando si los datos están actualizados!");
-			app.deferred.notify({ msg: "Comprobando si los datos están actualizados!" , count: 0 });
+			app.deferred.notify({ msg: "Comprobando datos actualizados!" , count: 0 });
 			var s = new Date();
 			s.setMonth(s.getMonth() - 3);
 			var updated = window.localStorage.getItem("updated");

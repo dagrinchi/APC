@@ -56,12 +56,24 @@ define(function(require) {
 		el: "body",
 		
 		events: {
-			"keyup #search-project": "search"
+			"keyup #search-project": "search",
+			"click #demandProyects": "proyectosDemanda",
+			"click #southProyects": "proyectosSursur"
 		},
 		
 		search: function(event) {
 			var key = $('#search-project').val();
 			this.collection.findByName(key);
+		},
+
+		proyectosDemanda: function() {
+			$('#search-project').val("");
+			this.collection.findAll();
+		},
+
+		proyectosSursur: function() {
+			$('#search-project').val("");
+			this.collection.findAllSursur();
 		},
 		
 		render: function() {
