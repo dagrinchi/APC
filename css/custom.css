@@ -362,18 +362,18 @@
 }
 /*fin de estilos pagina detalles*/
 
-table { 
+.detalleProyecto table { 
     width: 100%; 
     border-collapse: collapse; 
 }
-tr:nth-of-type(odd) { 
+.detalleProyecto tr:nth-of-type(odd) { 
     background: #eee; 
 }
-th { 
+.detalleProyecto th { 
     background: #1abc9c;
     color: white;  
 }
-td, th { 
+.detalleProyecto td, th { 
     padding: 6px;
     border: 0px solid #ccc;
     text-align: left;
