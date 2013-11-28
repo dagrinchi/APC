@@ -35,7 +35,7 @@ define(function(require) {
 
                 if (typeof APC.views.mapDemanda === 'undefined')
                     APC.views.mapDemanda = new MapView({
-                        id: "#map-canvas-a",
+                        id: "map-canvas-a",
                         className: "map-canvas map-canvas-a",
                         zoom: 4,
                         minZoom: 4,
@@ -72,7 +72,7 @@ define(function(require) {
 
                 if (typeof APC.views.mapCooperacion === 'undefined')
                     APC.views.mapCooperacion = new MapView({
-                        id: "#map-canvas-b",
+                        id: "map-canvas-b",
                         className: "map-canvas map-canvas-b",
                         zoom: 4,
                         minZoom: 4,
@@ -109,7 +109,7 @@ define(function(require) {
 
                 if (typeof APC.views.mapSursur === 'undefined')
                     APC.views.mapSursur = new MapView({
-                        id: "#map-canvas-c",
+                        id: "map-canvas-c",
                         className: "map-canvas map-canvas-c",
                         zoom: 1,
                         minZoom: 1,

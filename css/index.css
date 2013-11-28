@@ -113,6 +113,10 @@ h1, h2, h3 {
     opacity: 0.2;*/
 }
 
+.thumbnails h2 {
+    font-size: 150% !important;
+}
+
 .thumbnails, .tile, .tile-double {
     margin: 0 !important;
     padding: 0 !important;
@@ -287,4 +291,8 @@ and (orientation : portrait) {
     top: 0;
     margin: 0;
     padding: 0;
+}
+
+.gmnoprint a, .gmnoprint span {
+    display:none;
 }

@@ -21,29 +21,15 @@ define(function(require) {
 
 		el: "body",
 
-		template: _.template(detalleProyectoTpl),
+		template: _.template(detalleProyectoTpl),		
 
-		events: {
-			"click .share": "btnShare"
+		events : {
+			"click .back" : "btnBack"
 		},
 
-		btnShare: function() {
-			window.plugins.socialsharing.available(function(isAvailable) {
-				if (isAvailable) {
-					window.plugins.socialsharing.share("APC-mapps", "APC-mapps");
-				}
-			});
-			// require(['html2canvas'], function() {
-			// 	html2canvas(document.getElementsByTagName("body"), {
-			// 		onrendered: function(canvas) {
-			// 			window.plugins.socialsharing.available(function(isAvailable) {
-			// 				if (isAvailable) {
-			// 					window.plugins.socialsharing.share(null, "APC-mapps", canvas.toDataURL(), null);
-			// 				}
-			// 			});
-			// 		}
-			// 	});
-			// });			
+		btnBack : function(e) {
+			window.history.back();
+			return false;
 		},
 
 		render: function() {

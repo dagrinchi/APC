@@ -24,7 +24,7 @@ define(function(require) {
 		initialize: function() {
 			var self = this;
 
-			require(['async!http://maps.googleapis.com/maps/api/js?sensor=true&amp;language=es'], function() {
+			require(['async!https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'], function() {
 
 				var mapOptions = {
 					zoom: self.options.zoom,
@@ -32,7 +32,9 @@ define(function(require) {
 					maxZoom: self.options.maxZoom,
 					center: new google.maps.LatLng(self.options.latitude, self.options.longitude),
 					mapTypeId: google.maps.MapTypeId.ROADMAP,
-					mapTypeControl: false,
+					mapTypeControl: false,				    
+				    streetViewControl: false,
+				    panControl: false,
 					styles: self.options.styles
 				};
 				self.map = new google.maps.Map(self.el, mapOptions);
