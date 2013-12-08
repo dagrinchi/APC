@@ -14,7 +14,9 @@ define(function(require) {
 
     var Backbone = require('backbone'),
         DB = require('app/utils/db'),
-        model = require('app/models/sursur');
+        model = require('app/models/sursur'),
+        modalView = require('app/views/modalSursur'),
+        sursurByCountry = require('app/collections/sursurByCountry');
 
     var $ = require('jquery'),
         deferred = $.Deferred(),
@@ -41,7 +43,7 @@ define(function(require) {
         findAll: function() {
 
             var self = this;
-            this.baseapc.execute("select pais, group_concat(programaproyectoactividad,' +++ ') as contenido from sursur where pais like '%C%' group by pais", model, function(data) {
+            this.baseapc.execute("SELECT DISTINCT pais FROM sursur", model, function(data) {
                 self.reset(data);
                 deferred.resolve();
             });
@@ -57,13 +59,12 @@ define(function(require) {
         },
 
         geoCoder: function() {
-            var search = this.models[this.nextAddress].get("pais");
-            var windowContent = this.models[this.nextAddress].get("contenido");
+            var search = this.models[this.nextAddress].get("pais");            
             var pais = this.models[this.nextAddress].get("pais");
+            var RowKey = this.models[this.nextAddress].get("RowKey");           
             
-            //console.log(search + " >>> " + this.length + " >>>> " + this.nextAddress + "--" + windowContent);
             if (this.nextAddress < this.length - 1) {
-                setTimeout("APC.collections.sursurCollection.getAddress('" + search + "','" + windowContent + "','" + pais + "')", this.delay);
+                setTimeout("APC.collections.sursurCollection.getAddress('" + search + "','" + RowKey + "','" + pais + "')", this.delay);
                 this.nextAddress++;
             } else {
                 geoDeferred.resolve();
@@ -71,7 +72,7 @@ define(function(require) {
             return geoDeferred.promise();
         },
 
-        getAddress: function(search, winContent, pais) {
+        getAddress: function(search, RowKey, pais) {
             var self = this;
             this.geo.geocode({
                 address: search
@@ -80,7 +81,7 @@ define(function(require) {
                     var p = results[0].geometry.location;
                     var lat = p.lat();
                     var lng = p.lng();
-                    self.createMarker(winContent, lat, lng, pais);
+                    self.createMarker(RowKey, lat, lng, pais);
                     //console.log('address=' + search + ' lat=' + lat + ' lng=' + lng + '(delay=' + self.delay + 'ms)');
                     self.delay = 100;
                 } else {
@@ -96,9 +97,8 @@ define(function(require) {
             });
         },
 
-        createMarker: function(add, lat, lng, pais) {
-            var self = this;
-            var contentString = add;
+        createMarker: function(RowKey, lat, lng, pais) {
+            var self = this;            
             var marker = new google.maps.Marker({
                 position: new google.maps.LatLng(lat, lng),
                 map: APC.views.mapSursur.map,
@@ -108,8 +108,20 @@ define(function(require) {
             });
 
             google.maps.event.addListener(marker, 'click', function() {
-                self.infowindow.setContent(contentString);
-                self.infowindow.open(APC.views.mapSursur.map, marker);
+                
+                if (typeof APC.collections.sursurByCountry === 'undefined')
+                    APC.collections.sursurByCountry = new sursurByCountry();
+
+                $.when(APC.collections.sursurByCountry.findByCountry(pais)).done(function() {
+                    var modal = new modalView({
+                        id: RowKey,
+                        title: pais,
+                        collection: APC.collections.sursurByCountry
+                    });
+                    setTimeout(function() {
+                        modal.render();
+                    }, 500);
+                });
             });
 
             this.bounds.extend(marker.position);

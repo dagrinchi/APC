@@ -21,6 +21,8 @@ define(function(require) {
 
     return Backbone.Collection.extend({
 
+        sql : "SELECT DISTINCT * FROM dci INNER JOIN (SELECT DISTINCT dci.terrirorio terr, dane.lat, dane.long FROM dci INNER JOIN dane ON dane.nomdep LIKE dci.terrirorio WHERE dane.codmun = '' GROUP BY dci.terrirorio) dciterr ON dciterr.terr = dci.terrirorio ",
+
         markers: [],
 
         delay: 100,
@@ -41,7 +43,8 @@ define(function(require) {
         findAll: function() {
             var deferred = $.Deferred();
             var self = this;
-            this.baseapc.execute("SELECT * FROM dci LIMIT 20", model, function(data) {
+            
+            this.baseapc.execute(self.sql, model, function(data) {
                 self.reset(data);
                 deferred.resolve();
                 setTimeout(function() {
@@ -68,7 +71,7 @@ define(function(require) {
 
         buildSQL: function() {
             var selection = [];
-            var sql = "SELECT * FROM dci ";
+            var sql = this.sql;
 
             $.each(APC.selection, function(k1, v1) {
                 var item = [];
@@ -110,11 +113,7 @@ define(function(require) {
             var self = this;
 
             $.each(this.models, function(k1, v1) {
-                $.each(v1.latLon, function(k2, v2) {
-                    $.each(v2.models, function(k3, v3) {
-                        self.createMarker(v1.get("RowKey"), v1.get("componentecooperacion").trim(), parseFloat(v3.get("lat")), parseFloat(v3.get("long")));
-                    });
-                });
+                self.createMarker(v1.get("RowKey"), v1.get("componentecooperacion").trim(), parseFloat(v1.get("lat")), parseFloat(v1.get("long")));                
             });
 
             if (typeof APC.views.mapCooperacion.markerCluster !== "undefined") {

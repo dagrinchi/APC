@@ -14,11 +14,17 @@ define(function(require) {
 
     var Backbone = require('backbone'),
         DB = require('app/utils/db'),
-        model = require('app/models/demanda');
+        model = require('app/models/demanda'),
+        modalView = require('app/views/modal'),
+        demandaByMunicipios = require('app/collections/demandaByMunicipios');
 
     var $ = require('jquery');
 
     return Backbone.Collection.extend({
+
+        sqlInit: "SELECT DISTINCT * FROM demanda LEFT JOIN (SELECT DISTINCT demanda.municipio mun, dane.lat, dane.long FROM demanda INNER JOIN dane ON dane.nommun LIKE demanda.municipio WHERE demanda.municipio IS NOT '' GROUP BY demanda.municipio) municipios ON municipios.mun = demanda.municipio ",
+
+        sqlEnd: " GROUP BY demanda.codigoproyecto, demanda.municipio",
 
         markers: [],
 
@@ -42,7 +48,7 @@ define(function(require) {
             var deferred = $.Deferred();
 
             var self = this;
-            this.baseapc.execute("select * from demanda limit 20", model, function(data) {
+            this.baseapc.execute(self.sqlInit + self.sqlEnd, model, function(data) {
                 self.reset(data);
                 deferred.resolve();
                 setTimeout(function() {
@@ -70,7 +76,7 @@ define(function(require) {
 
         buildSQL: function() {
             var selection = [];
-            var sql = "SELECT * FROM demanda ";
+            var sql = this.sqlInit;
 
             $.each(APC.selection, function(k1, v1) {
                 var item = [];
@@ -87,11 +93,7 @@ define(function(require) {
             });
 
             $.each(selection, function(k1, v1) {
-                if (k1 === 0) {
-                    sql += "WHERE ";
-                } else {
-                    sql += " AND (";
-                }
+                sql += " AND (";
                 $.each(v1, function(k2, v2) {
                     if (k2 > 0) {
                         sql += " OR ";
@@ -100,10 +102,10 @@ define(function(require) {
                         sql += k3 + " = " + "'" + v3 + "'";
                     });
                 });
-                if (k1 !== 0) {
-                    sql += ")";
-                }
+                sql += ")";
             });
+
+            sql += this.sqlEnd;
             return sql;
         },
 
@@ -112,15 +114,12 @@ define(function(require) {
             var self = this;
 
             $.each(this.models, function(k1, v1) {
-                $.each(v1.latLon, function(k2, v2) {
-                    $.each(v2.models, function(k3, v3) {
-                        self.createMarker(v1.get("RowKey"), v1.get("proyectoprograma").trim(), parseFloat(v3.get("lat")), parseFloat(v3.get("long")));
-                    });
-                });
+                if (v1.get("long") > 0 || v1.get("lat") > 0)
+                    self.createMarker(v1.get("RowKey"), v1.get("municipio").trim(), parseFloat(v1.get("lat")), parseFloat(v1.get("long")));
             });
 
             if (typeof APC.views.mapDemanda.markerCluster !== "undefined") {
-               APC.views.mapDemanda.markerCluster.clearMarkers(); 
+                APC.views.mapDemanda.markerCluster.clearMarkers();
             }
             require(['markerclustererCompiled'], function() {
                 APC.views.mapDemanda.markerCluster = new MarkerClusterer(APC.views.mapDemanda.map, self.markers, {
@@ -187,8 +186,20 @@ define(function(require) {
             this.markers.push(marker);
 
             google.maps.event.addListener(marker, 'click', function() {
-                self.infowindow.setContent(contentString);
-                self.infowindow.open(APC.views.mapDemanda.map, marker);
+
+                if (typeof APC.collections.demByMunicipios === 'undefined')
+                    APC.collections.demByMunicipios = new demandaByMunicipios();
+
+                $.when(APC.collections.demByMunicipios.findByMunicipio(add)).done(function() {
+                    var modal = new modalView({
+                        id: RowKey,
+                        title: add,
+                        collection: APC.collections.demByMunicipios
+                    });
+                    setTimeout(function() {
+                        modal.render();
+                    }, 500);
+                });
             });
 
             this.bounds.extend(marker.position);

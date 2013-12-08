@@ -23,15 +23,6 @@ define(function(require) {
 
 		template: _.template(detalleProyectoTpl),		
 
-		events : {
-			"click .back" : "btnBack"
-		},
-
-		btnBack : function(e) {
-			window.history.back();
-			return false;
-		},
-
 		render: function() {
 			this.$el.html(this.template(this.model.toJSON()));
 			return this;
