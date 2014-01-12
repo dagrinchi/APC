@@ -15,3 +15,6 @@ phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin
 
 SOCIAL SHARING
 phonegap local plugin add https://github.com/EddyVerbruggen/SocialSharing-PhoneGap-Plugin.git
+
+NETWORK
+phonegap local plugin add https://git-wip-us.apache.org/repos/asf/cordova-plugin-network-information.git

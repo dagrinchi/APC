@@ -146,12 +146,10 @@ define(function(require) {
             });
         },
 
-        btnDemActores: function() {
-            if (typeof APC.views.demActoresListView === "undefined")
-                APC.views.demActoresListView = new listEl({
-                    collection: APC.collections.demActoresCollection
-                });
-
+        btnDemActores: function() {            
+            APC.views.demActoresListView = new listEl({
+                collection: APC.collections.demActoresCollection
+            });
 
             APC.views.demActoresModal = new modalList({
                 id: "demActoresModal",
@@ -163,12 +161,10 @@ define(function(require) {
             APC.views.demActoresModal.render();
         },
 
-        btnDemTerritorios: function() {
-            if (typeof APC.views.demTerritoriosListView === "undefined")
-                APC.views.demTerritoriosListView = new listEl({
-                    collection: APC.collections.demTerritoriosCollection
-                });
-
+        btnDemTerritorios: function() {            
+            APC.views.demTerritoriosListView = new listEl({
+                collection: APC.collections.demTerritoriosCollection
+            });
 
             APC.views.demTerritoriosModal = new modalList({
                 id: "demTerritoriosModal",
@@ -180,12 +176,10 @@ define(function(require) {
             APC.views.demTerritoriosModal.render();
         },
 
-        btnDemMunicipios: function() {
-            if (typeof APC.views.demMunicipiosListView === "undefined")
-                APC.views.demMunicipiosListView = new listEl({
-                    collection: APC.collections.demMunicipiosCollection
-                });
-
+        btnDemMunicipios: function() {            
+            APC.views.demMunicipiosListView = new listEl({
+                collection: APC.collections.demMunicipiosCollection
+            });
 
             APC.views.demMunicipiosModalListView = new modalList({
                 id: "demMunicipiosModal",
@@ -197,12 +191,10 @@ define(function(require) {
             APC.views.demMunicipiosModalListView.render();
         },
 
-        btnDemAreas: function() {
-            if (typeof APC.views.demAreasListView === "undefined")
-                APC.views.demAreasListView = new listEl({
-                    collection: APC.collections.demAreasCollection
-                });
-
+        btnDemAreas: function() {            
+            APC.views.demAreasListView = new listEl({
+                collection: APC.collections.demAreasCollection
+            });
 
             APC.views.demAreasModalListView = new modalList({
                 id: "demAreasModal",
@@ -214,12 +206,10 @@ define(function(require) {
             APC.views.demAreasModalListView.render();
         },
 
-        btnDemSectores: function() {
-            if (typeof APC.views.demSectoresListView === "undefined")
-                APC.views.demSectoresListView = new listEl({
-                    collection: APC.collections.demSectoresCollection
-                });
-
+        btnDemSectores: function() {            
+            APC.views.demSectoresListView = new listEl({
+                collection: APC.collections.demSectoresCollection
+            });
 
             APC.views.demSectoresModalListView = new modalList({
                 id: "demSectoresModal",
@@ -231,12 +221,10 @@ define(function(require) {
             APC.views.demSectoresModalListView.render();
         },
 
-        btnProTerritorios: function() {
-            if (typeof APC.views.proTerritoriosListView === "undefined")
-                APC.views.proTerritoriosListView = new listEl({
-                    collection: APC.collections.proTerritoriosCollection
-                });
-
+        btnProTerritorios: function() {            
+            APC.views.proTerritoriosListView = new listEl({
+                collection: APC.collections.proTerritoriosCollection
+            });
 
             APC.views.proTerritoriosModalListView = new modalList({
                 id: "proTerritoriosModal",
@@ -248,11 +236,10 @@ define(function(require) {
             APC.views.proTerritoriosModalListView.render();
         },
 
-        btnProAreas: function() {
-            if (typeof APC.views.proAreasListView === "undefined")
-                APC.views.proAreasListView = new listEl({
-                    collection: APC.collections.proAreasCollection
-                });
+        btnProAreas: function() {            
+            APC.views.proAreasListView = new listEl({
+                collection: APC.collections.proAreasCollection
+            });
 
             APC.views.proAreasModalListView = new modalList({
                 id: "proAreasModal",

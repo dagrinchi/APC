@@ -29,122 +29,140 @@ define(function(require) {
             "acercade": "acercade"
         },
 
+        checkConnection: function() {
+            console.log("checkConnection: Comprobando conectividad a internet!");
+            var networkState = navigator.connection.type;
+            if (networkState == Connection.NONE || networkState == Connection.UNKNOWN) {
+                console.log("checkConnection: No hay internet!");
+                return false;
+            } else {
+                console.log("checkConnection: Si hay internet!");
+                return true;
+            }
+        },
+
         initialize: function() {
+            if (this.checkConnection()) {
+                require(['app/views/map'], function(MapView) {
+                    if (typeof APC.views.mapDemanda === 'undefined')
+                        APC.views.mapDemanda = new MapView({
+                            id: "map-canvas-a",
+                            className: "map-canvas map-canvas-a",
+                            zoom: 4,
+                            minZoom: 4,
+                            latitude: 19.872195816700884,
+                            longitude: -106.65585937499998
+                            // ,
+                            // styles: [{
+                            //     "stylers": [{
+                            //         "invert_lightness": true
+                            //     }]
+                            // }, {
+                            //     "featureType": "landscape",
+                            //     "stylers": [{
+                            //         "color": "#003c81"
+                            //     }]
+                            // }, {
+                            //     "featureType": "road",
+                            //     "stylers": [{
+                            //         "color": "#d4e4e4"
+                            //     }, {
+                            //         "lightness": -19
+                            //     }]
+                            // }, {
+                            //     "featureType": "poi",
+                            //     "stylers": [{
+                            //         "visibility": "off"
+                            //     }]
+                            // }, {
+                            //     "featureType": "administrative",
+                            //     "stylers": [{
+                            //         "lightness": 25
+                            //     }]
+                            // }]
+                        });
 
-            require(['app/views/map'], function(MapView) {
+                    if (typeof APC.views.mapCooperacion === 'undefined')
+                        APC.views.mapCooperacion = new MapView({
+                            id: "map-canvas-b",
+                            className: "map-canvas map-canvas-b",
+                            zoom: 4,
+                            minZoom: 4,
+                            latitude: 19.872195816700884,
+                            longitude: -106.65585937499998
+                            // ,
+                            // styles: [{
+                            //     "stylers": [{
+                            //         "invert_lightness": true
+                            //     }]
+                            // }, {
+                            //     "featureType": "landscape",
+                            //     "stylers": [{
+                            //         "color": "#003c81"
+                            //     }]
+                            // }, {
+                            //     "featureType": "road",
+                            //     "stylers": [{
+                            //         "color": "#d4e4e4"
+                            //     }, {
+                            //         "lightness": -19
+                            //     }]
+                            // }, {
+                            //     "featureType": "poi",
+                            //     "stylers": [{
+                            //         "visibility": "off"
+                            //     }]
+                            // }, {
+                            //     "featureType": "administrative",
+                            //     "stylers": [{
+                            //         "lightness": 25
+                            //     }]
+                            // }]
+                        });
 
-                if (typeof APC.views.mapDemanda === 'undefined')
-                    APC.views.mapDemanda = new MapView({
-                        id: "map-canvas-a",
-                        className: "map-canvas map-canvas-a",
-                        zoom: 4,
-                        minZoom: 4,
-                        latitude: 19.872195816700884,
-                        longitude: -106.65585937499998,
-                        styles: [{
-                            "stylers": [{
-                                "invert_lightness": true
-                            }]
-                        }, {
-                            "featureType": "landscape",
-                            "stylers": [{
-                                "color": "#003c81"
-                            }]
-                        }, {
-                            "featureType": "road",
-                            "stylers": [{
-                                "color": "#d4e4e4"
-                            }, {
-                                "lightness": -19
-                            }]
-                        }, {
-                            "featureType": "poi",
-                            "stylers": [{
-                                "visibility": "off"
-                            }]
-                        }, {
-                            "featureType": "administrative",
-                            "stylers": [{
-                                "lightness": 25
-                            }]
-                        }]
-                    });
+                    if (typeof APC.views.mapSursur === 'undefined')
+                        APC.views.mapSursur = new MapView({
+                            id: "map-canvas-c",
+                            className: "map-canvas map-canvas-c",
+                            zoom: 1,
+                            minZoom: 1,
+                            latitude: 84.82717505894134,
+                            longitude: -182.87009974999998
+                            // ,
+                            // styles: [{
+                            //     "stylers": [{
+                            //         "invert_lightness": true
+                            //     }]
+                            // }, {
+                            //     "featureType": "landscape",
+                            //     "stylers": [{
+                            //         "color": "#8c44ae"
+                            //     }]
+                            // }, {
+                            //     "featureType": "road",
+                            //     "stylers": [{
+                            //         "color": "#d4e4e4"
+                            //     }, {
+                            //         "lightness": -19
+                            //     }]
+                            // }, {
+                            //     "featureType": "poi",
+                            //     "stylers": [{
+                            //         "visibility": "off"
+                            //     }]
+                            // }, {
+                            //     "featureType": "administrative",
+                            //     "stylers": [{
+                            //         "lightness": 25
+                            //     }]
+                            // }]
+                        });
 
-                if (typeof APC.views.mapCooperacion === 'undefined')
-                    APC.views.mapCooperacion = new MapView({
-                        id: "map-canvas-b",
-                        className: "map-canvas map-canvas-b",
-                        zoom: 4,
-                        minZoom: 4,
-                        latitude: 19.872195816700884,
-                        longitude: -106.65585937499998,
-                        styles: [{
-                            "stylers": [{
-                                "invert_lightness": true
-                            }]
-                        }, {
-                            "featureType": "landscape",
-                            "stylers": [{
-                                "color": "#003c81"
-                            }]
-                        }, {
-                            "featureType": "road",
-                            "stylers": [{
-                                "color": "#d4e4e4"
-                            }, {
-                                "lightness": -19
-                            }]
-                        }, {
-                            "featureType": "poi",
-                            "stylers": [{
-                                "visibility": "off"
-                            }]
-                        }, {
-                            "featureType": "administrative",
-                            "stylers": [{
-                                "lightness": 25
-                            }]
-                        }]
-                    });
-
-                if (typeof APC.views.mapSursur === 'undefined')
-                    APC.views.mapSursur = new MapView({
-                        id: "map-canvas-c",
-                        className: "map-canvas map-canvas-c",
-                        zoom: 1,
-                        minZoom: 1,
-                        latitude: 84.82717505894134,
-                        longitude: -182.87009974999998,
-                        styles: [{
-                            "stylers": [{
-                                "invert_lightness": true
-                            }]
-                        }, {
-                            "featureType": "landscape",
-                            "stylers": [{
-                                "color": "#8c44ae"
-                            }]
-                        }, {
-                            "featureType": "road",
-                            "stylers": [{
-                                "color": "#d4e4e4"
-                            }, {
-                                "lightness": -19
-                            }]
-                        }, {
-                            "featureType": "poi",
-                            "stylers": [{
-                                "visibility": "off"
-                            }]
-                        }, {
-                            "featureType": "administrative",
-                            "stylers": [{
-                                "lightness": 25
-                            }]
-                        }]
-                    });
-
-            });
+                });
+            } else {
+                navigator.notification.alert('No hay una conexión a internet!', function() {
+                }, 'Atención', 'Reintentar');
+            }
         },
 
         intro: function() {
@@ -154,7 +172,7 @@ define(function(require) {
                 APC.views.introView.render();
 
                 APC.utils.initdb = new Initdb();
-                $.when(APC.utils.initdb).then(function(r) {                    
+                $.when(APC.utils.initdb).then(function(r) {
                     APC.views.introView.progressBar(r.count, r.msg);
                     setTimeout(function() {
                         APC.router.navigate("inicio", {
@@ -162,8 +180,7 @@ define(function(require) {
                         });
                     }, 1000);
                 }, function(err) {
-                    navigator.notification.alert('El repositorio de datos Open Data no está disponible ó se ha perdido la conexión con la red, inténtalo más tarde!', function() {
-                    }, 'Atención', 'Reintentar');
+                    navigator.notification.alert('El repositorio de datos Open Data no está disponible ó se ha perdido la conexión con la red, inténtalo más tarde!', function() {}, 'Atención', 'Reintentar');
                 }, function(r) {
                     APC.views.introView.progressBar(r.count, r.msg);
                 });
