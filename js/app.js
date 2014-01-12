@@ -64,8 +64,8 @@ require(['../../phonegap', 'fastclick', 'app/router'], function(phonegap, fclick
       Backbone.history.start();
   });
 });
- // require(['fastclick', 'app/router'], function(fclick, router) {
- //     fclick.attach(document.body);
- //     APC.router = new router();
- //     Backbone.history.start();
- // });
+//  require(['fastclick', 'app/router'], function(fclick, router) {
+//      fclick.attach(document.body);
+//      APC.router = new router();
+//      Backbone.history.start();
+//  });
