@@ -37,10 +37,12 @@ define(function(require) {
         baseapc: {},
 
         initialize: function() {
-            this.geo = new google.maps.Geocoder();
-            this.bounds = new google.maps.LatLngBounds();
-            this.infowindow = new google.maps.InfoWindow();
-            this.baseapc = new DB(window.openDatabase("apc", "1.0", "APC - Agencia Presidencial de la Cooperación en Colombia", 4145728));
+            require(['async!https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'], function() {
+                this.geo = new google.maps.Geocoder();
+                this.bounds = new google.maps.LatLngBounds();
+                this.infowindow = new google.maps.InfoWindow();
+                this.baseapc = new DB(window.openDatabase("apc", "1.0", "APC - Agencia Presidencial de la Cooperación en Colombia", 4145728));
+            });
         },
 
         findAll: function() {
@@ -177,33 +179,35 @@ define(function(require) {
 
         createMarker: function(RowKey, add, lat, lng) {
             var self = this;
-            var contentString = '<a href="#proyectos/' + RowKey + '">' + add + '</a>';
-            var marker = new google.maps.Marker({
-                position: new google.maps.LatLng(lat, lng),
-                map: APC.views.mapDemanda.map,
-                zIndex: Math.round(4.5 * -100000) << 5
-            });
-
-            this.markers.push(marker);
-
-            google.maps.event.addListener(marker, 'click', function() {
-
-                if (typeof APC.collections.demByMunicipios === 'undefined')
-                    APC.collections.demByMunicipios = new demandaByMunicipios();
-
-                $.when(APC.collections.demByMunicipios.findByMunicipio(add)).done(function() {
-                    var modal = new modalView({
-                        id: RowKey,
-                        title: add,
-                        collection: APC.collections.demByMunicipios
-                    });
-                    setTimeout(function() {
-                        modal.render();
-                    }, 600);
+            require(['async!https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'], function() {
+                var contentString = '<a href="#proyectos/' + RowKey + '">' + add + '</a>';
+                var marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(lat, lng),
+                    map: APC.views.mapDemanda.map,
+                    zIndex: Math.round(4.5 * -100000) << 5
                 });
-            });
 
-            this.bounds.extend(marker.position);
+                this.markers.push(marker);
+
+                google.maps.event.addListener(marker, 'click', function() {
+
+                    if (typeof APC.collections.demByMunicipios === 'undefined')
+                        APC.collections.demByMunicipios = new demandaByMunicipios();
+
+                    $.when(APC.collections.demByMunicipios.findByMunicipio(add)).done(function() {
+                        var modal = new modalView({
+                            id: RowKey,
+                            title: add,
+                            collection: APC.collections.demByMunicipios
+                        });
+                        setTimeout(function() {
+                            modal.render();
+                        }, 600);
+                    });
+                });
+
+                this.bounds.extend(marker.position);
+            });
         }
 
     });
