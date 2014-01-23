@@ -144,7 +144,7 @@ define(function(require) {
                     zIndex: Math.round(4.5 * -100000) << 5
                 });
 
-                this.markers.push(marker);
+                self.markers.push(marker);
 
                 google.maps.event.addListener(marker, 'click', function() {
 
@@ -166,7 +166,7 @@ define(function(require) {
                     // self.infowindow.open(APC.views.mapCooperacion.map, marker);
                 });
 
-                this.bounds.extend(marker.position);
+                self.bounds.extend(marker.position);
 
             });
         }

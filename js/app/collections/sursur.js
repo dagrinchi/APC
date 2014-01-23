@@ -79,7 +79,7 @@ define(function(require) {
             var self = this;
 
             require(['async!https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'], function() {
-                this.geo.geocode({
+                self.geo.geocode({
                     address: search
                 }, function(results, status) {
                     if (status == google.maps.GeocoderStatus.OK) {
@@ -133,7 +133,7 @@ define(function(require) {
                     });
                 });
 
-                this.bounds.extend(marker.position);
+                self.bounds.extend(marker.position);
             });
         }
 
