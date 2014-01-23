@@ -37,12 +37,13 @@ define(function(require) {
         baseapc: {},
 
         initialize: function() {
+            var self = this;
             require(['async!https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'], function() {
-                this.geo = new google.maps.Geocoder();
-                this.bounds = new google.maps.LatLngBounds();
-                this.infowindow = new google.maps.InfoWindow();
-                this.baseapc = new DB(window.openDatabase("apc", "1.0", "APC - Agencia Presidencial de la Cooperación en Colombia", 4145728));
+                self.geo = new google.maps.Geocoder();
+                self.bounds = new google.maps.LatLngBounds();
+                self.infowindow = new google.maps.InfoWindow();
             });
+            this.baseapc = new DB(window.openDatabase("apc", "1.0", "APC - Agencia Presidencial de la Cooperación en Colombia", 4145728));
         },
 
         findAll: function() {
