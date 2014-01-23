@@ -22,9 +22,9 @@ define(function(require) {
 
     return Backbone.Collection.extend({
 
-        sqlInit: "SELECT DISTINCT * FROM demanda LEFT JOIN (SELECT DISTINCT demanda.municipio mun, dane.lat, dane.long FROM demanda INNER JOIN dane ON dane.nommun LIKE demanda.municipio WHERE demanda.municipio IS NOT '' GROUP BY demanda.municipio) municipios ON municipios.mun = demanda.municipio ",
+        sqlInit: "select * from demanda LEFT join dane on (((demanda.municipio like dane.nommun) and (demanda.territorio like dane.nomdep)) or ((demanda.municipio NOT like dane.nommun) and (demanda.territorio like dane.nomdep) and demanda.municipio = '' and demanda.territorio = 'AMBITO NACIONAL') OR ((demanda.municipio = dane.nommun) and (demanda.territorio like dane.nomdep) and demanda.municipio = '' and demanda.territorio != 'AMBITO NACIONAL' AND dane.nommun != 'AMBITO NACIONAL')) ",
 
-        sqlEnd: " GROUP BY demanda.codigoproyecto, demanda.municipio",
+        sqlEnd: "",
 
         markers: [],
 
@@ -93,7 +93,7 @@ define(function(require) {
             });
 
             $.each(selection, function(k1, v1) {
-                sql += " AND (";
+                sql += " WHERE (";
                 $.each(v1, function(k2, v2) {
                     if (k2 > 0) {
                         sql += " OR ";
@@ -106,6 +106,7 @@ define(function(require) {
             });
 
             sql += this.sqlEnd;
+            console.log(sql);
             return sql;
         },
 

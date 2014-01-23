@@ -128,18 +128,13 @@ define(function(require) {
                     onrendered: function(canvas) {                        
                         window.plugins.socialsharing.available(function(isAvailable) {
                             if (isAvailable) {                                
-                                window.plugins.socialsharing.share("APC-Mapps", "APC-Mapps", canvas.toDataURL(), "http://www.apccolombia.gov.co/",
-                                function(){
-                                    console.log("THE MUSIC IS THE ANSWER!!!!");
-                                },
-                                function(e){
-                                    console.log("WITHOUT MUSIC THE LIFE IS A MISTAKE!!!!" + e);
-                                });
+                                window.plugins.socialsharing.share("APC-Mapps", "APC-Mapps", canvas.toDataURL(), "http://www.apccolombia.gov.co/");
                             }
                         });
                     }
                 });
             });
+            return false;
         },
 
         btnDemActores: function() {            
@@ -197,7 +192,7 @@ define(function(require) {
                 title: "Áreas",
                 list: APC.views.demAreasListView.render().$el.html(),
                 table: "demanda",
-                cols: "otrossectoresrelacionados"
+                cols: "codigoenci"
             });
             APC.views.demAreasModalListView.render();
         },
