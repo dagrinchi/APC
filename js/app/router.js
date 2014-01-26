@@ -262,15 +262,17 @@ define(function(require) {
 
         detalleProyecto: function(RowKey) {
             var self = this;
-            require(['app/models/proyectos', 'app/views/detalleProyecto'], function(proyectoModel, detalleProyectoView) {
+            require(['app/models/proyectos', 'app/views/detalleProyectoModal'], function(proyectoModel, detalleProyectoModalView) {
                 APC.models.proyecto = new proyectoModel();
                 APC.models.proyecto.findByRowKey(RowKey, function(model) {
-                    APC.views.detalleProyectoPage = new detalleProyectoView({
+                    APC.views.detalleProyectoModal = new detalleProyectoModalView({
+                        id: RowKey,
                         model: model
                     });
-                    APC.views.detalleProyectoPage.render();
+                    APC.views.detalleProyectoModal.render();
                 });
             });
+            return false;
         },
 
         directorio: function() {
