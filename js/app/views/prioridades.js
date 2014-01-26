@@ -142,13 +142,15 @@ define(function(require) {
                 collection: APC.collections.demActoresCollection
             });
 
-            APC.views.demActoresModal = new modalList({
-                id: "demActoresModal",
-                title: "Cooperantes",
-                list: APC.views.demActoresListView.render().$el.html(),
-                table: "demanda",
-                cols: "actor"
-            });
+            if (typeof APC.views.demActoresModal === "undefined") {
+                APC.views.demActoresModal = new modalList({ 
+                    id: "demActoresModal",
+                    title: "Cooperantes",
+                    list: APC.views.demActoresListView.render().$el.html(),
+                    table: "demanda",
+                    cols: "actor"
+                });
+            }
             APC.views.demActoresModal.render();
         },
 
@@ -157,13 +159,15 @@ define(function(require) {
                 collection: APC.collections.demTerritoriosCollection
             });
 
-            APC.views.demTerritoriosModal = new modalList({
-                id: "demTerritoriosModal",
-                title: "Territorios",
-                list: APC.views.demTerritoriosListView.render().$el.html(),
-                table: "demanda",
-                cols: "territorio"
-            });
+            if (typeof APC.views.demTerritoriosModal === "undefined") {
+                APC.views.demTerritoriosModal = new modalList({
+                    id: "demTerritoriosModal",
+                    title: "Territorios",
+                    list: APC.views.demTerritoriosListView.render().$el.html(),
+                    table: "demanda",
+                    cols: "territorio"
+                });
+            }
             APC.views.demTerritoriosModal.render();
         },
 
@@ -172,13 +176,15 @@ define(function(require) {
                 collection: APC.collections.demMunicipiosCollection
             });
 
-            APC.views.demMunicipiosModalListView = new modalList({
-                id: "demMunicipiosModal",
-                title: "Municipios",
-                list: APC.views.demMunicipiosListView.render().$el.html(),
-                table: "demanda",
-                cols: "municipio"
-            });
+            if (typeof APC.views.demMunicipiosModalListView === "undefined") {
+                APC.views.demMunicipiosModalListView = new modalList({
+                    id: "demMunicipiosModal",
+                    title: "Municipios",
+                    list: APC.views.demMunicipiosListView.render().$el.html(),
+                    table: "demanda",
+                    cols: "municipio"
+                });
+            }
             APC.views.demMunicipiosModalListView.render();
         },
 
@@ -187,13 +193,15 @@ define(function(require) {
                 collection: APC.collections.demAreasCollection
             });
 
-            APC.views.demAreasModalListView = new modalList({
-                id: "demAreasModal",
-                title: "Áreas",
-                list: APC.views.demAreasListView.render().$el.html(),
-                table: "demanda",
-                cols: "codigoenci"
-            });
+            if (typeof APC.views.demAreasModalListView === "undefined") {
+                APC.views.demAreasModalListView = new modalList({
+                    id: "demAreasModal",
+                    title: "Áreas",
+                    list: APC.views.demAreasListView.render().$el.html(),
+                    table: "demanda",
+                    cols: "codigoenci"
+                });
+            }   
             APC.views.demAreasModalListView.render();
         },
 
@@ -202,13 +210,15 @@ define(function(require) {
                 collection: APC.collections.demSectoresCollection
             });
 
-            APC.views.demSectoresModalListView = new modalList({
-                id: "demSectoresModal",
-                title: "Sectores",
-                list: APC.views.demSectoresListView.render().$el.html(),
-                table: "demanda",
-                cols: "sectorliderpolitica"
-            });
+            if (typeof APC.views.demSectoresModalListView === "undefined") {
+                APC.views.demSectoresModalListView = new modalList({
+                    id: "demSectoresModal",
+                    title: "Sectores",
+                    list: APC.views.demSectoresListView.render().$el.html(),
+                    table: "demanda",
+                    cols: "sectorliderpolitica"
+                });
+            }
             APC.views.demSectoresModalListView.render();
         },
 
@@ -217,13 +227,15 @@ define(function(require) {
                 collection: APC.collections.proTerritoriosCollection
             });
 
-            APC.views.proTerritoriosModalListView = new modalList({
-                id: "proTerritoriosModal",
-                title: "Territorios",
-                list: APC.views.proTerritoriosListView.render().$el.html(),
-                table: "dci",
-                cols: "terrirorio"
-            });
+            if (typeof APC.views.proTerritoriosModalListView === "undefined") {
+                APC.views.proTerritoriosModalListView = new modalList({
+                    id: "proTerritoriosModal",
+                    title: "Territorios",
+                    list: APC.views.proTerritoriosListView.render().$el.html(),
+                    table: "dci",
+                    cols: "terrirorio"
+                });
+            }
             APC.views.proTerritoriosModalListView.render();
         },
 
@@ -232,13 +244,15 @@ define(function(require) {
                 collection: APC.collections.proAreasCollection
             });
 
-            APC.views.proAreasModalListView = new modalList({
-                id: "proAreasModal",
-                title: "Áreas",
-                list: APC.views.proAreasListView.render().$el.html(),
-                table: "dci",
-                cols: "areacooperacion"
-            });
+            if (typeof APC.views.proAreasModalListView === "undefined") {
+                APC.views.proAreasModalListView = new modalList({
+                    id: "proAreasModal",
+                    title: "Áreas",
+                    list: APC.views.proAreasListView.render().$el.html(),
+                    table: "dci",
+                    cols: "areacooperacion"
+                });
+            }
             APC.views.proAreasModalListView.render();
         },
 
