@@ -227,15 +227,17 @@ define(function(require) {
 
         detalleSursur: function(RowKey) {
             var self = this;
-            require(['app/models/sursur', 'app/views/detalleSursur'], function(sursurModel, detalleSursurView) {
+            require(['app/models/sursur', 'app/views/detalleSursurModal'], function(sursurModel, detalleSursurModalView) {
                 APC.models.sursur = new sursurModel();
                 APC.models.sursur.findByRowKey(RowKey, function(model) {
-                    APC.views.detalleSursurPage = new detalleSursurView({
+                    APC.views.detalleSursurModal = new detalleSursurModalView({
+                        id: RowKey,
                         model: model
                     });
-                    APC.views.detalleSursurPage.render();
+                    APC.views.detalleSursurModal.render();
                 });
             });
+            return false;
         },
 
         proyectos: function() {

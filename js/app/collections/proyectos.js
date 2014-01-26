@@ -38,7 +38,7 @@ define(function(require) {
 
         findByName: function(key) {            
             var self = this;
-            var sql = "SELECT DISTINCT RowKey, proyectoprograma FROM demanda WHERE demanda.proyectoprograma LIKE '%" + key + "%' GROUP BY codigoproyecto ORDER BY proyectoprograma";            
+            var sql = "SELECT DISTINCT RowKey, proyectoprograma FROM demanda WHERE proyectoprograma LIKE '%" + key + "%' GROUP BY codigoproyecto ORDER BY proyectoprograma";            
             this.baseapc.execute(sql, model, function(data) {
                 self.reset(data);               
             });
@@ -47,8 +47,6 @@ define(function(require) {
         findAll: function() {            
             var self = this;
             var sql = "SELECT DISTINCT RowKey, proyectoprograma FROM demanda GROUP BY codigoproyecto ORDER BY proyectoprograma LIMIT " + this.proOff + ", " + this.proLimit;
-
-            console.log(sql);
         
             this.baseapc.execute(sql, model, function(data) {
                 self.reset(data);
