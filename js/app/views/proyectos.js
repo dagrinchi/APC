@@ -64,12 +64,14 @@ define(function(require) {
 		
 		search: function(event) {
 			var key = $('#search-project').val();
-			this.collection.findByName(key);
+			if (key.length  > 5) {
+				this.collection.findByName(key);
+			}
 		},
 
 		proyectosDemanda: function() {
 			$('#search-project').val("");
-			this.collection.findAll();
+			this.collection.findAll(1, 10);
 		},
 
 		proyectosSursur: function() {

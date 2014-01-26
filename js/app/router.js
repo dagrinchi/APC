@@ -244,7 +244,7 @@ define(function(require) {
                 $("#loadingBox").fadeIn(500, function() {
                     if (typeof APC.collections.proCollection === 'undefined')
                         APC.collections.proCollection = new ProyectosCollection();
-                    $.when(APC.collections.proCollection.findAll()).done(function() {
+                    $.when(APC.collections.proCollection.findAll(1, 10)).done(function() {
                         APC.views.ProyectosPageView = new ProyectosPageView({
                             collection: APC.collections.proCollection
                         });

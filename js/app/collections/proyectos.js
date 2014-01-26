@@ -36,9 +36,11 @@ define(function(require) {
             });
         },
 
-        findAll: function() {            
+        findAll: function(offset, limit) {            
             var self = this;
-            this.baseapc.execute("SELECT DISTINCT RowKey, proyectoprograma FROM demanda GROUP BY codigoproyecto ORDER BY codigoproyecto", model, function(data) {
+            var sql = "SELECT DISTINCT RowKey, proyectoprograma FROM demanda GROUP BY codigoproyecto ORDER BY codigoproyecto LIMIT " + offset + ", " + limit;
+        
+            this.baseapc.execute(sql, model, function(data) {
                 self.reset(data);
                 deferred.resolve();
             });
