@@ -1,3 +1,90 @@
+/* 
+ * start the media queries
+ */
+@media (min-width:320px) {
+    /* smartphones, iPhone, portrait 480x320 phones */ 
+    h2 {
+        color: #fff !important;
+        font-weight: 200;
+        letter-spacing: -1px !important;
+        line-height: 1.3rem !important;
+        text-rendering: optimizeLegibility;        
+    }
+    .thumbnails h2 {
+        font-size: 1.3rem !important;
+    }
+}
+@media (min-width:481px) { 
+    /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ 
+    h2 {
+        color: #fff !important;
+        font-weight: 200;
+        letter-spacing: -1px !important;
+        line-height: 1.5rem !important;
+        text-rendering: optimizeLegibility;        
+    }
+    .thumbnails h2 {
+        font-size: 1.6rem !important;
+    }
+}
+@media (min-width:641px) { 
+    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+    h2 {
+        color: #fff !important;
+        font-weight: 200;
+        letter-spacing: -1px !important;
+        line-height: 1.5rem !important;
+        text-rendering: optimizeLegibility;        
+    }
+    .thumbnails h2 {
+        font-size: 1.6rem !important;
+    }
+
+}
+@media (min-width:961px) { 
+    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
+    h2 {
+        color: #fff !important;
+        font-weight: 200;
+        letter-spacing: -1px !important;
+        line-height: 1.5rem !important;
+        text-rendering: optimizeLegibility;        
+    }
+    .thumbnails h2 {
+        font-size: 1.9rem !important;
+    }
+}
+@media (min-width:1025px) { 
+    /* big landscape tablets, laptops, and desktops */ 
+    h2 {
+        color: #fff !important;
+        font-weight: 200;
+        letter-spacing: -1px !important;
+        line-height: 1.5rem !important;
+        text-rendering: optimizeLegibility;        
+    }
+    .thumbnails h2 {
+        font-size: 1.9rem !important;
+        margin-top: -17px !important;
+    }
+}
+
+@media (min-width:1281px) { 
+    /* hi-res laptops and desktops */ 
+    h2 {
+        color: #fff !important;
+        font-weight: 200;
+        letter-spacing: -1px !important;
+        line-height: 1.5rem !important;
+        text-rendering: optimizeLegibility;        
+    }
+    .thumbnails h2 {
+        font-size: 1.9rem !important;
+        margin-top: -17px !important;
+    }
+}
+/*===========end media queries========================*/
+
 #demandProyects {
     font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
     font-weight: 100;
