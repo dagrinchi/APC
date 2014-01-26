@@ -31,7 +31,7 @@ define(function(require) {
 
         findByName: function(key) {            
             var self = this;
-            var sql = "SELECT * FROM directorio WHERE nombredelaorganizacion LIKE '%" + key + "%'";            
+            var sql = "SELECT * FROM directorio WHERE nombredelrepresentante LIKE '%" + key + "%'";            
             this.baseapc.execute(sql, model, function(data) {
                 self.reset(data);               
             });
@@ -39,7 +39,7 @@ define(function(require) {
 
         findAll: function() {            
             var self = this;            
-            this.baseapc.execute("select * from directorio", model, function(data) {
+            this.baseapc.execute("SELECT * FROM directorio", model, function(data) {
                 self.reset(data);
                 deferred.resolve();
             });

@@ -7,6 +7,14 @@ html, body {
     margin: 0px !important;
     padding: 0px !important;
     background-color: #fff !important;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    webkit-overflow-scrolling: touch;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
 
 body {
@@ -414,4 +422,8 @@ and (orientation : portrait) {
 .bool-slider.disabled .control
 {
     cursor: default;
+}
+
+#projectList, #dirList {
+    overflow: scroll !important;
 }

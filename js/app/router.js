@@ -240,11 +240,17 @@ define(function(require) {
 
         proyectos: function() {
             var self = this;
+            var wh = $(window).height();
+            var limit = 10;
+
             require(['app/collections/proyectos', 'app/views/proyectos'], function(ProyectosCollection, ProyectosPageView) {
                 $("#loadingBox").fadeIn(500, function() {
+
                     if (typeof APC.collections.proCollection === 'undefined')
                         APC.collections.proCollection = new ProyectosCollection();
-                    $.when(APC.collections.proCollection.findAll(1, 10)).done(function() {
+
+                    APC.collections.proCollection.proOff = 0;
+                    $.when(APC.collections.proCollection.findAll()).done(function() {
                         APC.views.ProyectosPageView = new ProyectosPageView({
                             collection: APC.collections.proCollection
                         });

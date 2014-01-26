@@ -80,7 +80,9 @@ define(function(require) {
 			var list = new DirectorioListView({
 				collection: self.collection
 			});
-			this.$el.html(_.template(directorioPageTpl));			
+			this.$el.html(_.template(directorioPageTpl));		
+
+			$("#dirList").height($(window).height() - 118);	
 			$("#dirList").html(list.render().el);
 			return this;
 		}

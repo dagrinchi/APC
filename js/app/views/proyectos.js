@@ -35,12 +35,11 @@ define(function(require) {
 		tagName: "ul",
 		className: 'topcoat-list__container',
 		
-		initialize: function() {
+		initialize: function() {			
 			this.collection.bind("reset", this.render, this);
 		},
-		
-		render: function() {
-			this.$el.empty();
+
+		render: function() {			
 			var frag = document.createDocumentFragment();
 			this.collection.each(function(proyecto) {
 				var proyectoView = new ProyectoView({
@@ -64,19 +63,28 @@ define(function(require) {
 		
 		search: function(event) {
 			var key = $('#search-project').val();
-			if (key.length  > 5) {
+			if (key.length  > 4) {
 				this.collection.findByName(key);
 			}
 		},
 
 		proyectosDemanda: function() {
 			$('#search-project').val("");
-			this.collection.findAll(1, 10);
+			this.collection.findAll();
 		},
 
 		proyectosSursur: function() {
 			$('#search-project').val("");
 			this.collection.findAllSursur();
+		},
+
+		scrollList: function(e) {
+			var st = $(e.currentTarget).scrollTop() + $(e.currentTarget).height() + 200;
+			var sh = $(e.currentTarget).children().height();
+			if (st > sh) {
+				APC.collections.proCollection.proOff += 20;
+				APC.collections.proCollection.findAll();
+			}
 		},
 		
 		render: function() {
@@ -84,8 +92,13 @@ define(function(require) {
 			var list = new ProyectosView({
 				collection: self.collection
 			});
+
 			this.$el.html(_.template(proyectosPageTpl));
+
+			$("#projectList").height($(window).height() - 167);
 			$("#projectList").html(list.render().el);
+
+			$("#projectList").on("scroll", this.scrollList);
 			return this;
 		}
 	});

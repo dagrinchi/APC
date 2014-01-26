@@ -24,21 +24,31 @@ define(function(require) {
 
         baseapc: {},
 
-        initialize: function() {
+        proOff: 0,
+
+        proLimit: 20,
+
+        surOff: 1,
+
+        surLimit: 10,
+
+        initialize: function(options) {
             this.baseapc = new DB(window.openDatabase("apc", "1.0", "APC - Agencia Presidencial de la Cooperación en Colombia", 4145728));
         },
 
         findByName: function(key) {            
             var self = this;
-            var sql = "SELECT DISTINCT RowKey, proyectoprograma FROM demanda WHERE demanda.proyectoprograma LIKE '%" + key + "%' GROUP BY codigoproyecto ORDER BY codigoproyecto";            
+            var sql = "SELECT DISTINCT RowKey, proyectoprograma FROM demanda WHERE demanda.proyectoprograma LIKE '%" + key + "%' GROUP BY codigoproyecto ORDER BY proyectoprograma";            
             this.baseapc.execute(sql, model, function(data) {
                 self.reset(data);               
             });
         },
 
-        findAll: function(offset, limit) {            
+        findAll: function() {            
             var self = this;
-            var sql = "SELECT DISTINCT RowKey, proyectoprograma FROM demanda GROUP BY codigoproyecto ORDER BY codigoproyecto LIMIT " + offset + ", " + limit;
+            var sql = "SELECT DISTINCT RowKey, proyectoprograma FROM demanda GROUP BY codigoproyecto ORDER BY proyectoprograma LIMIT " + this.proOff + ", " + this.proLimit;
+
+            console.log(sql);
         
             this.baseapc.execute(sql, model, function(data) {
                 self.reset(data);
@@ -50,7 +60,8 @@ define(function(require) {
 
         findAllSursur: function() {            
             var self = this;
-            this.baseapc.execute("SELECT DISTINCT RowKey, programaproyectoactividad proyectoprograma FROM sursur GROUP BY programaproyectoactividad ORDER BY programaproyectoactividad", model, function(data) {
+            var sql  = "SELECT DISTINCT RowKey, programaproyectoactividad proyectoprograma FROM sursur GROUP BY programaproyectoactividad ORDER BY programaproyectoactividad LIMIT " + this.surOff + ", " + this.surLimit;
+            this.baseapc.execute(sql, model, function(data) {
                 self.reset(data);                
             });
         }
