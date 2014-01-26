@@ -14,7 +14,9 @@
         font-size: 1.3rem !important;
     }
     .topcoat-navigation-bar__title {
-        font-size: 0.71rem !important;
+        font-size: 1.1rem !important;
+        line-height: 14px !important;
+        height: 45px !important;
     }
 }
 @media (min-width:481px) { 
@@ -30,7 +32,9 @@
         font-size: 1.6rem !important;
     }
     .topcoat-navigation-bar__title {
-        font-size: 1.09rem !important;
+        font-size: 1.5rem !important;
+        line-height: 18px !important;
+        height: 45px !important;
     }
 }
 @media (min-width:641px) { 
@@ -43,10 +47,12 @@
         text-rendering: optimizeLegibility;        
     }
     .thumbnails h2 {
-        font-size: 1.6rem !important;
+        font-size: 1.5rem !important;
     }
     .topcoat-navigation-bar__title {
-        font-size: 1.45rem !important;
+        font-size: 1.7rem !important;
+        line-height: 20px !important;
+        height: 45px !important;
     }
 
 }
@@ -63,7 +69,9 @@
         font-size: 1.9rem !important;
     }
     .topcoat-navigation-bar__title {
-        font-size: 1.6rem !important;
+        font-size: 1.7rem !important;
+        line-height: 20px !important;
+        height: 45px !important;
     }
 }
 @media (min-width:1025px) { 
@@ -80,7 +88,9 @@
         margin-top: -17px !important;
     }
     .topcoat-navigation-bar__title {
-        font-size: 1.7rem !important;
+        font-size: 1.8rem !important;
+        line-height: 20px !important;
+        height: 45px !important;
     }
 }
 
@@ -98,7 +108,9 @@
         margin-top: -17px !important;
     }
     .topcoat-navigation-bar__title {
-        font-size: 1.7rem !important;
+        font-size: 1.8rem !important;
+        line-height: 20px !important;
+        height: 45px !important;
     }
 }
 /*===========end media queries========================*/
@@ -261,7 +273,7 @@
 }
 
 #header-detalles{
-    background-color: #1abc9c;
+    background-color: #27ae27;
     opacity: 0.85;       
 }
 
@@ -404,17 +416,17 @@
 }
 
 #titulo {
-    margin: 12.5px 0;
+    margin: 6.5px 0;
     font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
     font-weight: 100;
     line-height: 25px;
     color: inherit;
     text-rendering: optimizelegibility;
-    background-color: #1abc9c;
+    background-color: #27ae27;
     color: #fff;
     font-size: 1.3rem;
     padding: 5px;
-    border-radius: 3px 3px 0px 0px;
+    border-radius: 0px 0px 0px 0px;
     height: 2.8rem;
 }
 
@@ -469,8 +481,8 @@
 
 #container-botton-panel{
     padding: 7px;
-    background-color: #1abc9c;
-    border-radius: 0px 0px 3px 3px;
+    background-color: #27ae27;
+    border-radius: 0px 0px 0px 0px;
 }
 /*fin de estilos pagina detalles*/
 
@@ -482,7 +494,7 @@
     background: #eee; 
 }
 .detalleProyecto th { 
-    background: #1abc9c;
+    background: #27ae27;
     color: white;  
 }
 .detalleProyecto td, th { 
@@ -510,4 +522,14 @@
     line-height: 25px;
 }
 
+#dirList .topcoat-list__item{
+    padding: 0.2rem 1.25rem !important;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #9daca9;
+}
+
+#botonCompartirDirectorio{
+    bottom: 49px;
+    left: 22px;
+}
 
