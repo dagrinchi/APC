@@ -30,7 +30,7 @@ define(function(require) {
 
         findByDepartamento: function(dep) {            
             var self = this;
-            var sql = "SELECT DISTINCT * FROM dci WHERE terrirorio = '" + dep + "'";            
+            var sql = "SELECT DISTINCT Rowkey, areacooperacion, componentecooperacion, puntofocal FROM dci WHERE terrirorio = '" + dep + "'";            
             this.baseapc.execute(sql, model, function(data) {
                 self.reset(data);
                 deferred.resolve();

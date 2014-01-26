@@ -15,8 +15,7 @@ define(function(require) {
     var Backbone = require('backbone'),
         DB = require('app/utils/db');
 
-    var $ = require('jquery'),
-        deferred = $.Deferred();
+    var $ = require('jquery');
 
     var model = Backbone.Model.extend({});
 
@@ -29,11 +28,14 @@ define(function(require) {
         },
 
         findByMunicipio: function(mun) {            
+            var deferred = $.Deferred();
+
             var self = this;
-            var sql = "SELECT DISTINCT * FROM demanda WHERE municipio = '" + mun + "'";            
+            var sql = "SELECT DISTINCT RowKey, proyectoprograma FROM demanda WHERE territorio = '" + mun + "'";            
             this.baseapc.execute(sql, model, function(data) {
                 self.reset(data);
                 deferred.resolve();
+                console.log(sql);
             });
 
             return deferred.promise();

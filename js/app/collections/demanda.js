@@ -118,8 +118,8 @@ define(function(require) {
             var self = this;
 
             $.each(this.models, function(k1, v1) {
-                if (v1.get("long") > 0 || v1.get("lat") > 0)
-                    self.createMarker(v1.get("RowKey"), v1.get("municipio").trim(), parseFloat(v1.get("lat")), parseFloat(v1.get("long")));
+                if (v1.get("long") > 0 || v1.get("lat") > 0)                    
+                    self.createMarker(v1.get("RowKey"), v1.get("territorio").trim(), parseFloat(v1.get("lat")), parseFloat(v1.get("long")));
             });
 
             if (typeof APC.views.mapDemanda.markerCluster !== "undefined") {
@@ -131,7 +131,7 @@ define(function(require) {
                     gridSize: 50
                 });
             });
-            APC.views.mapDemanda.map.fitBounds(self.bounds);
+            // APC.views.mapDemanda.map.fitBounds(self.bounds);
         },
 
         initMapMarkersWithGeo: function() {
@@ -180,8 +180,9 @@ define(function(require) {
 
         createMarker: function(RowKey, add, lat, lng) {
             var self = this;
+            
             require(['async!https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'], function() {
-                var contentString = '<a href="#proyectos/' + RowKey + '">' + add + '</a>';
+                
                 var marker = new google.maps.Marker({
                     position: new google.maps.LatLng(lat, lng),
                     map: APC.views.mapDemanda.map,

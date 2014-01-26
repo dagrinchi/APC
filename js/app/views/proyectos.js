@@ -1,4 +1,4 @@
-/**
+ /**
  * COOL4CODE
  * Authors:
  *
@@ -41,11 +41,12 @@ define(function(require) {
 		
 		render: function() {
 			this.$el.empty();
+			var frag = document.createDocumentFragment();
 			this.collection.each(function(proyecto) {
 				var proyectoView = new ProyectoView({
 					model: proyecto
 				});
-				this.$el.append(proyectoView.render().el);
+				this.$el.append(frag.appendChild(proyectoView.render().el));
 			}, this);
 			return this;
 		}

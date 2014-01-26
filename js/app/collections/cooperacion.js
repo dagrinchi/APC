@@ -130,7 +130,7 @@ define(function(require) {
                     gridSize: 50
                 });
             });
-            APC.views.mapCooperacion.map.fitBounds(self.bounds);
+            // APC.views.mapCooperacion.map.fitBounds(self.bounds);
         },
 
         createMarker: function(RowKey, add, lat, lng) {
