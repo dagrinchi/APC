@@ -25,6 +25,7 @@ define(function(require) {
             "proyectos": "proyectos",
             "proyectos/:RowKey": "detalleProyecto",
             "sursur/:RowKey": "detalleSursur",
+            "dci/:RowKey": "detalleDci",
             "directorio": "directorio",
             "ejecutasproyectos": "ejecutas",
             "acercade": "acercade"
@@ -272,6 +273,21 @@ define(function(require) {
                         model: model
                     });
                     APC.views.detalleProyectoModal.render();
+                });
+            });
+            return false;
+        },
+
+        detalleDci: function(RowKey) {
+            var self = this;
+            require(['app/models/dci', 'app/views/detalleDciModal'], function(dciModel, detalleDciModalView) {
+                APC.models.dci = new dciModel();
+                APC.models.dci.findByRowKey(RowKey, function(model) {
+                    APC.views.detalleDciModal = new detalleDciModalView({
+                        id: RowKey,
+                        model: model
+                    });
+                    APC.views.detalleDciModal.render();
                 });
             });
             return false;

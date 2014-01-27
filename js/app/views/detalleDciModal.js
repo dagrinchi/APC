@@ -15,7 +15,7 @@ define(function(require) {
     var $ = require('jquery'),
         Backbone = require('backbone'),
         _ = require('underscore'),
-        tpl = require('text!tpl/detalleSurSur.html'),
+        tpl = require('text!tpl/detalleDci.html'),
         bootstrap = require('bootstrap/bootstrap');
 
     return Backbone.View.extend({
