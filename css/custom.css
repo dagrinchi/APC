@@ -150,7 +150,9 @@
 }
 
 #descriptionText {
-    padding: 20px 45px 0px 45px;  
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 14px;    
 }
 
 #agree {
@@ -364,7 +366,7 @@
 
 .aceptar {  
     display:none;
-    height:300px;
+    height: 245px;
     background-color: #ECF0F1;
     padding:20px;
     margin-top:10px;
@@ -372,7 +374,7 @@
 }
 
 .denegar { 
-    height: 300px;
+    height: 245px;
     background-color: #ECF0F1;
     padding: 20px;
     margin-top: 10px;
@@ -527,5 +529,10 @@
 #botonCompartirDirectorio{
     bottom: 49px;
     left: 22px;
+}
+
+#titleEjecutas {
+    color: #000000 !important;
+    font-size: larger;
 }
 
