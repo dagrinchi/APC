@@ -59,6 +59,7 @@ define(function(require) {
 
         render: function() {
             this.$el.html(this.template);
+            $(".container").height($(window).height() - 117);
             return this;
         }
     });
