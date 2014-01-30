@@ -164,8 +164,8 @@ define(function(require) {
                     position: new google.maps.LatLng(lat, lng),
                     map: APC.views.mapSursur.map,
                     zIndex: Math.round(4.5 * -100000) << 5,
-                    icon: "img/sursur/" + pais + ".png"
-                    //animation: google.maps.Animation.DROP
+                    icon: "img/sursur/" + pais + ".png",
+                    animation: google.maps.Animation.DROP
                 });
 
                 self.markers.push(marker);
