@@ -115,24 +115,27 @@
 }
 /*===========end media queries========================*/
 
-#demandProyects {
+#demandProyects, #btnSurAreas {
     font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
     font-weight: 100;
     text-rendering: optimizelegibility;
     font-size: 1.1rem;
     color: #fff;
     text-shadow: none;
-    border: none;
+    border: none;    
+    background-color: #f5a932;
+    box-shadow: none;
+    text-align: center;
+}
+#demandProyects {
     background-image: url(../img/colombia.svg);
     background-size: 32px;
     background-position: 4px center;
     background-repeat: no-repeat;
-    background-color: #f5a932;
-    box-shadow: none;
     cursor: pointer;
 }
 
-#southProyects {
+#southProyects, #btnSurSectores {
     font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
     font-weight: 100;
     text-rendering: optimizelegibility;
@@ -140,13 +143,16 @@
     color: #fff;
     text-shadow: none;
     border: none;
+    box-shadow: none;
+    background-color: #8c44ae;
+    cursor: pointer;
+    text-align: center;
+}
+#southProyects {
     background-image: url(../img/south.svg);
     background-size: 32px;
     background-position: 4px center;
-    background-repeat: no-repeat;
-    background-color: #8c44ae;
-    box-shadow: none;
-    cursor: pointer;
+    background-repeat: no-repeat;    
 }
 
 #descriptionText {

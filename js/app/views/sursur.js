@@ -136,6 +136,8 @@ define(function(require) {
                 });
             }
             APC.views.surAreasModalListView.render();
+
+            return false;
         },
 
 
@@ -154,6 +156,8 @@ define(function(require) {
                 });
             }
             APC.views.surSectoresModalListView.render();
+
+            return false;
         },
 
         render: function() {
