@@ -20,23 +20,28 @@ var APC = {
     selection: {
         demanda: {
             cols: {
-                actor: [],
-                territorio: [],
-                municipio: [],
-                codigoenci: [],
-                sectorliderpolitica: []
+                'actor': [],
+                'territorio': [],
+                'municipio': [],
+                'codigoenci': [],
+                'sectorliderpolitica': [],
+                'lat': [],
+                'long' : []
             }
         },
         dci: {
             cols: {
-                terrirorio: [],
-                areacooperacion: []
+                'terrirorio': [],
+                'areacooperacion': [],
+                'lat': [],
+                'long' : []
             }
         },
         sursur: {
             cols: {
-                areacooperacion: [],
-                sectorliderpolitica: []
+                'areacooperacion': [],
+                'sectorliderpolitica': [],
+                'pais': []
             }
         }
     }

@@ -62,14 +62,7 @@ define(function(require) {
 
         btnOK: function() {
             if (this.options.table === "sursur")
-                $.when(APC.collections.sursurCollection.findBySelection()).done(function() {
-                    APC.selection.sursur = {
-                        cols: {
-                            areacooperacion: [],
-                            sectorliderpolitica: []
-                        }
-                    };
-                });
+                APC.collections.sursurCollection.findBySelection();
         },
 
         chkItem: function(e) {
@@ -104,6 +97,15 @@ define(function(require) {
             "click #btnSurSectores": "btnSurSectores"
         },
 
+        clearSelection: function() {
+            APC.selection.sursur = {
+                cols: {
+                    'areacooperacion': [],
+                    'sectorliderpolitica': [],
+                    'pais': []
+                }
+            };
+        },
 
         btnShare: function() {
             require(['html2canvas'], function() {
@@ -122,6 +124,7 @@ define(function(require) {
         },
 
         btnSurAreas: function() {
+            this.clearSelection();
             APC.views.surAreasListView = new listEl({
                 collection: APC.collections.surAreasCollection
             });
@@ -142,6 +145,7 @@ define(function(require) {
 
 
         btnSurSectores: function() {
+            this.clearSelection();
             APC.views.surSectoresListView = new listEl({
                 collection: APC.collections.surSectoresCollection
             });

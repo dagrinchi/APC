@@ -61,27 +61,10 @@ define(function(require) {
 
         btnOK: function() {
             if (this.options.table === "demanda")
-                $.when(APC.collections.demCollection.findBySelection()).done(function() {
-                    APC.selection.demanda = {
-                        cols: {
-                            actor: [],
-                            territorio: [],
-                            municipio: [],
-                            otrossectoresrelacionados: [],
-                            sectorliderpolitica: []
-                        }
-                    };
-                });
+                APC.collections.demCollection.findBySelection();
 
             if (this.options.table === "dci")
-                $.when(APC.collections.coopCollection.findBySelection()).done(function() {
-                    APC.selection.dci = {
-                        cols: {
-                            terrirorio: [],
-                            areacooperacion: []
-                        }
-                    };
-                });
+                APC.collections.coopCollection.findBySelection();
         },
 
         chkItem: function(e) {
@@ -121,6 +104,31 @@ define(function(require) {
             "click .share": "btnShare"
         },
 
+        clearDemSelection: function() {
+            APC.selection.demanda = {
+                cols: {
+                    'actor': [],
+                    'territorio': [],
+                    'municipio': [],
+                    'codigoenci': [],
+                    'sectorliderpolitica': [],
+                    'lat': [],
+                    'long': []
+                }
+            };
+        },
+
+        clearDciSelection: function() {
+            APC.selection.dci = {
+                cols: {
+                    'terrirorio': [],
+                    'areacooperacion': [],
+                    'lat': [],
+                    'long': []
+                }
+            };
+        },
+
         btnShare: function() {
             require(['html2canvas'], function() {
                 html2canvas(document.getElementsByTagName("body"), {
@@ -137,7 +145,8 @@ define(function(require) {
             return false;
         },
 
-        btnDemActores: function() {            
+        btnDemActores: function() {        
+            this.clearDemSelection();    
             APC.views.demActoresListView = new listEl({
                 collection: APC.collections.demActoresCollection
             });
@@ -154,7 +163,8 @@ define(function(require) {
             APC.views.demActoresModal.render();
         },
 
-        btnDemTerritorios: function() {            
+        btnDemTerritorios: function() {
+            this.clearDemSelection();            
             APC.views.demTerritoriosListView = new listEl({
                 collection: APC.collections.demTerritoriosCollection
             });
@@ -172,6 +182,7 @@ define(function(require) {
         },
 
         btnDemMunicipios: function() {            
+            this.clearDemSelection();
             APC.views.demMunicipiosListView = new listEl({
                 collection: APC.collections.demMunicipiosCollection
             });
@@ -188,7 +199,8 @@ define(function(require) {
             APC.views.demMunicipiosModalListView.render();
         },
 
-        btnDemAreas: function() {            
+        btnDemAreas: function() { 
+            this.clearDemSelection();           
             APC.views.demAreasListView = new listEl({
                 collection: APC.collections.demAreasCollection
             });
@@ -206,6 +218,7 @@ define(function(require) {
         },
 
         btnDemSectores: function() {            
+            this.clearDemSelection();
             APC.views.demSectoresListView = new listEl({
                 collection: APC.collections.demSectoresCollection
             });
@@ -223,6 +236,7 @@ define(function(require) {
         },
 
         btnProTerritorios: function() {            
+            this.clearDciSelection();
             APC.views.proTerritoriosListView = new listEl({
                 collection: APC.collections.proTerritoriosCollection
             });
@@ -239,7 +253,8 @@ define(function(require) {
             APC.views.proTerritoriosModalListView.render();
         },
 
-        btnProAreas: function() {            
+        btnProAreas: function() {    
+            this.clearDciSelection();        
             APC.views.proAreasListView = new listEl({
                 collection: APC.collections.proAreasCollection
             });

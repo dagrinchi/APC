@@ -74,37 +74,32 @@ define(function(require) {
         },
 
         buildSQL: function() {
-            var selection = [];
-            var sql = this.sqlInit;
-
-            $.each(APC.selection, function(k1, v1) {
-                var item = [];
-                $.each(v1["cols"], function(k2, v2) {
-                    $.each(v2, function(k3, v3) {
-                        var val = {};
-                        val[k2] = v3;
-                        item.push(val);
-                    });
-                });
-                if (item[0]) {
-                    selection.push(item);
+            var selection = {
+                cols: [],
+                vals: []
+            };
+            $.each(APC.selection.sursur.cols, function(k1, v1) {
+                if (v1.length > 0) {
+                    selection.cols.push(k1);
+                    selection.vals.push(v1);
                 }
             });
+            var sql = this.sqlInit;
 
-            $.each(selection, function(k1, v1) {
-                sql += " WHERE (";
+            $.each(selection.vals, function(k1, v1) {
+                if (k1 === 0) {
+                    sql += "WHERE (";
+                } else {
+                    sql += " AND (";
+                }
                 $.each(v1, function(k2, v2) {
                     if (k2 > 0) {
                         sql += " OR ";
                     }
-                    $.each(v2, function(k3, v3) {
-                        sql += k3 + " = " + "'" + v3 + "'";
-                    });
+                    sql += selection.cols[k1] + " = " + "'" + v2 + "'";
                 });
                 sql += ")";
             });
-
-            console.log(sql);
             return sql;
         },
 
@@ -118,7 +113,7 @@ define(function(require) {
         geoCoder: function() {
             var geoDeferred = $.Deferred();
             var pais = this.models[this.nextAddress].get("pais");
-            
+
             if (this.nextAddress < this.length) {
                 setTimeout("APC.collections.sursurCollection.getAddress('" + pais + "')", this.delay);
                 this.nextAddress++;
@@ -175,7 +170,10 @@ define(function(require) {
                     if (typeof APC.collections.sursurByCountry === 'undefined')
                         APC.collections.sursurByCountry = new sursurByCountry();
 
-                    $.when(APC.collections.sursurByCountry.findByCountry(pais)).done(function() {
+                    APC.selection.sursur.cols['pais'] = [];
+                    APC.selection.sursur.cols['pais'].push(pais);
+
+                    $.when(APC.collections.sursurByCountry.findByCountry()).done(function() {
                         var modal = new modalView({
                             id: pais,
                             title: pais,
