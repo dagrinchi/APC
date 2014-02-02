@@ -128,23 +128,19 @@ define(function(require) {
 
 		proyectosDemanda: function() {
 			$("#sursurList").hide();
-			$("#loadingBox").fadeIn(500, function() {
-				$("#projectList").show();
-				$("#loadingBox").hide();
-				$('#search-project').val("");
-				APC.collections.proCollection.findAll();
-			});
+			$("#projectList").fadeIn();
+			
+			$('#search-project').val("");
+			APC.collections.proCollection.findAll();
 			return false;
 		},
 
 		proyectosSursur: function() {
 			$("#projectList").hide();
-			$("#loadingBox").fadeIn(500, function() {				
-				$("#sursurList").show();
-				$("#loadingBox").hide();
-				$('#search-project').val("");
-				APC.collections.sursurProCollection.findAll();
-			});
+			$("#sursurList").fadeIn();
+
+			$('#search-project').val("");
+			APC.collections.sursurProCollection.findAll();
 			return false;
 		},
 
