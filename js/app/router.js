@@ -33,15 +33,16 @@ define(function(require) {
         },
 
         checkConnection: function() {
-            console.log("checkConnection: Comprobando conectividad a internet!");
-            var networkState = navigator.connection.type;
-            if (networkState == Connection.NONE || networkState == Connection.UNKNOWN) {
-                console.log("checkConnection: No hay internet!");
-                return false;
-            } else {
-                console.log("checkConnection: Si hay internet!");
-                return true;
-            }
+            // console.log("checkConnection: Comprobando conectividad a internet!");
+            // var networkState = navigator.connection.type;
+            // if (networkState == Connection.NONE || networkState == Connection.UNKNOWN) {
+            //     console.log("checkConnection: No hay internet!");
+            //     return false;
+            // } else {
+            //     console.log("checkConnection: Si hay internet!");
+            //     return true;
+            // }
+            return true;
         },
 
         initialize: function() {
@@ -58,11 +59,11 @@ define(function(require) {
 
             var wh = $(window).height();
 
-            navigator.geolocation.getCurrentPosition(function(gp) {
-                position = gp;
-            }, function(error) {
-                console.error('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
-            });
+            // navigator.geolocation.getCurrentPosition(function(gp) {
+            //     position = gp;
+            // }, function(error) {
+            //     console.error('code: ' + error.code + '\n' + 'message: ' + error.message + '\n');
+            // });
 
             if (this.checkConnection()) {
 
@@ -110,10 +111,10 @@ define(function(require) {
 
                 });
             } else {
-                navigator.notification.alert('No hay una conexión a internet!', function() {
-                    console.log("Start again!!!");
-                    Backbone.history.loadUrl("/");
-                }, 'Atención', 'Reintentar');
+                // navigator.notification.alert('No hay una conexión a internet!', function() {
+                //     console.log("Start again!!!");
+                //     Backbone.history.loadUrl("/");
+                // }, 'Atención', 'Reintentar');
             }
         },
 
@@ -194,10 +195,10 @@ define(function(require) {
                     });
                 });
             } else {
-                navigator.notification.alert('No hay una conexión a internet!', function() {
-                    console.log("Start again!!!");
-                    Backbone.history.loadUrl("/");
-                }, 'Atención', 'Reintentar');
+                // navigator.notification.alert('No hay una conexión a internet!', function() {
+                //     console.log("Start again!!!");
+                //     Backbone.history.loadUrl("/");
+                // }, 'Atención', 'Reintentar');
             }
         },
 
@@ -228,10 +229,10 @@ define(function(require) {
                     });
                 });
             } else {
-                navigator.notification.alert('No hay una conexión a internet!', function() {
-                    console.log("Start again!!!");
-                    Backbone.history.loadUrl("/");
-                }, 'Atención', 'Reintentar');
+                // navigator.notification.alert('No hay una conexión a internet!', function() {
+                //     console.log("Start again!!!");
+                //     Backbone.history.loadUrl("/");
+                // }, 'Atención', 'Reintentar');
             }
         },
 
@@ -336,10 +337,10 @@ define(function(require) {
                     });
                 });
             } else {
-                navigator.notification.alert('No hay una conexión a internet!', function() {
-                    console.log("Start again!!!");
-                    Backbone.history.loadUrl("/");
-                }, 'Atención', 'Reintentar');
+                // navigator.notification.alert('No hay una conexión a internet!', function() {
+                //     console.log("Start again!!!");
+                //     Backbone.history.loadUrl("/");
+                // }, 'Atención', 'Reintentar');
             }
         },
 

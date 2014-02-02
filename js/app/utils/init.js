@@ -141,8 +141,8 @@ define(function(require) {
 				dataType: 'jsonp',
 				error: function() {
 					console.error("El repositorio de datos Open Data no está disponible ó se ha perdido la conexión con la red!");
-					navigator.notification.alert('El repositorio de datos Open Data no está disponible ó se ha perdido la conexión con la red, inténtalo más tarde!', function() {
-					}, 'Atención', 'Reintentar');
+					// navigator.notification.alert('El repositorio de datos Open Data no está disponible ó se ha perdido la conexión con la red, inténtalo más tarde!', function() {
+					// }, 'Atención', 'Reintentar');
 				}
 			});
 		},
