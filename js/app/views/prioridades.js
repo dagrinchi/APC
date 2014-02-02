@@ -52,7 +52,7 @@ define(function(require) {
                 title: self.options.title,
                 list: self.options.list
             });
-            this.$el.on('hidden', function () {
+            this.$el.on('hidden', function() {
                 console.log("Bye modal");
                 self.$el.remove();
             });
@@ -95,7 +95,7 @@ define(function(require) {
         template: _.template(tpl),
 
         initialize: function() {
-            
+
         },
 
         events: {

@@ -28,7 +28,8 @@ define(function(require) {
             "dci/:RowKey": "detalleDci",
             "directorio": "directorio",
             "ejecutasproyectos": "ejecutas",
-            "acercade": "acercade"
+            "acercade": "acercade",
+            "ayuda/:seccion" : "ayuda"
         },
 
         checkConnection: function() {
@@ -340,6 +341,20 @@ define(function(require) {
                     Backbone.history.loadUrl("/");
                 }, 'Atención', 'Reintentar');
             }
+        },
+
+        ayuda: function(seccion) {
+            require(['app/views/modalHelp', 'text!tpl/' + seccion + '.html'], function(modalHelp, tpl) {
+                if (typeof APC.views[seccion] === "undefined")
+                    APC.views[seccion] = new modalHelp({
+                        id: seccion,
+                        title: "Ayuda",
+                        content: tpl
+                    });
+                APC.views[seccion].render();
+            });
+
+            return false;
         }
 
     });

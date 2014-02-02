@@ -54,7 +54,7 @@ define(function(require) {
                 list: self.options.list
             });
 
-            this.$el.on('hidden', function () {
+            this.$el.on('hidden', function() {
                 console.log("Bye modal");
                 self.$el.remove();
             });
@@ -82,7 +82,7 @@ define(function(require) {
         render: function() {
             this.$el.html(this.template);
             this.$el.modal('show');
-            this.$el.children(".modal-body").height($(window).height() - 250);
+            this.$el.children(".modal-body").height($(window).height() - 210);
             return this;
         }
     });
@@ -135,13 +135,13 @@ define(function(require) {
             });
 
             //if (typeof APC.views.surAreasModalListView === "undefined")
-                APC.views.surAreasModalListView = new modalList({
-                    id: "surAreasModal",
-                    title: "Áreas",
-                    list: APC.views.surAreasListView.render().$el.html(),
-                    table: "sursur",
-                    cols: "areacooperacion"
-                });
+            APC.views.surAreasModalListView = new modalList({
+                id: "surAreasModal",
+                title: "Áreas",
+                list: APC.views.surAreasListView.render().$el.html(),
+                table: "sursur",
+                cols: "areacooperacion"
+            });
             APC.views.surAreasModalListView.render();
 
             return false;
@@ -155,13 +155,13 @@ define(function(require) {
             });
 
             //if (typeof APC.views.surSectoresModalListView === "undefined")
-                APC.views.surSectoresModalListView = new modalList({
-                    id: "surSectoresModal",
-                    title: "Sectores",
-                    list: APC.views.surSectoresListView.render().$el.html(),
-                    table: "sursur",
-                    cols: "sectorliderpolitica"
-                });
+            APC.views.surSectoresModalListView = new modalList({
+                id: "surSectoresModal",
+                title: "Sectores",
+                list: APC.views.surSectoresListView.render().$el.html(),
+                table: "sursur",
+                cols: "sectorliderpolitica"
+            });
             APC.views.surSectoresModalListView.render();
 
             return false;
