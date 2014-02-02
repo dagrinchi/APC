@@ -51,15 +51,20 @@ define(function(require) {
             this.template = _.template(modalTpl, {
                 title: self.options.title,
                 list: self.options.list
-            });            
+            });
+            this.$el.on('hidden', function () {
+                console.log("Bye modal");
+                self.$el.remove();
+            });
         },
 
         events: {
             "click .items": "chkItem",
-            "click .ok": "btnOK"
+            "click #ok": "btnOK"
         },
 
         btnOK: function() {
+            console.log("btnOK: Click boton OK despues de la selección.");
             if (this.options.table === "demanda")
                 APC.collections.demCollection.findBySelection();
 
@@ -76,7 +81,7 @@ define(function(require) {
             }
         },
 
-        render: function() {            
+        render: function() {
             this.$el.html(this.template);
             this.$el.modal('show');
             this.$el.children(".modal-body").height($(window).height() - 200);
@@ -133,9 +138,9 @@ define(function(require) {
             require(['html2canvas'], function() {
                 html2canvas(document.getElementsByTagName("body"), {
                     useCORS: true,
-                    onrendered: function(canvas) {                        
+                    onrendered: function(canvas) {
                         window.plugins.socialsharing.available(function(isAvailable) {
-                            if (isAvailable) {                                
+                            if (isAvailable) {
                                 window.plugins.socialsharing.share("APC-Mapps", "APC-Mapps", canvas.toDataURL(), "http://www.apccolombia.gov.co/");
                             }
                         });
@@ -145,129 +150,123 @@ define(function(require) {
             return false;
         },
 
-        btnDemActores: function() {        
-            this.clearDemSelection();    
+        btnDemActores: function() {
+            console.log("btnDemActores: Click en btnDemActores");
+            this.clearDemSelection();
             APC.views.demActoresListView = new listEl({
                 collection: APC.collections.demActoresCollection
             });
 
-            if (typeof APC.views.demActoresModal === "undefined") {
-                APC.views.demActoresModal = new modalList({ 
-                    id: "demActoresModal",
-                    title: "Cooperantes",
-                    list: APC.views.demActoresListView.render().$el.html(),
-                    table: "demanda",
-                    cols: "actor"
-                });
-            }
+            //if (typeof APC.views.demActoresModal === "undefined") {
+            APC.views.demActoresModal = new modalList({
+                id: "demActoresModal",
+                title: "Cooperantes",
+                list: APC.views.demActoresListView.render().$el.html(),
+                table: "demanda",
+                cols: "actor"
+            });
             APC.views.demActoresModal.render();
         },
 
         btnDemTerritorios: function() {
-            this.clearDemSelection();            
+            this.clearDemSelection();
             APC.views.demTerritoriosListView = new listEl({
                 collection: APC.collections.demTerritoriosCollection
             });
 
-            if (typeof APC.views.demTerritoriosModal === "undefined") {
-                APC.views.demTerritoriosModal = new modalList({
-                    id: "demTerritoriosModal",
-                    title: "Territorios",
-                    list: APC.views.demTerritoriosListView.render().$el.html(),
-                    table: "demanda",
-                    cols: "territorio"
-                });
-            }
+            //if (typeof APC.views.demTerritoriosModal === "undefined") {
+            APC.views.demTerritoriosModal = new modalList({
+                id: "demTerritoriosModal",
+                title: "Territorios",
+                list: APC.views.demTerritoriosListView.render().$el.html(),
+                table: "demanda",
+                cols: "territorio"
+            });
             APC.views.demTerritoriosModal.render();
         },
 
-        btnDemMunicipios: function() {            
+        btnDemMunicipios: function() {
             this.clearDemSelection();
             APC.views.demMunicipiosListView = new listEl({
                 collection: APC.collections.demMunicipiosCollection
             });
 
-            if (typeof APC.views.demMunicipiosModalListView === "undefined") {
-                APC.views.demMunicipiosModalListView = new modalList({
-                    id: "demMunicipiosModal",
-                    title: "Municipios",
-                    list: APC.views.demMunicipiosListView.render().$el.html(),
-                    table: "demanda",
-                    cols: "municipio"
-                });
-            }
+            //if (typeof APC.views.demMunicipiosModalListView === "undefined") {
+            APC.views.demMunicipiosModalListView = new modalList({
+                id: "demMunicipiosModal",
+                title: "Municipios",
+                list: APC.views.demMunicipiosListView.render().$el.html(),
+                table: "demanda",
+                cols: "municipio"
+            });
             APC.views.demMunicipiosModalListView.render();
         },
 
-        btnDemAreas: function() { 
-            this.clearDemSelection();           
+        btnDemAreas: function() {
+            this.clearDemSelection();
             APC.views.demAreasListView = new listEl({
                 collection: APC.collections.demAreasCollection
             });
 
-            if (typeof APC.views.demAreasModalListView === "undefined") {
-                APC.views.demAreasModalListView = new modalList({
-                    id: "demAreasModal",
-                    title: "Áreas",
-                    list: APC.views.demAreasListView.render().$el.html(),
-                    table: "demanda",
-                    cols: "codigoenci"
-                });
-            }   
+            //if (typeof APC.views.demAreasModalListView === "undefined") {
+            APC.views.demAreasModalListView = new modalList({
+                id: "demAreasModal",
+                title: "Áreas",
+                list: APC.views.demAreasListView.render().$el.html(),
+                table: "demanda",
+                cols: "codigoenci"
+            });
             APC.views.demAreasModalListView.render();
         },
 
-        btnDemSectores: function() {            
+        btnDemSectores: function() {
             this.clearDemSelection();
             APC.views.demSectoresListView = new listEl({
                 collection: APC.collections.demSectoresCollection
             });
 
-            if (typeof APC.views.demSectoresModalListView === "undefined") {
-                APC.views.demSectoresModalListView = new modalList({
-                    id: "demSectoresModal",
-                    title: "Sectores",
-                    list: APC.views.demSectoresListView.render().$el.html(),
-                    table: "demanda",
-                    cols: "sectorliderpolitica"
-                });
-            }
+            //if (typeof APC.views.demSectoresModalListView === "undefined") {
+            APC.views.demSectoresModalListView = new modalList({
+                id: "demSectoresModal",
+                title: "Sectores",
+                list: APC.views.demSectoresListView.render().$el.html(),
+                table: "demanda",
+                cols: "sectorliderpolitica"
+            });
             APC.views.demSectoresModalListView.render();
         },
 
-        btnProTerritorios: function() {            
+        btnProTerritorios: function() {
             this.clearDciSelection();
             APC.views.proTerritoriosListView = new listEl({
                 collection: APC.collections.proTerritoriosCollection
             });
 
-            if (typeof APC.views.proTerritoriosModalListView === "undefined") {
-                APC.views.proTerritoriosModalListView = new modalList({
-                    id: "proTerritoriosModal",
-                    title: "Territorios",
-                    list: APC.views.proTerritoriosListView.render().$el.html(),
-                    table: "dci",
-                    cols: "terrirorio"
-                });
-            }
+            //if (typeof APC.views.proTerritoriosModalListView === "undefined") {
+            APC.views.proTerritoriosModalListView = new modalList({
+                id: "proTerritoriosModal",
+                title: "Territorios",
+                list: APC.views.proTerritoriosListView.render().$el.html(),
+                table: "dci",
+                cols: "terrirorio"
+            });
             APC.views.proTerritoriosModalListView.render();
         },
 
-        btnProAreas: function() {    
-            this.clearDciSelection();        
+        btnProAreas: function() {
+            this.clearDciSelection();
             APC.views.proAreasListView = new listEl({
                 collection: APC.collections.proAreasCollection
             });
 
-            if (typeof APC.views.proAreasModalListView === "undefined") {
-                APC.views.proAreasModalListView = new modalList({
-                    id: "proAreasModal",
-                    title: "Áreas",
-                    list: APC.views.proAreasListView.render().$el.html(),
-                    table: "dci",
-                    cols: "areacooperacion"
-                });
-            }
+            //if (typeof APC.views.proAreasModalListView === "undefined") {
+            APC.views.proAreasModalListView = new modalList({
+                id: "proAreasModal",
+                title: "Áreas",
+                list: APC.views.proAreasListView.render().$el.html(),
+                table: "dci",
+                cols: "areacooperacion"
+            });
             APC.views.proAreasModalListView.render();
         },
 
@@ -289,7 +288,7 @@ define(function(require) {
                 });
 
             });
-            
+
             return this;
         }
     });

@@ -185,6 +185,9 @@ define(function(require) {
 
                             if (typeof APC.views.prioridadesPageView === 'undefined')
                                 APC.views.prioridadesPageView = new PrioridadesPageView();
+
+                            APC.views.prioridadesPageView.clearDemSelection();
+                            APC.views.prioridadesPageView.clearDciSelection();                            
                             APC.views.prioridadesPageView.render();
                         });
                     });
@@ -213,10 +216,10 @@ define(function(require) {
                             APC.collections.surSectoresCollection.findAll(),
                             APC.collections.sursurCollection.findAll()).done(function() {
 
-                            if (typeof APC.views.sursurview === 'undefined') {
-                                APC.views.sursurview = new sursurview();                                
-                            }
+                            if (typeof APC.views.sursurview === 'undefined')
+                                APC.views.sursurview = new sursurview();
 
+                            APC.views.sursurview.clearSelection();
                             APC.collections.sursurCollection.clearMarkers();
                             APC.collections.sursurCollection.initMapMarkers();
                             APC.views.sursurview.render();

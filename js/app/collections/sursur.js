@@ -58,6 +58,8 @@ define(function(require) {
         },
 
         findBySelection: function() {
+            console.log("findBySelection: " + this.buildSQL());
+
             var deferred = $.Deferred();
             var self = this;
 

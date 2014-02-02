@@ -63,6 +63,7 @@ define(function(require) {
         },
 
         findBySelection: function() {
+            console.log("findBySelection: Buscar registros por la selección.");
             var deferred = $.Deferred();
             var self = this;
 
@@ -108,6 +109,7 @@ define(function(require) {
         },
 
         initMapMarkersWithDb: function() {
+            console.log("initMapMarkersWithDb: Creando markers con DB.");
             this.markers = [];
             var self = this;
 

@@ -52,12 +52,17 @@ define(function(require) {
             this.template = _.template(modalTpl, {
                 title: self.options.title,
                 list: self.options.list
-            });            
+            });
+
+            this.$el.on('hidden', function () {
+                console.log("Bye modal");
+                self.$el.remove();
+            });
         },
 
         events: {
             "click .items": "chkItem",
-            "click .ok": "btnOK"
+            "click #ok": "btnOK"
         },
 
         btnOK: function() {
@@ -74,10 +79,10 @@ define(function(require) {
             }
         },
 
-        render: function() {            
-            this.$el.html(this.template);        
+        render: function() {
+            this.$el.html(this.template);
             this.$el.modal('show');
-            this.$el.children(".modal-body").height($(window).height() - 200);
+            this.$el.children(".modal-body").height($(window).height() - 250);
             return this;
         }
     });
@@ -88,7 +93,7 @@ define(function(require) {
         template: _.template(tpl),
 
         initialize: function() {
-            
+            this.clearSelection();
         },
 
         events: {
@@ -111,9 +116,9 @@ define(function(require) {
             require(['html2canvas'], function() {
                 html2canvas(document.getElementsByTagName("body"), {
                     useCORS: true,
-                    onrendered: function(canvas) {                        
+                    onrendered: function(canvas) {
                         window.plugins.socialsharing.available(function(isAvailable) {
-                            if (isAvailable) {                                
+                            if (isAvailable) {
                                 window.plugins.socialsharing.share("APC-Mapps", "APC-Mapps", canvas.toDataURL(), "http://www.apccolombia.gov.co/");
                             }
                         });
@@ -129,7 +134,7 @@ define(function(require) {
                 collection: APC.collections.surAreasCollection
             });
 
-            if (typeof APC.views.surAreasModalListView === "undefined") {
+            //if (typeof APC.views.surAreasModalListView === "undefined")
                 APC.views.surAreasModalListView = new modalList({
                     id: "surAreasModal",
                     title: "Áreas",
@@ -137,7 +142,6 @@ define(function(require) {
                     table: "sursur",
                     cols: "areacooperacion"
                 });
-            }
             APC.views.surAreasModalListView.render();
 
             return false;
@@ -150,7 +154,7 @@ define(function(require) {
                 collection: APC.collections.surSectoresCollection
             });
 
-            if (typeof APC.views.surSectoresModalListView === "undefined") {
+            //if (typeof APC.views.surSectoresModalListView === "undefined")
                 APC.views.surSectoresModalListView = new modalList({
                     id: "surSectoresModal",
                     title: "Sectores",
@@ -158,7 +162,6 @@ define(function(require) {
                     table: "sursur",
                     cols: "sectorliderpolitica"
                 });
-            }
             APC.views.surSectoresModalListView.render();
 
             return false;

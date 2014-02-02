@@ -60,7 +60,9 @@ define(function(require) {
             return sql;
         },
 
-        findByCountry: function() {            
+        findByCountry: function() {      
+            console.log("findByCountry: " + this.buildSQL());
+
             var self = this;
             this.baseapc.execute(self.buildSQL(), model, function(data) {
                 self.reset(data);
