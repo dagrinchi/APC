@@ -421,7 +421,7 @@
 
 #titulo {
     margin: 6.5px 0;
-    font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;
+    /*font-family: "Segoe UI Light", "Helvetica Neue", "Segoe UI", "Segoe WP", sans-serif;*/
     font-weight: 100;
     line-height: 25px;
     color: inherit;
@@ -431,7 +431,7 @@
     font-size: 1.3rem;
     padding: 5px;
     border-radius: 0px 0px 0px 0px;
-    height: 2.8rem;
+    /*height: 2.8rem;*/
 }
 
 #detalles-contenedor {
