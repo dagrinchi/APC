@@ -62,8 +62,7 @@ define(function(require) {
             return deferred.promise();
         },
 
-        findBySelection: function() {
-            console.log("findBySelection: Buscar registros por la selección.");
+        findBySelection: function() {            
             var deferred = $.Deferred();
             var self = this;
 
@@ -101,7 +100,7 @@ define(function(require) {
                     if (k2 > 0) {
                         sql += " OR ";
                     }
-                    sql += selection.cols[k1] + " = " + "'" + v2 + "'";
+                    sql += selection.cols[k1] + " LIKE " + "'" + v2 + "'";
                 });
                 sql += ")";
             });

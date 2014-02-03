@@ -65,19 +65,63 @@ define(function(require) {
 
         btnOK: function() {
             console.log("btnOK: Click boton OK despues de la selección.");
-            if (this.options.table === "demanda")
-                APC.collections.demCollection.findBySelection();
 
-            if (this.options.table === "dci")
-                APC.collections.coopCollection.findBySelection();
+            if (this.options.table === "demanda") {
+                switch (this.options.cols) {
+                    case "codigoenci":
+                        APC.collections.demCollection.findBySelection();
+                        APC.collections.coopCollection.findBySelection();
+                        break;
+                    case "territorio":
+                        APC.collections.demCollection.findBySelection();
+                        APC.collections.coopCollection.findBySelection();
+                        break;
+                    default:                        
+                        APC.collections.demCollection.findBySelection();
+                        break;
+                }
+            } else if (this.options.table === "dci") {
+                switch (this.options.cols) {
+                    case "codigoarea":
+                        APC.collections.demCollection.findBySelection();
+                        APC.collections.coopCollection.findBySelection();
+                        break;
+                    case "terrirorio":
+                        APC.collections.demCollection.findBySelection();
+                        APC.collections.coopCollection.findBySelection();
+                        break;
+                    default:
+                        APC.collections.coopCollection.findBySelection();
+                        break;
+                }
+            }
+
         },
 
         chkItem: function(e) {
             var self = this;
             if (e.currentTarget.checked) {
                 APC.selection[self.options.table]["cols"][self.options.cols].push(e.currentTarget.value);
+                if (self.options.table === "demanda" && self.options.cols === "codigoenci") {                    
+                    APC.selection["dci"]["cols"]["codigoarea"].push(e.currentTarget.value);
+                } else if (self.options.table === "demanda" && self.options.cols === "territorio") {                    
+                    APC.selection["dci"]["cols"]["terrirorio"].push(e.currentTarget.value);
+                } else if (self.options.table === "dci" && self.options.cols === "codigoarea") {                    
+                    APC.selection["demanda"]["cols"]["codigoenci"].push(e.currentTarget.value);
+                } else if (self.options.table === "dci" && self.options.cols === "terrirorio") {                    
+                    APC.selection["demanda"]["cols"]["territorio"].push(e.currentTarget.value);
+                }
             } else {
                 APC.selection[self.options.table]["cols"][self.options.cols].splice(APC.selection[self.options.table]["cols"][self.options.cols].indexOf(e.currentTarget.value), 1);
+                if (self.options.table === "demanda" && self.options.cols === "codigoenci") {                    
+                    APC.selection["dci"]["cols"]["codigoarea"].splice(APC.selection["dci"]["cols"]["codigoarea"].indexOf(e.currentTarget.value), 1);
+                } else if (self.options.table === "demanda" && self.options.cols === "territorio") {                    
+                    APC.selection["dci"]["cols"]["terrirorio"].splice(APC.selection["dci"]["cols"]["terrirorio"].indexOf(e.currentTarget.value), 1);
+                } else if (self.options.table === "dci" && self.options.cols === "codigoarea") {                    
+                    APC.selection["demanda"]["cols"]["codigoenci"].splice(APC.selection["demanda"]["cols"]["codigoenci"].indexOf(e.currentTarget.value), 1);
+                } else if (self.options.table === "dci" && self.options.cols === "terrirorio") {                    
+                    APC.selection["demanda"]["cols"]["territorio"].splice(APC.selection["demanda"]["cols"]["territorio"].indexOf(e.currentTarget.value), 1);
+                }
             }
         },
 
@@ -109,7 +153,7 @@ define(function(require) {
             "click .share": "btnShare"
         },
 
-        clearDemSelection: function() {
+        clearSelection: function() {
             APC.selection.demanda = {
                 cols: {
                     'actor': [],
@@ -121,13 +165,10 @@ define(function(require) {
                     'long': []
                 }
             };
-        },
-
-        clearDciSelection: function() {
             APC.selection.dci = {
                 cols: {
                     'terrirorio': [],
-                    'areacooperacion': [],
+                    'codigoarea': [],
                     'lat': [],
                     'long': []
                 }
@@ -152,7 +193,7 @@ define(function(require) {
 
         btnDemActores: function() {
             console.log("btnDemActores: Click en btnDemActores");
-            this.clearDemSelection();
+            this.clearSelection();
             APC.views.demActoresListView = new listEl({
                 collection: APC.collections.demActoresCollection
             });
@@ -169,7 +210,7 @@ define(function(require) {
         },
 
         btnDemTerritorios: function() {
-            this.clearDemSelection();
+            this.clearSelection();
             APC.views.demTerritoriosListView = new listEl({
                 collection: APC.collections.demTerritoriosCollection
             });
@@ -186,7 +227,7 @@ define(function(require) {
         },
 
         btnDemMunicipios: function() {
-            this.clearDemSelection();
+            this.clearSelection();
             APC.views.demMunicipiosListView = new listEl({
                 collection: APC.collections.demMunicipiosCollection
             });
@@ -203,7 +244,7 @@ define(function(require) {
         },
 
         btnDemAreas: function() {
-            this.clearDemSelection();
+            this.clearSelection();
             APC.views.demAreasListView = new listEl({
                 collection: APC.collections.demAreasCollection
             });
@@ -220,7 +261,7 @@ define(function(require) {
         },
 
         btnDemSectores: function() {
-            this.clearDemSelection();
+            this.clearSelection();
             APC.views.demSectoresListView = new listEl({
                 collection: APC.collections.demSectoresCollection
             });
@@ -237,7 +278,7 @@ define(function(require) {
         },
 
         btnProTerritorios: function() {
-            this.clearDciSelection();
+            this.clearSelection();
             APC.views.proTerritoriosListView = new listEl({
                 collection: APC.collections.proTerritoriosCollection
             });
@@ -254,7 +295,7 @@ define(function(require) {
         },
 
         btnProAreas: function() {
-            this.clearDciSelection();
+            this.clearSelection();
             APC.views.proAreasListView = new listEl({
                 collection: APC.collections.proAreasCollection
             });
@@ -265,7 +306,7 @@ define(function(require) {
                 title: "Áreas",
                 list: APC.views.proAreasListView.render().$el.html(),
                 table: "dci",
-                cols: "areacooperacion"
+                cols: "codigoarea"
             });
             APC.views.proAreasModalListView.render();
         },

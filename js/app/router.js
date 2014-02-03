@@ -187,8 +187,7 @@ define(function(require) {
                             if (typeof APC.views.prioridadesPageView === 'undefined')
                                 APC.views.prioridadesPageView = new PrioridadesPageView();
 
-                            APC.views.prioridadesPageView.clearDemSelection();
-                            APC.views.prioridadesPageView.clearDciSelection();                            
+                            APC.views.prioridadesPageView.clearSelection();
                             APC.views.prioridadesPageView.render();
                         });
                     });

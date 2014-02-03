@@ -32,7 +32,7 @@ var APC = {
         dci: {
             cols: {
                 'terrirorio': [],
-                'areacooperacion': [],
+                'codigoarea': [],
                 'lat': [],
                 'long' : []
             }
