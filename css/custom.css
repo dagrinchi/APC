@@ -554,3 +554,31 @@
     font-size: larger;
 }
 
+#tuto1 {
+    background-image: url(../img/tutorial/Prioridadesdelpais.jpg);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#tuto2 {
+    background-image: url(../img/tutorial/CooperacionSur-Sur.jpg);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#tuto3 {
+    background-image: url(../img/tutorial/AyudaProyectos.jpg);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#tuto4 {
+    background-image: url(../img/tutorial/AyudaDirectorio.jpg);
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
