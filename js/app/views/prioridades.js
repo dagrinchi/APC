@@ -278,18 +278,44 @@ define(function(require) {
 
             require(['async!https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false'], function() {
 
-                google.maps.event.addListener(APC.views.mapDemanda.map, 'dragend', function() {
-                    APC.views.mapCooperacion.map.setCenter(APC.views.mapDemanda.map.getCenter());
-                    APC.views.mapCooperacion.map.setZoom(APC.views.mapDemanda.map.getZoom());
+                var mapDemanda = APC.views.mapDemanda.map;
+                var mapCooperacion = APC.views.mapCooperacion.map;
+
+                //ZOOM
+                google.maps.event.addListener(mapDemanda, 'zoom_changed', function() {
+                    mapCooperacion.setZoom(mapDemanda.getZoom());
                 });
-                google.maps.event.addListener(APC.views.mapCooperacion.map, 'dragend', function() {
-                    APC.views.mapDemanda.map.setCenter(APC.views.mapCooperacion.map.getCenter());
-                    APC.views.mapDemanda.map.setZoom(APC.views.mapCooperacion.map.getZoom());
+
+                google.maps.event.addListener(mapDemanda, 'drag', function() {
+                    google.maps.event.clearListeners(mapCooperacion, 'center_changed');
+                    // google.maps.event.clearListeners(mapCooperacion, 'zoom_changed');
+
+                    //CENTER
+                    google.maps.event.addListener(mapDemanda, 'center_changed', function() {
+                        mapCooperacion.setCenter(mapDemanda.getCenter());
+                    });
+
+                    //ZOOM
+                    // google.maps.event.addListener(mapDemanda, 'zoom_changed', function() {
+                    //     mapCooperacion.setZoom(mapDemanda.getZoom());    
+                    // });                    
+                });
+                google.maps.event.addListener(mapCooperacion, 'drag', function() {
+                    google.maps.event.clearListeners(mapDemanda, 'center_changed');
+                    // google.maps.event.clearListeners(mapDemanda, 'zoom_changed');
+
+                    //CENTER
+                    google.maps.event.addListener(mapCooperacion, 'center_changed', function() {
+                        mapDemanda.setCenter(mapCooperacion.getCenter());
+                    });
+
+                    //ZOOM
+                    // google.maps.event.addListener(mapCooperacion, 'zoom_changed', function() {
+                    //     mapDemanda.setZoom(mapCooperacion.getZoom());    
+                    // });                    
                 });
 
             });
-
-            return this;
         }
     });
 
