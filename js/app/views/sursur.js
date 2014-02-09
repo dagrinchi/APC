@@ -191,7 +191,7 @@ define(function(require) {
                     latitude: position.coords.latitude,
                     longitude: position.coords.longitude,
                     height: wh - 111,
-                    zoomControl: false
+                    zoomControl: true
                 });
                 APC.views.mapSursur.render();
             });
