@@ -7957,5 +7957,55 @@ define(function(require) {
 		"nomdep": "Cundinamarca",
 		"lat": "5.25",
 		"long": "-74.5"
-	}];
+	}, {
+		"codmun": "11001",
+		"nommun": "BOGOTA D.C.",
+		"coddep": "11",
+		"nomdep": "BOGOTA D.C.",
+		"lat": "4.6",
+		"long": "-74.0833333"
+	}, {
+		"codmun": "18756",
+		"nommun": "Solano",
+		"coddep": "18",
+		"nomdep": "Caqueta",
+		"lat": "0.699",
+		"long": "-75.25"
+	}, {
+		"codmun": "8372",
+		"nommun": "Juan de Acosta",
+		"coddep": "8",
+		"nomdep": "Atlantico",
+		"lat": "10.88",
+		"long": "-75.07"
+	}, {
+		"codmun": "91405",
+		"nommun": "La Chorrera",
+		"coddep": "91",
+		"nomdep": "Amazonas",
+		"lat": "-0.73",
+		"long": "-73.01"
+	}, {
+		"codmun": "91407",
+		"nommun": "La Pedrera",
+		"coddep": "91",
+		"nomdep": "Amazonas",
+		"lat": "-1.30",
+		"long": "-69.56"
+	}, {
+		"codmun": "97511",	
+		"nommun": "Pacoa",
+		"coddep": "97",
+		"nomdep": "Vaupes",
+		"lat": "0.25",
+		"long": "-70.75"
+	}, {
+		"codmun": "97777",	
+		"nommun": "Papunaua",
+		"coddep": "97",
+		"nomdep": "Vaupes",
+		"lat": "1.91",
+		"long": "-70.60"
+	}
+	];
 });
