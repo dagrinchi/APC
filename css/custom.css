@@ -1,3 +1,18 @@
+/*
+custom font Roboto
+*/
+
+@font-face {
+    font-family: 'Roboto', sans-serif;
+    src: url("Roboto-Thin.ttf") format("opentype"); 
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+    text-rendering: optimizeLegibility;
+}
+
 /* 
  * start the media queries
  */
