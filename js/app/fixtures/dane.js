@@ -8010,9 +8010,9 @@ define(function(require) {
 		"codmun": "",	
 		"nommun": "",
 		"coddep": "11",
-		"nomdep": "BOGOTA D.C.",
-		"lat": "1.91",
-		"long": "-70.60"
+		"nomdep": "Bogota D.C.",
+		"lat": "4.6",
+		"long": "-74.0833333"
 	}
 	];
 });
