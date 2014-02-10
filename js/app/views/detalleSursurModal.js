@@ -57,7 +57,7 @@ define(function(require) {
             var self = this;      
             this.$el.html(this.template(this.model.toJSON()));
             this.$el.modal('show');
-            this.$el.children(".modal-body").height($(window).height() - 200);
+            this.$el.children(".modal-body").height($(window).height() - 220);
             return this;
         }
     });

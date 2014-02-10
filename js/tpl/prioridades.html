@@ -21,7 +21,8 @@
 </div>    
 
  <div class="container-fluid container" style="margin:0; padding:0;">    
-    <div class="row-fluid">       
+    <div class="row-fluid" style="position: relative;">    
+    	<div id="demandaSelectionList" style="position: absolute; bottom: 0; left: 50%; z-index: 1;"></div>   
     	<div id="map-canvas-a" class="map-canvas map-canvas-a"></div>
 		<div class="overlay-a">
 			<div class="accordion" id="demand">
@@ -43,9 +44,10 @@
 			    </div>
 			  </div>	  
 			</div>
-		</div>
+		</div>		
     </div>
-    <div class="row-fluid">
+    <div class="row-fluid" style="position: relative;">
+    	<div id="dciSelectionList" style="position: absolute; bottom: 0; left: 50%; z-index: 1;"></div>
     	<div id="map-canvas-b" class="map-canvas map-canvas-b"></div>
 		<div class="overlay-b">
 			<div class="accordion" id="cooperation">
@@ -63,6 +65,6 @@
 			    </div>
 			  </div>	  
 			</div>
-		</div>
+		</div>		
     </div>
 </div>

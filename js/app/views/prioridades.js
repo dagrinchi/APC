@@ -66,8 +66,11 @@ define(function(require) {
         btnOK: function() {
             console.log("btnOK: Click boton OK despues de la selección.");
 
-            if (this.options.table === "demanda") {
-                switch (this.options.cols) {
+            var table = this.options.table;
+            var cols = this.options.cols;
+
+            if (table === "demanda") {
+                switch (cols) {
                     case "codigoenci":
                         APC.collections.demCollection.findBySelection();
                         APC.collections.coopCollection.findBySelection();
@@ -80,8 +83,8 @@ define(function(require) {
                         APC.collections.demCollection.findBySelection();
                         break;
                 }
-            } else if (this.options.table === "dci") {
-                switch (this.options.cols) {
+            } else if (table === "dci") {
+                switch (cols) {
                     case "codigoarea":
                         APC.collections.demCollection.findBySelection();
                         APC.collections.coopCollection.findBySelection();
@@ -96,6 +99,17 @@ define(function(require) {
                 }
             }
 
+            require(['app/collections/selection', 'app/views/selection'], function(selectionColl, selectionView) {
+
+                APC.collections[table + 'Selection'] = new selectionColl();
+                $.when(APC.collections[table + 'Selection'].find(table)).done(function() {
+                    APC.views[table + 'Selection'] = new selectionView({
+                        collection: APC.collections[table + 'Selection'],
+                        table: table
+                    });
+                    $("#" + table + "SelectionList").html(APC.views[table + 'Selection'].render().$el);
+                });
+            });
         },
 
         chkItem: function(e) {
@@ -128,7 +142,7 @@ define(function(require) {
         render: function() {
             this.$el.html(this.template);
             this.$el.modal('show');
-            this.$el.children(".modal-body").height($(window).height() - 200);
+            this.$el.children(".modal-body").height($(window).height() - 220);
             return this;
         }
     });
@@ -252,7 +266,7 @@ define(function(require) {
             //if (typeof APC.views.demAreasModalListView === "undefined") {
             APC.views.demAreasModalListView = new modalList({
                 id: "demAreasModal",
-                title: "Áreas",
+                title: "Areas / Componente ENCI",
                 list: APC.views.demAreasListView.render().$el.html(),
                 table: "demanda",
                 cols: "codigoenci"
@@ -308,7 +322,7 @@ define(function(require) {
                 table: "dci",
                 cols: "codigoarea"
             });
-            APC.views.proAreasModalListView.render();
+            APC.views.proAreasModalListView.render();            
         },
 
         render: function() {
