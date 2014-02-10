@@ -42,7 +42,7 @@ define(function(require) {
                     selection.vals.push(v1);
                 }
             });
-            var sql = "SELECT DISTINCT " + selection.cols.join() + " item FROM " + table;
+            var sql = "SELECT DISTINCT " + selection.cols.join() + " FROM " + table;
             $.each(selection.vals, function(k1, v1) {                
                 if (k1 === 0) {
                     sql += " WHERE (";
@@ -58,7 +58,6 @@ define(function(require) {
                 sql += ")";
             });
 
-            console.log(sql);
             return sql;
         },
 

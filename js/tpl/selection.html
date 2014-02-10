@@ -1,1 +1,1 @@
-<i class="icon-remove icon-white"></i> <%= item %>
+<% _.each(data, function(item, key) { %><i class="icon-remove icon-white"></i> <%= item[key] %><% }); %>
