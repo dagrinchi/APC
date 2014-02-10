@@ -113,8 +113,8 @@ define(function(require) {
             var self = this;
 
             $.each(this.models, function(k1, v1) {
-                if (v1.get("long") > 0 || v1.get("lat") > 0)
-                    self.createMarker(v1.get("RowKey"), v1.get("territorio").trim(), parseFloat(v1.get("lat")), parseFloat(v1.get("long")));
+                //if (v1.get("long") > 0 || v1.get("lat") > 0)
+                self.createMarker(v1.get("RowKey"), v1.get("territorio").trim(), parseFloat(v1.get("lat")), parseFloat(v1.get("long")));
             });
 
             if (typeof APC.views.mapDemanda.markerCluster !== "undefined") {
