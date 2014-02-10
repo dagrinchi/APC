@@ -8006,6 +8006,13 @@ define(function(require) {
 		"nomdep": "Vaupes",
 		"lat": "1.91",
 		"long": "-70.60"
+	},{
+		"codmun": "",	
+		"nommun": "",
+		"coddep": "11",
+		"nomdep": "BOGOTA D.C.",
+		"lat": "1.91",
+		"long": "-70.60"
 	}
 	];
 });
