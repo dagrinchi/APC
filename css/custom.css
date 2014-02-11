@@ -192,7 +192,7 @@ h2 {
     background-repeat: no-repeat;    
 }
 
-#descriptionText {
+.descriptionText {
     padding-left: 30px;
     padding-right: 30px;
     padding-top: 14px;    
