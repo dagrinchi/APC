@@ -43,10 +43,10 @@ define(function(require) {
 					cols = key;
 					APC.selection[table]["cols"][cols].splice(APC.selection[table]["cols"][cols].indexOf(item), 1);
 					if (table === "demanda" && cols === "codigoenci") {
-						APC.selection["dci"]["cols"]["codigoarea"].splice(APC.selection["dci"]["cols"]["codigoarea"].indexOf(item), 1);
+						APC.selection["dci"]["cols"]["codigocomponente"].splice(APC.selection["dci"]["cols"]["codigocomponente"].indexOf(item), 1);
 					} else if (table === "demanda" && cols === "territorio") {
 						APC.selection["dci"]["cols"]["terrirorio"].splice(APC.selection["dci"]["cols"]["terrirorio"].indexOf(item), 1);
-					} else if (table === "dci" && cols === "codigoarea") {
+					} else if (table === "dci" && cols === "codigocomponente") {
 						APC.selection["demanda"]["cols"]["codigoenci"].splice(APC.selection["demanda"]["cols"]["codigoenci"].indexOf(item), 1);
 					} else if (table === "dci" && cols === "terrirorio") {
 						APC.selection["demanda"]["cols"]["territorio"].splice(APC.selection["demanda"]["cols"]["territorio"].indexOf(item), 1);
@@ -69,7 +69,7 @@ define(function(require) {
 					}
 				} else if (table === "dci") {
 					switch (cols) {
-						case "codigoarea":
+						case "codigocomponente":
 							APC.collections.demCollection.findBySelection();
 							APC.collections.coopCollection.findBySelection();
 							break;
