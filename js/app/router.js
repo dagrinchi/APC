@@ -99,7 +99,6 @@ define(function(require) {
 
                 if (self.checkConnection() && typeof google !== 'undefined') {
                     require([
-                        'app/collections/demanda',
                         'app/collections/demActores',
                         'app/collections/demTerritorios',
                         'app/collections/demMunicipios',
@@ -109,8 +108,7 @@ define(function(require) {
                         'app/collections/proAreas',
                         'app/collections/cooperacion',
                         'app/views/prioridades'
-                    ], function(
-                        DemandaCollection,
+                    ], function(                        
                         DemActoresCollection,
                         DemTerritoriosCollection,
                         DemMunicipiosCollection,
@@ -122,8 +120,8 @@ define(function(require) {
                         PrioridadesPageView) {
 
 
-                        if (typeof APC.collections.demCollection === 'undefined')
-                            APC.collections.demCollection = new DemandaCollection();
+                        // if (typeof APC.collections.demCollection === 'undefined')
+                        //     APC.collections.demCollection = new DemandaCollection();
 
                         if (typeof APC.collections.demActoresCollection === 'undefined')
                             APC.collections.demActoresCollection = new DemActoresCollection();
@@ -144,8 +142,7 @@ define(function(require) {
                         if (typeof APC.collections.coopCollection === 'undefined')
                             APC.collections.coopCollection = new CooperacionCollection();
 
-                        $.when(APC.collections.demCollection.findAll(),
-                            APC.collections.coopCollection.findAll(),
+                        $.when(APC.collections.coopCollection.findAll(),
                             APC.collections.demActoresCollection.findAll(),
                             APC.collections.demTerritoriosCollection.findAll(),
                             APC.collections.demMunicipiosCollection.findAll(),
