@@ -67,6 +67,11 @@ define(function(require) {
                 sql += ")";
             });
 
+            if (select === "codigoenci") {
+                sql += "GROUP BY codigoenci";
+            } else if (select === "codigocomponente") {
+                sql += "GROUP BY codigocomponente";
+            }
             return sql;
         },
 

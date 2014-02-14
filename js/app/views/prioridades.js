@@ -56,10 +56,12 @@ define(function(require) {
                 console.log("Bye modal");
                 self.$el.remove();
             });
-            this.$el.on('shown', function() {   
+            this.$el.on('shown', function() {
                 require(['iscroll'], function() {
-                    var scroll = new IScroll('#modalList', { mouseWheel: true });  
-                });                            
+                    var scroll = new IScroll('#modalList', {
+                        mouseWheel: true
+                    });
+                });
             });
         },
 
@@ -106,14 +108,32 @@ define(function(require) {
 
             require(['app/collections/selection', 'app/views/selection'], function(selectionColl, selectionView) {
 
-                APC.collections[table + 'Selection'] = new selectionColl();
-                $.when(APC.collections[table + 'Selection'].find(table)).done(function() {
-                    APC.views[table + 'Selection'] = new selectionView({
-                        collection: APC.collections[table + 'Selection'],
-                        table: table
+                if (table === "demanda") {
+                    if (cols === "codigoenci" || cols === "territorio") {
+                        APC.collections['demandaSelection'] = new selectionColl();
+                        drawSelection('demanda', APC.collections['demandaSelection']);
+
+                        APC.collections['dciSelection'] = new selectionColl();
+                        drawSelection('dci', APC.collections['dciSelection']);
+                    }
+                } else if (table === "dci") {
+                    APC.collections['demandaSelection'] = new selectionColl();
+                    drawSelection('demanda', APC.collections['demandaSelection']);
+
+                    APC.collections['dciSelection'] = new selectionColl();
+                    drawSelection('dci', APC.collections['dciSelection']);
+                }
+                
+                function drawSelection(table, collection) {
+                    $.when(collection.find(table)).done(function() {
+                        APC.views[table + 'Selection'] = new selectionView({
+                            collection: collection,
+                            table: table
+                        });
+                        $("#" + table + "SelectionList").html(APC.views[table + 'Selection'].render().$el);
                     });
-                    $("#" + table + "SelectionList").html(APC.views[table + 'Selection'].render().$el);
-                });
+                }
+                
             });
         },
 
@@ -146,8 +166,8 @@ define(function(require) {
 
         render: function() {
             this.$el.html(this.template);
-            this.$el.modal('show');            
-            this.$el.children(".modal-body").height($(window).height() - 220);            
+            this.$el.modal('show');
+            this.$el.children(".modal-body").height($(window).height() - 220);
             return this;
         }
     });
@@ -327,7 +347,7 @@ define(function(require) {
                 table: "dci",
                 cols: "codigocomponente"
             });
-            APC.views.proAreasModalListView.render();            
+            APC.views.proAreasModalListView.render();
         },
 
         render: function() {
