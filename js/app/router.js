@@ -99,6 +99,7 @@ define(function(require) {
 
                 if (self.checkConnection() && typeof google !== 'undefined') {
                     require([
+                        'app/collections/demanda',
                         'app/collections/demActores',
                         'app/collections/demTerritorios',
                         'app/collections/demMunicipios',
@@ -108,7 +109,8 @@ define(function(require) {
                         'app/collections/proAreas',
                         'app/collections/cooperacion',
                         'app/views/prioridades'
-                    ], function(                        
+                    ], function(         
+                        DemandaCollection,               
                         DemActoresCollection,
                         DemTerritoriosCollection,
                         DemMunicipiosCollection,
@@ -120,8 +122,8 @@ define(function(require) {
                         PrioridadesPageView) {
 
 
-                        // if (typeof APC.collections.demCollection === 'undefined')
-                        //     APC.collections.demCollection = new DemandaCollection();
+                        if (typeof APC.collections.demCollection === 'undefined')
+                            APC.collections.demCollection = new DemandaCollection();
 
                         if (typeof APC.collections.demActoresCollection === 'undefined')
                             APC.collections.demActoresCollection = new DemActoresCollection();

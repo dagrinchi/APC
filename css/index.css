@@ -445,3 +445,8 @@ and (orientation : portrait) {
     margin: 1px;
     width: 100%;
 }
+
+.selectionBadge {
+    --moz-opacity: 0.8;
+    opacity: 0.8;
+}

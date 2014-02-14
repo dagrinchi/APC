@@ -20,7 +20,7 @@ define(function(require) {
 
 		tagName: "li",
 
-		className: "badge",
+		className: "badge selectionBadge",
 
 		render: function() {
 			var list = '<% _.each(data, function(item, key) { %><i class="icon-remove icon-white"></i> <%= item %><% }); %>';

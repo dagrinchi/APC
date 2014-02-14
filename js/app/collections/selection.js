@@ -42,7 +42,16 @@ define(function(require) {
                     selection.vals.push(v1);
                 }
             });
-            var sql = "SELECT DISTINCT " + selection.cols.join() + " FROM " + table;
+            var select = selection.cols.join();
+            var sql = "SELECT DISTINCT ";
+            if (select === "codigoenci") {
+                sql += select + " || ' ' || enci item FROM " + table;    
+            } else if (select === "codigocomponente") {
+                sql += select + " || ' ' || componentecooperacion item FROM " + table;    
+            } else {
+                sql += select + " FROM " + table;    
+            }
+            
             $.each(selection.vals, function(k1, v1) {                
                 if (k1 === 0) {
                     sql += " WHERE (";
