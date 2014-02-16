@@ -292,7 +292,8 @@ define(function(require) {
         ejecutas: function() {
             $("#loadingBox").fadeIn();
             require(['app/views/ejecutas'], function(EjecutasView) {
-                APC.views.ejecutasView = new EjecutasView();
+                if (typeof APC.views.ejecutasView === "undefined")
+                    APC.views.ejecutasView = new EjecutasView();
                 APC.views.ejecutasView.render();
             });
         },
@@ -301,7 +302,8 @@ define(function(require) {
             $("#loadingBox").fadeIn();
             if (this.checkConnection()) {
                 require(['app/views/acercade'], function(AcercadeView) {
-                    APC.views.acercadeView = new AcercadeView();
+                    if (typeof APC.views.acercadeView === "undefined")
+                        APC.views.acercadeView = new AcercadeView();
                     APC.views.acercadeView.render();
                 });
             } else {
