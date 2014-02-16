@@ -45,9 +45,9 @@ define(function(require) {
             var select = selection.cols.join();
             var sql = "SELECT DISTINCT ";
             if (select === "codigoenci") {
-                sql += select + " || ' ' || enci item FROM " + table;    
+                sql += select + " || ' ' || enci codigoenci FROM " + table;    
             } else if (select === "codigocomponente") {
-                sql += select + " || ' ' || componentecooperacion item FROM " + table;    
+                sql += select + " || ' ' || componentecooperacion codigocomponente FROM " + table;    
             } else {
                 sql += select + " FROM " + table;    
             }
@@ -68,14 +68,16 @@ define(function(require) {
             });
 
             if (select === "codigoenci") {
-                sql += "GROUP BY codigoenci";
+                sql += "GROUP BY " + table + ".codigoenci";
             } else if (select === "codigocomponente") {
-                sql += "GROUP BY codigocomponente";
+                sql += "GROUP BY " + table + ".codigocomponente";
             }
+
+            console.log(sql);
             return sql;
         },
 
-        find: function(table) {
+        findSelection: function(table) {
             var baseapc = new DB(window.openDatabase("apc", "1.0", "APC - Agencia Presidencial de la Cooperación en Colombia", 4145728));
             var self = this;   
             baseapc.execute(this.buildSQL(table), model, function(data) {

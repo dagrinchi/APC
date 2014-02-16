@@ -110,22 +110,22 @@ define(function(require) {
 
                 if (table === "demanda") {
                     if (cols === "codigoenci" || cols === "territorio") {
-                        APC.collections['demandaSelection'] = new selectionColl();
-                        drawSelection('demanda', APC.collections['demandaSelection']);
-
                         APC.collections['dciSelection'] = new selectionColl();
                         drawSelection('dci', APC.collections['dciSelection']);
+                    } else {
+                        APC.collections['dciSelection'].reset();
                     }
+                    APC.collections['demandaSelection'] = new selectionColl();
+                    drawSelection('demanda', APC.collections['demandaSelection']);
                 } else if (table === "dci") {
                     APC.collections['demandaSelection'] = new selectionColl();
                     drawSelection('demanda', APC.collections['demandaSelection']);
-
                     APC.collections['dciSelection'] = new selectionColl();
-                    drawSelection('dci', APC.collections['dciSelection']);
+                    drawSelection('dci', APC.collections['dciSelection']);                    
                 }
                 
                 function drawSelection(table, collection) {
-                    $.when(collection.find(table)).done(function() {
+                    $.when(collection.findSelection(table)).done(function() {
                         APC.views[table + 'Selection'] = new selectionView({
                             collection: collection,
                             table: table
@@ -177,8 +177,8 @@ define(function(require) {
 
         template: _.template(tpl),
 
-        initialize: function() {
-
+        initialize: function() {        
+            
         },
 
         events: {
