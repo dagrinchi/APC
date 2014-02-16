@@ -117,6 +117,18 @@ define(function(require) {
 		initialize: function() {
 			this.collection.bind("reset", this.render, this);
 			this.collection.bind("remove", this.removeItem, this);
+			this.collection.bind("reset", this.resetAction, this);
+		},
+
+		resetAction: function() {
+			if (this.collection.models.length === 0) {
+				if (typeof APC.views.mapDemanda.markerCluster !== "undefined") {
+					APC.views.mapDemanda.markerCluster.clearMarkers();
+				}
+				if (typeof APC.views.mapCooperacion.markerCluster !== "undefined") {
+					APC.views.mapCooperacion.markerCluster.clearMarkers();
+				}
+			}
 		},
 
 		removeItem: function(model) {

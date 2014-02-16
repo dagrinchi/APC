@@ -112,7 +112,7 @@ define(function(require) {
                     if (cols === "codigoenci" || cols === "territorio") {
                         APC.collections['dciSelection'] = new selectionColl();
                         drawSelection('dci', APC.collections['dciSelection']);
-                    } else {
+                    } else if (typeof APC.collections['dciSelection'] !== "undefined") {
                         APC.collections['dciSelection'].reset();
                     }
                     APC.collections['demandaSelection'] = new selectionColl();

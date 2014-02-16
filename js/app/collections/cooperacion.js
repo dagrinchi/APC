@@ -52,7 +52,7 @@ define(function(require) {
             this.baseapc.execute(self.sql, model, function(data) {
                 self.reset(data);
                 deferred.resolve();
-                setTimeout(self.initMapMarkersWithDb, 500);
+                setTimeout(self.initMapMarkersWithDb, 2000);
             });
             return deferred.promise();
         },
