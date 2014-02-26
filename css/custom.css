@@ -585,7 +585,7 @@ h2 {
     border-bottom: 1px solid #9daca9;
 }
 
-#botonCompartirDirectorio{
+.botonCompartirDirectorio{
     bottom: 30px;
     right: 0px;
 }
