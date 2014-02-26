@@ -623,10 +623,10 @@ h2 {
     background-repeat: no-repeat;
     background-position: center;
 }
-#dirList {
+/*#dirList {
     width: 100% !important;
     position: fixed;
-}
+}*/
 #leftcolumn {
     width: 100px; 
     border: 0px solid red; 
