@@ -51,7 +51,7 @@ define(function(require) {
             this.baseapc.execute(self.sql, model, function(data) {
                 self.reset(data);
                 deferred.resolve();
-                setTimeout(self.initMapMarkersWithDb, 3000);
+                setTimeout(self.initMapMarkersWithDb, 3500);
             });
             return deferred.promise();
         },
@@ -102,8 +102,7 @@ define(function(require) {
 
         initMapMarkersWithDb: function() {            
             var self = this;
-            if (typeof this.models === "undefined") {
-                console.log("initMapMarkersWithDb: Nothing!");
+            if (typeof this.models === "undefined" || this.models.length <= 0) {                
                 APC.collections.coopCollection.initMapMarkersWithDb();
             } else {
                 self.markers = [];
@@ -155,9 +154,7 @@ define(function(require) {
                         title: add,
                         collection: APC.collections.coopByDepartamento
                     });
-                    setTimeout(function() {
-                        modal.render();
-                    }, 600);
+                    modal.render();
                 });
 
                 // self.infowindow.setContent(add);

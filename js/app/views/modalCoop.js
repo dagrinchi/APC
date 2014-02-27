@@ -14,7 +14,7 @@ define(function(require) {
 
     var $ = require('jquery'),
         Backbone = require('backbone'),
-        _ = require('underscore'),        
+        _ = require('underscore'),
         modalTpl = require('text!tpl/modalCooperacion.html'),
         coopMarker = require('text!tpl/coopMarkerListItem.html'),
         bootstrap = require('bootstrap/bootstrap');
@@ -23,10 +23,10 @@ define(function(require) {
         tagName: 'li',
         className: 'topcoat-list__item',
         attributes: {
-            "style" : "padding-top: 0px; padding-bottom: 0px;"
-        },        
+            "style": "padding-top: 0px; padding-bottom: 0px;"
+        },
         template: _.template(coopMarker),
-        render: function() {                                    
+        render: function() {
             this.$el.html(this.template(this.model.toJSON()));
             return this;
         }
@@ -50,14 +50,17 @@ define(function(require) {
 
         initialize: function() {
             var self = this;
-            this.$el.on('hidden', function () {
+            this.$el.on('hidden', function() {
                 console.log("Bye modal");
                 self.$el.remove();
             });
-            this.$el.on('shown', function() {   
+            this.$el.on('shown', function() {
                 require(['iscroll'], function() {
-                    var scroll = new IScroll('#dciDetalle', { scrollY: true, scrollX: false });  
-                });                            
+                    var scroll = new IScroll('#dciDetalle', {
+                        scrollY: true,
+                        scrollX: false
+                    });
+                });
             });
         },
 
@@ -69,9 +72,9 @@ define(function(require) {
             var self = this;
             require(['html2canvas'], function() {
                 html2canvas(self.$el.find(".modal-body"), {
-                    onrendered: function(canvas) {                        
+                    onrendered: function(canvas) {
                         window.plugins.socialsharing.available(function(isAvailable) {
-                            if (isAvailable) {                                
+                            if (isAvailable) {
                                 window.plugins.socialsharing.share("APC-Mapps", "APC-Mapps", canvas.toDataURL(), "http://www.apccolombia.gov.co/");
                             }
                         });
@@ -83,21 +86,29 @@ define(function(require) {
         },
 
         render: function() {
-            var self = this;
-            var listElement = new listEl({
-                collection : this.collection
-            });
+            console.log("render dci modal!");
+            if (this.collection.models.length > 0) {
 
-            this.$el.html(_.template(modalTpl, {
-                title: self.options.title,
-                puntofocal: self.collection.models[0].attributes.puntofocal,
-                direccionpuntofocal: self.collection.models[0].attributes.direccionpuntofocal,
-                miembrosdelcomite: self.collection.models[0].attributes.miembrocomite,
-                content: listElement.render().$el.html()
-            }));
+                var self = this;
+                var listElement = new listEl({
+                    collection: this.collection
+                });
 
-            this.$el.children(".modal-body").height($(window).height() - 220);
-            this.$el.modal('show');            
+                this.$el.html(_.template(modalTpl, {
+                    title: self.options.title,
+                    puntofocal: self.collection.models[0].attributes.puntofocal,
+                    direccionpuntofocal: self.collection.models[0].attributes.direccionpuntofocal,
+                    miembrosdelcomite: self.collection.models[0].attributes.miembrocomite,
+                    content: listElement.render().$el.html()
+                }));
+
+                this.$el.children(".modal-body").height($(window).height() - 220);
+                this.$el.modal('show');                
+
+            } else {
+                this.render();
+            }
+
             return this;
         }
     });
