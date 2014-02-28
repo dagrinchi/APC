@@ -83,11 +83,11 @@ define(function(require) {
 
     var AreaCooperacion = Backbone.RelationalModel.extend({
 
-        initialize: function() {
-            this.get("componentes").fetch({
-                data: this.get("codigoarea")
-            });
-        },
+        // initialize: function() {
+        //     this.get("componentes").fetch({
+        //         data: this.get("codigoarea")
+        //     });
+        // },
 
         relations: [{
             type: Backbone.HasMany,
@@ -127,9 +127,9 @@ define(function(require) {
 
     var Territorio = Backbone.RelationalModel.extend({
 
-        initialize: function() {
-            this.get("areas").fetch();
-        },
+        // initialize: function() {
+        //     this.get("areas").fetch();
+        // },
 
         relations: [{
             type: Backbone.HasMany,

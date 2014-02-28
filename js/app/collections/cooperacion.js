@@ -149,15 +149,30 @@ define(function(require) {
                 APC.selection.dci.cols['terrirorio'].push(add);
 
                 APC.collections.coopByDepartamento.fetch({
-                    success: function(data) {
-                        var modal = new modalView({
-                            id: RowKey,
-                            title: add,
-                            collection: APC.collections.coopByDepartamento
+                    success: function(territorioCollection) {
+                        territorioCollection.each(function(territorio) {
+                            territorio.get("areas").fetch({
+                                success: function(areasCollection) {
+                                    var len = areasCollection.length;
+                                    areasCollection.each(function(area, k) {
+                                        area.get("componentes").fetch({
+                                            data: area.get("codigoarea"),
+                                            success: function(componentesCollection) {
+                                                if (len === k + 1) {
+                                                    var modal = new modalView({
+                                                        id: RowKey,
+                                                        title: add,
+                                                        collection: APC.collections.coopByDepartamento
+                                                    });
+                                                    modal.render();
+                                                }
+                                            }
+                                        });
+                                    });
+                                }
+                            });
                         });
-                        setTimeout(function() {
-                            modal.render();
-                        }, 600);
+
                     }
                 });
 
