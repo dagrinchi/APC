@@ -23,7 +23,7 @@ define(function(require) {
 
     return Backbone.Collection.extend({
 
-        sql: "SELECT DISTINCT * FROM dci INNER JOIN (SELECT dci.terrirorio terr, dane.lat, dane.long FROM dci INNER JOIN dane ON (dane.nomdep LIKE dci.terrirorio and dane.codmun = '') or(dane.nommun LIKE dci.terrirorio) GROUP BY dci.terrirorio) dciterr ON dciterr.terr = dci.terrirorio ", 
+        sql: "SELECT DISTINCT * FROM dci INNER JOIN (SELECT dci.terrirorio terr, dane.lat, dane.long FROM dci INNER JOIN dane ON (dane.nomdep LIKE dci.terrirorio and dane.codmun = '') or(dane.nommun LIKE dci.terrirorio) GROUP BY dci.terrirorio) dciterr ON dciterr.terr = dci.terrirorio ",
         markers: [],
 
         delay: 100,
@@ -96,13 +96,13 @@ define(function(require) {
                 });
                 sql += ")";
             });
-                                      console.log(sql);
+            console.log(sql);
             return sql;
         },
 
-        initMapMarkersWithDb: function() {            
+        initMapMarkersWithDb: function() {
             var self = this;
-            if (typeof this.models === "undefined" || this.models.length <= 0) {                
+            if (typeof this.models === "undefined" || this.models.length <= 0) {
                 APC.collections.coopCollection.initMapMarkersWithDb();
             } else {
                 self.markers = [];
@@ -148,13 +148,17 @@ define(function(require) {
                 APC.selection.dci.cols['terrirorio'] = [];
                 APC.selection.dci.cols['terrirorio'].push(add);
 
-                $.when(APC.collections.coopByDepartamento.findByDepartamento()).done(function() {
-                    var modal = new modalView({
-                        id: RowKey,
-                        title: add,
-                        collection: APC.collections.coopByDepartamento
-                    });
-                    modal.render();
+                APC.collections.coopByDepartamento.fetch({
+                    success: function(data) {
+                        var modal = new modalView({
+                            id: RowKey,
+                            title: add,
+                            collection: APC.collections.coopByDepartamento
+                        });
+                        setTimeout(function() {
+                            modal.render();
+                        }, 600);
+                    }
                 });
 
                 // self.infowindow.setContent(add);

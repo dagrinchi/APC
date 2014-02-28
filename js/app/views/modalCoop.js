@@ -15,38 +15,13 @@ define(function(require) {
     var $ = require('jquery'),
         Backbone = require('backbone'),
         _ = require('underscore'),
-        modalTpl = require('text!tpl/modalCooperacion.html'),
-        coopMarker = require('text!tpl/coopMarkerListItem.html'),
         bootstrap = require('bootstrap/bootstrap');
-
-    var listItemView = Backbone.View.extend({
-        tagName: 'li',
-        className: 'topcoat-list__item',
-        attributes: {
-            "style": "padding-top: 0px; padding-bottom: 0px;"
-        },
-        template: _.template(coopMarker),
-        render: function() {
-            this.$el.html(this.template(this.model.toJSON()));
-            return this;
-        }
-    });
-
-    var listEl = Backbone.View.extend({
-        render: function() {
-            this.collection.each(function(m) {
-                var itemView = new listItemView({
-                    model: m
-                });
-                this.$el.append(itemView.render().el);
-            }, this);
-            return this;
-        }
-    });
 
     return Backbone.View.extend({
 
         className: "modal hide fade",
+
+        template: _.template(require('text!tpl/modalCooperacion.html')),
 
         initialize: function() {
             var self = this;
@@ -86,28 +61,11 @@ define(function(require) {
         },
 
         render: function() {
-            console.log("render dci modal!");
-            if (this.collection.models.length > 0) {
-
-                var self = this;
-                var listElement = new listEl({
-                    collection: this.collection
-                });
-
-                this.$el.html(_.template(modalTpl, {
-                    title: self.options.title,
-                    puntofocal: self.collection.models[0].attributes.puntofocal,
-                    direccionpuntofocal: self.collection.models[0].attributes.direccionpuntofocal,
-                    miembrosdelcomite: self.collection.models[0].attributes.miembrocomite,
-                    content: listElement.render().$el.html()
-                }));
-
-                this.$el.children(".modal-body").height($(window).height() - 220);
-                this.$el.modal('show');                
-
-            } else {
-                this.render();
-            }
+            this.$el.html(this.template({
+                'dci': this.collection.toJSON()
+            }));
+            this.$el.children(".modal-body").height($(window).height() - 220);
+            this.$el.modal('show');
 
             return this;
         }
