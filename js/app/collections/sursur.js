@@ -24,7 +24,7 @@ define(function(require) {
 
         markers: [],
 
-        sqlInit: "SELECT DISTINCT pais FROM sursur ",
+        sqlInit: "SELECT DISTINCT sursur.pais, countries.lat, countries.lng FROM sursur LEFT JOIN countries ON sursur.pais = countries.country ",
 
         delay: 100,
 
@@ -49,9 +49,10 @@ define(function(require) {
             var deferred = $.Deferred();
             var self = this;
 
-            this.baseapc.execute("SELECT DISTINCT pais FROM sursur ORDER BY pais", model, function(data) {
+            this.baseapc.execute("SELECT DISTINCT sursur.pais, countries.lat, countries.lng FROM sursur LEFT JOIN countries ON sursur.pais = countries.country ORDER BY sursur.pais", model, function(data) {
                 self.reset(data);
                 deferred.resolve();
+                setTimeout(self.initMapMarkersWithDb, 3500);
             });
 
             return deferred.promise();
@@ -66,10 +67,7 @@ define(function(require) {
             this.baseapc.execute(this.buildSQL(), model, function(data) {
                 self.reset(data);
                 deferred.resolve();
-                setTimeout(function() {
-                    self.clearMarkers();
-                    self.initMapMarkers();
-                }, 3000);
+                self.initMapMarkersWithDb();
             });
 
             return deferred.promise();
@@ -110,6 +108,31 @@ define(function(require) {
             this.geoCoder().done(function() {
                 APC.views.mapSursur.map.fitBounds(self.bounds);
             });
+        },
+
+        initMapMarkersWithDb: function() {
+            var self = this;
+            if (typeof this.models === "undefined") {
+                console.log("initMapMarkersWithDb: Nothing!");
+                APC.collections.sursurCollection.initMapMarkersWithDb();
+            } else {
+                self.markers = [];
+                $.each(self.models, function(k1, v1) {
+                    //if (v1.get("long") > 0 || v1.get("lat") > 0)
+                    self.createMarker(parseFloat(v1.get("lat")), parseFloat(v1.get("lng")), v1.get("pais"));
+                });
+
+                if (typeof APC.views.mapSursur.markerCluster !== "undefined") {
+                    APC.views.mapSursur.markerCluster.clearMarkers();
+                }
+                require(['markerclustererCompiled'], function() {
+                    APC.views.mapSursur.markerCluster = new MarkerClusterer(APC.views.mapSursur.map, self.markers, {
+                        maxZoom: 11,
+                        gridSize: 50
+                    });
+                });
+                //APC.views.mapSursur.map.fitBounds(self.bounds);
+            }
         },
 
         geoCoder: function() {

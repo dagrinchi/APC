@@ -195,8 +195,8 @@ define(function(require) {
                                 APC.views.sursurview = new sursurview();
 
                             APC.views.sursurview.clearSelection();
-                            APC.collections.sursurCollection.clearMarkers();
-                            APC.collections.sursurCollection.initMapMarkers();
+                            //APC.collections.sursurCollection.clearMarkers();
+                            //APC.collections.sursurCollection.initMapMarkers();
                             APC.views.sursurview.render();
                         });
                     });
