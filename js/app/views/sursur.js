@@ -141,6 +141,8 @@ define(function(require) {
         },
 
         btnSurAreas: function() {
+            $("#btnSurAreas").addClass("active");
+            $("#btnSurSectores").removeClass("active");
             this.clearSelection();
             APC.views.surAreasListView = new listEl({
                 collection: APC.collections.surAreasCollection
@@ -161,6 +163,8 @@ define(function(require) {
 
 
         btnSurSectores: function() {
+            $("#btnSurSectores").addClass("active");
+            $("#btnSurAreas").removeClass("active");
             this.clearSelection();
             APC.views.surSectoresListView = new listEl({
                 collection: APC.collections.surSectoresCollection
