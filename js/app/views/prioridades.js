@@ -108,20 +108,17 @@ define(function(require) {
 
             require(['app/collections/selection', 'app/views/selection'], function(selectionColl, selectionView) {
 
-                if (table === "demanda") {
-                    if (cols === "codigoenci" || cols === "territorio") {
-                        APC.collections['dciSelection'] = new selectionColl();
-                        drawSelection('dci', APC.collections['dciSelection']);
-                    } else if (typeof APC.collections['dciSelection'] !== "undefined") {
-                        APC.collections['dciSelection'].reset();
-                    }
-                    APC.collections['demandaSelection'] = new selectionColl();
-                    drawSelection('demanda', APC.collections['demandaSelection']);
-                } else if (table === "dci") {
-                    APC.collections['demandaSelection'] = new selectionColl();
-                    drawSelection('demanda', APC.collections['demandaSelection']);
+                if (table === "demanda" || table === "dci") {
+                    // if (cols === "codigoenci" || cols === "territorio") {
+                    //     APC.collections['dciSelection'] = new selectionColl();
+                    //     drawSelection('dci', APC.collections['dciSelection']);
+                    // } else if (typeof APC.collections['dciSelection'] !== "undefined") {
+                    //     APC.collections['dciSelection'].reset();
+                    // }
                     APC.collections['dciSelection'] = new selectionColl();
-                    drawSelection('dci', APC.collections['dciSelection']);                    
+                    drawSelection('dci', APC.collections['dciSelection']);
+                    APC.collections['demandaSelection'] = new selectionColl();
+                    drawSelection('demanda', APC.collections['demandaSelection']);
                 }
                 
                 function drawSelection(table, collection) {
